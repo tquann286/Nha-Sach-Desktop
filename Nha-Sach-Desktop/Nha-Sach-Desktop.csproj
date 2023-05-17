@@ -59,6 +59,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmDSSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDSSach.Designer.cs">
+      <DependentUpon>frmDSSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,10 +83,19 @@
     <Compile Include="UI\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPhieuNhap.Designer.cs">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDSSach.resx">
+      <DependentUpon>frmDSSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmKhachHang.resx">
       <DependentUpon>frmKhachHang.cs</DependentUpon>
@@ -90,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPhieuNhap.resx">
+      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
