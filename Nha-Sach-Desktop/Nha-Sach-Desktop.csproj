@@ -149,5 +149,10 @@
   <ItemGroup>
     <None Include="Resources\ranger-4df6c1b61.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BUS\" />
+    <Folder Include="DAO\" />
+    <Folder Include="DTO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
