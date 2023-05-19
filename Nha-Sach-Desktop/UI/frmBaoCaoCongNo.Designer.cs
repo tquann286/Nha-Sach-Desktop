@@ -37,11 +37,11 @@
             this.NoDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhatSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NoCuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label62 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,6 +119,30 @@
             this.NoCuoi.Name = "NoCuoi";
             this.NoCuoi.Width = 125;
             // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.BackColor = System.Drawing.SystemColors.Control;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label62.Location = new System.Drawing.Point(33, 178);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(140, 20);
+            this.label62.TabIndex = 45;
+            this.label62.Text = "Báo cáo công nợ:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(395, 134);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(289, 31);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "BÁO CÁO CÔNG NỢ";
+            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.NavajoWhite;
@@ -145,18 +169,6 @@
             this.panel1.Size = new System.Drawing.Size(1041, 114);
             this.panel1.TabIndex = 47;
             // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.BackColor = System.Drawing.SystemColors.Control;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label62.Location = new System.Drawing.Point(33, 178);
-            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(140, 20);
-            this.label62.TabIndex = 45;
-            this.label62.Text = "Báo cáo công nợ:";
-            // 
             // btnXuat
             // 
             this.btnXuat.BackColor = System.Drawing.Color.Aquamarine;
@@ -172,18 +184,6 @@
             this.btnXuat.Text = "IN BÁO CÁO";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(395, 134);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 31);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "BÁO CÁO CÔNG NỢ";
             // 
             // frmBaoCaoCongNo
             // 

@@ -32,17 +32,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnTim = new System.Windows.Forms.Button();
             this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnexit = new System.Windows.Forms.Button();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnchon = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnLuuKhachHang = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
@@ -55,12 +55,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLuuKhachHang = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnexit = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -69,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -104,22 +107,6 @@
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra cứu khách hàng";
-            // 
-            // btnTim
-            // 
-            this.btnTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(105)))), ((int)(((byte)(22)))));
-            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
-            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTim.Location = new System.Drawing.Point(463, 39);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(139, 50);
-            this.btnTim.TabIndex = 2;
-            this.btnTim.Text = "Tìm kiếm";
-            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTim.UseVisualStyleBackColor = false;
             // 
             // txtTenKhachHang
             // 
@@ -157,20 +144,47 @@
             this.dataGridView1.Size = new System.Drawing.Size(998, 150);
             this.dataGridView1.TabIndex = 38;
             // 
-            // btnexit
+            // MaKH
             // 
-            this.btnexit.BackColor = System.Drawing.Color.Transparent;
-            this.btnexit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnexit.BackgroundImage")));
-            this.btnexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnexit.CausesValidation = false;
-            this.btnexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnexit.Location = new System.Drawing.Point(925, 117);
-            this.btnexit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(54, 49);
-            this.btnexit.TabIndex = 39;
-            this.btnexit.UseVisualStyleBackColor = false;
+            this.MaKH.HeaderText = "Mã KH";
+            this.MaKH.MinimumWidth = 6;
+            this.MaKH.Name = "MaKH";
+            this.MaKH.Width = 50;
+            // 
+            // Fullname
+            // 
+            this.Fullname.HeaderText = "Họ và tên";
+            this.Fullname.MinimumWidth = 6;
+            this.Fullname.Name = "Fullname";
+            this.Fullname.Width = 155;
+            // 
+            // phone
+            // 
+            this.phone.HeaderText = "Số điện thoại";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.Width = 125;
+            // 
+            // address
+            // 
+            this.address.HeaderText = "Địa chỉ";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.Width = 125;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 145;
+            // 
+            // doanhthu
+            // 
+            this.doanhthu.HeaderText = "Doanh thu";
+            this.doanhthu.MinimumWidth = 6;
+            this.doanhthu.Name = "doanhthu";
+            this.doanhthu.Width = 95;
             // 
             // btnchon
             // 
@@ -215,60 +229,6 @@
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
-            // 
-            // btnLuuKhachHang
-            // 
-            this.btnLuuKhachHang.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnLuuKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLuuKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKhachHang.Image")));
-            this.btnLuuKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuuKhachHang.Location = new System.Drawing.Point(759, 162);
-            this.btnLuuKhachHang.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuuKhachHang.Name = "btnLuuKhachHang";
-            this.btnLuuKhachHang.Size = new System.Drawing.Size(125, 42);
-            this.btnLuuKhachHang.TabIndex = 54;
-            this.btnLuuKhachHang.Text = " LƯU    ";
-            this.btnLuuKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuuKhachHang.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(759, 122);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(125, 33);
-            this.btnSua.TabIndex = 30;
-            this.btnSua.Text = "  SỬA";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(759, 79);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(125, 36);
-            this.btnXoa.TabIndex = 29;
-            this.btnXoa.Text = "  XÓA";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(759, 36);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(125, 34);
-            this.btnThem.TabIndex = 28;
-            this.btnThem.Text = "  THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // txtEmail
             // 
@@ -378,47 +338,100 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã KH:";
             // 
-            // MaKH
+            // btnLuuKhachHang
             // 
-            this.MaKH.HeaderText = "Mã KH";
-            this.MaKH.MinimumWidth = 6;
-            this.MaKH.Name = "MaKH";
-            this.MaKH.Width = 50;
+            this.btnLuuKhachHang.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnLuuKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLuuKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnLuuKhachHang.Image")));
+            this.btnLuuKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuuKhachHang.Location = new System.Drawing.Point(759, 162);
+            this.btnLuuKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuuKhachHang.Name = "btnLuuKhachHang";
+            this.btnLuuKhachHang.Size = new System.Drawing.Size(125, 42);
+            this.btnLuuKhachHang.TabIndex = 54;
+            this.btnLuuKhachHang.Text = " LƯU    ";
+            this.btnLuuKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuuKhachHang.UseVisualStyleBackColor = false;
             // 
-            // Fullname
+            // btnSua
             // 
-            this.Fullname.HeaderText = "Họ và tên";
-            this.Fullname.MinimumWidth = 6;
-            this.Fullname.Name = "Fullname";
-            this.Fullname.Width = 155;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(759, 122);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(125, 33);
+            this.btnSua.TabIndex = 30;
+            this.btnSua.Text = "  SỬA";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // phone
+            // btnXoa
             // 
-            this.phone.HeaderText = "Số điện thoại";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.Width = 125;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(759, 79);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(125, 36);
+            this.btnXoa.TabIndex = 29;
+            this.btnXoa.Text = "  XÓA";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // address
+            // btnThem
             // 
-            this.address.HeaderText = "Địa chỉ";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.Width = 125;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(759, 36);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(125, 34);
+            this.btnThem.TabIndex = 28;
+            this.btnThem.Text = "  THÊM";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // email
+            // btnexit
             // 
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 145;
+            this.btnexit.BackColor = System.Drawing.Color.Transparent;
+            this.btnexit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnexit.BackgroundImage")));
+            this.btnexit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnexit.CausesValidation = false;
+            this.btnexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnexit.Location = new System.Drawing.Point(925, 117);
+            this.btnexit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(54, 49);
+            this.btnexit.TabIndex = 39;
+            this.btnexit.UseVisualStyleBackColor = false;
             // 
-            // doanhthu
+            // btnTim
             // 
-            this.doanhthu.HeaderText = "Doanh thu";
-            this.doanhthu.MinimumWidth = 6;
-            this.doanhthu.Name = "doanhthu";
-            this.doanhthu.Width = 95;
+            this.btnTim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(105)))), ((int)(((byte)(22)))));
+            this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
+            this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTim.Location = new System.Drawing.Point(463, 39);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(139, 50);
+            this.btnTim.TabIndex = 2;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTim.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1041, 114);
+            this.panel2.TabIndex = 48;
             // 
             // frmKhachHang
             // 
@@ -434,6 +447,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmKhachHang";
             this.Text = "frmKhachHang";
+            this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -478,5 +492,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn doanhthu;
+        private System.Windows.Forms.Panel panel2;
     }
 }
