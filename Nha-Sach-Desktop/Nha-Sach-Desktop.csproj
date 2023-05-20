@@ -53,7 +53,6 @@
       <DependentUpon>BatOnBookStoreDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BUS\BUSLogin.cs" />
-    <Compile Include="DAO\Connect.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
     <Compile Include="NhaSachBatOn.designer.cs">
