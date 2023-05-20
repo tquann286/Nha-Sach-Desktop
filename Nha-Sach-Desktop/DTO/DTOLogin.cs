@@ -8,7 +8,31 @@ namespace Nha_Sach_Desktop.DTO
 {
     public class DTOLogin
     {
-        public string taiKoan { get; set; }
-        public string matKhau { get; set; }
+        private string _taiKhoan;
+        private string _matKhau;
+        public string taiKhoan
+        {
+            get
+            {
+                return _taiKhoan;
+            }
+
+            set
+            {
+                _taiKhoan = value;
+            }
+        }
+        public string matKhau
+        {
+            get
+            {
+                return _matKhau;
+            }
+
+            set
+            {
+                _matKhau = value;
+            }
+        }
     }
 }
