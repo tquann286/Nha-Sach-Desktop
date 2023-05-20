@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="BUS\BUSLogin.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
+    <Compile Include="DTO\DTOHoaDon.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
     <Compile Include="NhaSachBatOn.designer.cs">
       <AutoGen>True</AutoGen>
