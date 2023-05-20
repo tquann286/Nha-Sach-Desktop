@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nha_Sach_Desktop.UI
 {
-    public partial class frmBaoCaoCongNo : Form
+    public partial class frmBaoCaoDoanhThu : Form
     {
-        public frmBaoCaoCongNo()
+        public frmBaoCaoDoanhThu()
         {
             InitializeComponent();
         }
