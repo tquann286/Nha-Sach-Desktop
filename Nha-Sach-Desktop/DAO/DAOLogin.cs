@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Nha_Sach_Desktop.DAO;
 using System.Data.SqlClient;
 using Nha_Sach_Desktop.DTO;
-using System.Linq;
+using System.Windows.Forms;
 
 namespace Nha_Sach_Desktop.DAO
 {
@@ -14,16 +14,20 @@ namespace Nha_Sach_Desktop.DAO
     {
         public static bool KiemTraTaiKhoan(DTOLogin user)
         {
-            dbMainDataContext dbMain = new dbMainDataContext();
+            NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext();
 
-            var svt = (from a in dbMain.Accounts
-                       where a.UserName == user.taiKoan && a.PassWord == user.matKhau
+            var svt = (from a in dbMain.DANGNHAPs
+                       where a.taikhoan == user.taiKoan && a.matkhau == user.matKhau
                        select a);
             if (svt.Count() > 0)
             {
+                MessageBox.Show("Đăng nhập thành công" + svt.ToString());
                 return true;
+                
             }
             else return false;
         }
+
+        
     }
 }
