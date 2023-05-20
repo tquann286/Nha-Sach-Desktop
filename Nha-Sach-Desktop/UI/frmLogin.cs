@@ -60,13 +60,19 @@ namespace Nha_Sach_Desktop.UI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
             BUSLogin lg = new BUSLogin();
             DTOLogin acc = new DTOLogin();
-            if(lg.BLLKTraTKhoan(acc) == true)
+            acc.taiKhoan = txtTaiKhoan.Text;
+            acc.matKhau = txtMatKhau.Text;
+
+            if (lg.BLLKTraTKhoan(acc) == true)
             {
-                MessageBox.Show("Bạn đã đăng nhập thành công");
+                this.Hide();
+                frmTrangChu frmTrangChu = new frmTrangChu();
+                frmTrangChu.ShowDialog();
+                this.Close();
             }    
             else
             {

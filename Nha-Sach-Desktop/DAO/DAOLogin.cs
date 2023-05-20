@@ -17,11 +17,10 @@ namespace Nha_Sach_Desktop.DAO
             NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext();
 
             var svt = (from a in dbMain.DANGNHAPs
-                       where a.taikhoan == user.taiKoan && a.matkhau == user.matKhau
+                       where a.taikhoan == user.taiKhoan && a.matkhau == user.matKhau
                        select a);
             if (svt.Count() > 0)
             {
-                //MessageBox.Show("Đăng nhập thành công" + svt.ToString());
                 return true;
                 
             }
