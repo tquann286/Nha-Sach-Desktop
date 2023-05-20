@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BatOnBookStore" Class="NhaSachBatOnDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=QUANTRUNG286\QUANTRUNG;Initial Catalog=BatOnBookStore;Integrated Security=True" SettingsObjectName="Nha_Sach_Desktop.Properties.Settings" SettingsPropertyName="BatOnBookStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-R6I8CPR\SQLEXPRESS;Initial Catalog=BatOnBookStore;Integrated Security=True" SettingsObjectName="Nha_Sach_Desktop.Properties.Settings" SettingsPropertyName="BatOnBookStoreConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DANGNHAP" Member="DANGNHAPs">
     <Type Name="DANGNHAP">
       <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
