@@ -28,18 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoDoanhThu));
             this.dgvBaoCaoNo = new System.Windows.Forms.DataGridView();
+            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnChiTiet = new System.Windows.Forms.Button();
+            this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
+            this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBaoCaoNo
@@ -55,6 +60,30 @@
             this.dgvBaoCaoNo.RowHeadersWidth = 51;
             this.dgvBaoCaoNo.Size = new System.Drawing.Size(697, 218);
             this.dgvBaoCaoNo.TabIndex = 55;
+            // 
+            // MaDT
+            // 
+            this.MaDT.DataPropertyName = "MaDT";
+            this.MaDT.HeaderText = "Mã Doanh thu";
+            this.MaDT.MinimumWidth = 6;
+            this.MaDT.Name = "MaDT";
+            this.MaDT.Width = 125;
+            // 
+            // Thang
+            // 
+            this.Thang.DataPropertyName = "Thang";
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.MinimumWidth = 6;
+            this.Thang.Name = "Thang";
+            this.Thang.Width = 125;
+            // 
+            // doanhthu
+            // 
+            this.doanhthu.DataPropertyName = "doanhthu";
+            this.doanhthu.HeaderText = "Doanh thu";
+            this.doanhthu.MinimumWidth = 6;
+            this.doanhthu.Name = "doanhthu";
+            this.doanhthu.Width = 125;
             // 
             // btnThoat
             // 
@@ -122,30 +151,6 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "BÁO CÁO DOANH THU";
             // 
-            // MaDT
-            // 
-            this.MaDT.DataPropertyName = "MaDT";
-            this.MaDT.HeaderText = "Mã Doanh thu";
-            this.MaDT.MinimumWidth = 6;
-            this.MaDT.Name = "MaDT";
-            this.MaDT.Width = 125;
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.MinimumWidth = 6;
-            this.Thang.Name = "Thang";
-            this.Thang.Width = 125;
-            // 
-            // doanhthu
-            // 
-            this.doanhthu.DataPropertyName = "doanhthu";
-            this.doanhthu.HeaderText = "Doanh thu";
-            this.doanhthu.MinimumWidth = 6;
-            this.doanhthu.Name = "doanhthu";
-            this.doanhthu.Width = 125;
-            // 
             // btnChiTiet
             // 
             this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
@@ -159,6 +164,16 @@
             this.btnChiTiet.TabIndex = 56;
             this.btnChiTiet.Text = "CHI TIẾT";
             this.btnChiTiet.UseVisualStyleBackColor = false;
+            // 
+            // batOnBookStoreDataSet
+            // 
+            this.batOnBookStoreDataSet.DataSetName = "BatOnBookStoreDataSet";
+            this.batOnBookStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // batOnBookStoreDataSetBindingSource
+            // 
+            this.batOnBookStoreDataSetBindingSource.DataSource = this.batOnBookStoreDataSet;
+            this.batOnBookStoreDataSetBindingSource.Position = 0;
             // 
             // frmBaoCaoDoanhThu
             // 
@@ -175,6 +190,8 @@
             this.Name = "frmBaoCaoDoanhThu";
             this.Text = "frmBaoCaoDoanhThu";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,5 +209,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Thang;
         private System.Windows.Forms.DataGridViewTextBoxColumn doanhthu;
         internal System.Windows.Forms.Button btnChiTiet;
+        private BatOnBookStoreDataSet batOnBookStoreDataSet;
+        private System.Windows.Forms.BindingSource batOnBookStoreDataSetBindingSource;
     }
 }
