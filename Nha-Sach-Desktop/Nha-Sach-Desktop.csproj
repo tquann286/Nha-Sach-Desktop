@@ -67,6 +67,9 @@
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
     <Compile Include="DTO\DTOChiTietDoanhThu.cs" />
+    <Compile Include="DAO\DAOHoaDon.cs" />
+    <Compile Include="DAO\DAOLogin.cs" />
+    <Compile Include="DTO\DTOHoaDon.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
     <Compile Include="NhaSachBatOn.designer.cs">
       <AutoGen>True</AutoGen>
