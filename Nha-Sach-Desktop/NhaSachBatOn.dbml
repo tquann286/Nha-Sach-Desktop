@@ -40,15 +40,6 @@
       <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.PHIEUBAN" Member="PHIEUBANs">
-    <Type Name="PHIEUBAN">
-      <Column Name="maphieuban" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="masach" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="HOADON_PHIEUBAN" Member="HOADON" ThisKey="maphieuban" OtherKey="mahd" Type="HOADON" IsForeignKey="true" />
-      <Association Name="SACH_PHIEUBAN" Member="SACH" ThisKey="masach" OtherKey="masach" Type="SACH" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.PHIEUNHAP" Member="PHIEUNHAPs">
     <Type Name="PHIEUNHAP">
       <Column Name="maphieunhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -57,6 +48,15 @@
       <Column Name="dongia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="tongtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="SACH_PHIEUNHAP" Member="SACH" ThisKey="masach" OtherKey="masach" Type="SACH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHIEUBAN" Member="PHIEUBANs">
+    <Type Name="PHIEUBAN">
+      <Column Name="maphieuban" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="masach" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HOADON_PHIEUBAN" Member="HOADON" ThisKey="maphieuban" OtherKey="mahd" Type="HOADON" IsForeignKey="true" />
+      <Association Name="SACH_PHIEUBAN" Member="SACH" ThisKey="masach" OtherKey="masach" Type="SACH" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.SACH" Member="SACHes">
@@ -71,8 +71,8 @@
       <Column Name="tongban" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="phatsinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="toncuoi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Association Name="SACH_PHIEUBAN" Member="PHIEUBANs" ThisKey="masach" OtherKey="masach" Type="PHIEUBAN" />
       <Association Name="SACH_PHIEUNHAP" Member="PHIEUNHAPs" ThisKey="masach" OtherKey="masach" Type="PHIEUNHAP" />
+      <Association Name="SACH_PHIEUBAN" Member="PHIEUBANs" ThisKey="masach" OtherKey="masach" Type="PHIEUBAN" />
     </Type>
   </Table>
 </Database>

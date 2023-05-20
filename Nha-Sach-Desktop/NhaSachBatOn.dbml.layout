@@ -2,74 +2,74 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.125" name="NhaSachBatOn">
   <DataContextMoniker Name="/NhaSachBatOnDataContext" />
   <nestedChildShapes>
-    <classShape Id="4ab25294-3033-4ab5-b0d9-8437fcc143de" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+    <classShape Id="114c5413-a812-4dd5-8b1e-f6442fe09cbb" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/DANGNHAP" />
       <nestedChildShapes>
-        <elementListCompartment Id="5327d84e-bb81-4b6e-ac4e-d301e4b26e7f" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4c9896d4-2305-490a-bcce-4b93cbde8861" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="34eaf23c-40db-4ddf-ae83-053dbc7be59b" absoluteBounds="0.75, 6.125, 2, 2.5401025390625005">
+    <classShape Id="e4602f94-9497-4555-983e-1ea61463b950" absoluteBounds="0.75, 6.125, 2, 1.7708968098958326">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/HOADON" />
       <nestedChildShapes>
-        <elementListCompartment Id="a82ea70c-34cd-4cb6-8863-46f6dd95efbe" absoluteBounds="0.765, 6.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="02dc38f1-851d-40ec-a45b-f5623d6de100" absoluteBounds="0.765, 6.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="c9963b4a-7308-4c44-b7a7-2e52f8a37259" absoluteBounds="1.5, 9.125, 2, 1.7708968098958344">
+    <classShape Id="244b40a7-51b0-48ae-9929-a2371ed6715c" absoluteBounds="1.5, 9.125, 2, 1.7708968098958344">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/KHACHHANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="1efe9996-5bb7-4f27-bf50-257b46a36d1b" absoluteBounds="1.5150000000000001, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="4a9186a1-4507-4abd-a164-43e0f254a090" absoluteBounds="1.5150000000000001, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="8ef87acd-d5cd-44df-b68a-259e484e9091" absoluteBounds="6.75, 2.75, 2, 1.7708968098958326">
+    <classShape Id="85e711d5-2bca-472d-8092-0d5b924818a1" absoluteBounds="6.75, 2.75, 2, 1.7708968098958326">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/NHANVIEN" />
       <nestedChildShapes>
-        <elementListCompartment Id="741cd51c-ec18-435f-abac-1011b05550e6" absoluteBounds="6.765, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="39accc44-628b-4b24-a25c-72f9cc623071" absoluteBounds="6.765, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a969c627-31b5-46af-af71-c4715769c9f8" absoluteBounds="3.5, 1.25, 2, 1.3862939453125003">
-      <DataClassMoniker Name="/NhaSachBatOnDataContext/PHIEUBAN" />
-      <nestedChildShapes>
-        <elementListCompartment Id="5af2eab4-7c20-4170-969d-52ddee29b2e5" absoluteBounds="3.515, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="01a0ae9c-4a3c-4f23-adde-df96ff102e3e" absoluteBounds="3.5, 4.25, 2, 1.7708968098958326">
+    <classShape Id="2c98dcd3-ad0c-4de3-afda-38aaa63334fb" absoluteBounds="3.5, 4.25, 2, 1.7708968098958326">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/PHIEUNHAP" />
       <nestedChildShapes>
-        <elementListCompartment Id="db270059-058d-4e6a-bd7d-1b9c6cb0b102" absoluteBounds="3.515, 4.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="763f2e1a-de76-49ad-bf01-c0ca9f25fa52" absoluteBounds="3.515, 4.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="3fa0b490-d1f0-4ccc-8dce-e229b02513bc" absoluteBounds="0.75, 1.625, 2, 2.7324039713541661">
+    <classShape Id="2c742353-aef8-46f8-9c27-b02a322ff63b" absoluteBounds="3.5, 1.25, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/NhaSachBatOnDataContext/PHIEUBAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a65278b-91a4-4bd9-a93b-a8a40c9049f7" absoluteBounds="3.515, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72da77b8-51e3-49ca-80f5-fa4afc80eda4" absoluteBounds="0.75, 1.625, 2, 2.7324039713541661">
       <DataClassMoniker Name="/NhaSachBatOnDataContext/SACH" />
       <nestedChildShapes>
-        <elementListCompartment Id="f18a9dde-2eea-4963-b103-1947a486425a" absoluteBounds="0.765, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="16334dd8-04c9-44c5-8080-4c53c6fe08aa" absoluteBounds="0.765, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 8.6651025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/KHACHHANG/KHACHHANG_HOADON" />
       <nodes>
-        <classShapeMoniker Id="c9963b4a-7308-4c44-b7a7-2e52f8a37259" />
-        <classShapeMoniker Id="34eaf23c-40db-4ddf-ae83-053dbc7be59b" />
+        <classShapeMoniker Id="244b40a7-51b0-48ae-9929-a2371ed6715c" />
+        <classShapeMoniker Id="e4602f94-9497-4555-983e-1ea61463b950" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(2.75 : 6.12653746153846); (3.125 : 5.75153746153846); (3.125 : 1.76985822949219); (3.5 : 1.76985822949219)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/HOADON/HOADON_PHIEUBAN" />
       <nodes>
-        <classShapeMoniker Id="34eaf23c-40db-4ddf-ae83-053dbc7be59b" />
-        <classShapeMoniker Id="a969c627-31b5-46af-af71-c4715769c9f8" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.35222045898438); (3.04166666666667 : 2.35222045898437 : JumpStart); (3.20833333333333 : 2.35222045898438 : JumpEnd); (3.5 : 2.35222045898438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/NhaSachBatOnDataContext/SACH/SACH_PHIEUBAN" />
-      <nodes>
-        <classShapeMoniker Id="3fa0b490-d1f0-4ccc-8dce-e229b02513bc" />
-        <classShapeMoniker Id="a969c627-31b5-46af-af71-c4715769c9f8" />
+        <classShapeMoniker Id="e4602f94-9497-4555-983e-1ea61463b950" />
+        <classShapeMoniker Id="2c742353-aef8-46f8-9c27-b02a322ff63b" />
       </nodes>
     </associationConnector>
     <associationConnector edgePoints="[(1.75 : 4.35740397135417); (1.75 : 5.189150890625); (3.04166666666667 : 5.189150890625 : JumpStart); (3.20833333333333 : 5.189150890625 : JumpEnd); (3.5 : 5.189150890625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/SACH/SACH_PHIEUNHAP" />
       <nodes>
-        <classShapeMoniker Id="3fa0b490-d1f0-4ccc-8dce-e229b02513bc" />
-        <classShapeMoniker Id="01a0ae9c-4a3c-4f23-adde-df96ff102e3e" />
+        <classShapeMoniker Id="72da77b8-51e3-49ca-80f5-fa4afc80eda4" />
+        <classShapeMoniker Id="2c98dcd3-ad0c-4de3-afda-38aaa63334fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.35222045898438); (3.04166666666667 : 2.35222045898437 : JumpStart); (3.20833333333333 : 2.35222045898438 : JumpEnd); (3.5 : 2.35222045898438)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NhaSachBatOnDataContext/SACH/SACH_PHIEUBAN" />
+      <nodes>
+        <classShapeMoniker Id="72da77b8-51e3-49ca-80f5-fa4afc80eda4" />
+        <classShapeMoniker Id="2c742353-aef8-46f8-9c27-b02a322ff63b" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
