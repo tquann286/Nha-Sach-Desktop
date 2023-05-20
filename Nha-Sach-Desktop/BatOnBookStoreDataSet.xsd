@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BatOnBookStoreDataSet" targetNamespace="http://tempuri.org/BatOnBookStoreDataSet.xsd" xmlns:mstns="http://tempuri.org/BatOnBookStoreDataSet.xsd" xmlns="http://tempuri.org/BatOnBookStoreDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BatOnBookStoreConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BatOnBookStoreConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Nha_Sach_Desktop.Properties.Settings.GlobalReference.Default.BatOnBookStoreConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BatOnBookStoreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BatOnBookStoreDataSet" msprop:Generator_DataSetName="BatOnBookStoreDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

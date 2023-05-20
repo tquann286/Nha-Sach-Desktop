@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatOnBookStoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BatOnBookStoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BUS\BUSLogin.cs" />
     <Compile Include="DAO\Connect.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
@@ -62,6 +67,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmChiTietDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmChiTietDoanhThu.Designer.cs">
+      <DependentUpon>frmChiTietDoanhThu.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmBaoCaoDoanhThu.cs">
       <SubType>Form</SubType>
@@ -128,6 +139,9 @@
     <EmbeddedResource Include="UI\frmBaoCaoTonKho.resx">
       <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmChiTietDoanhThu.resx">
+      <DependentUpon>frmChiTietDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmDSSach.resx">
       <DependentUpon>frmDSSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +163,17 @@
     <EmbeddedResource Include="UI\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="BatOnBookStoreDataSet.xsc">
+      <DependentUpon>BatOnBookStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BatOnBookStoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BatOnBookStoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BatOnBookStoreDataSet.xss">
+      <DependentUpon>BatOnBookStoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="NhaSachBatOn.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>NhaSachBatOn.designer.cs</LastGenOutput>
