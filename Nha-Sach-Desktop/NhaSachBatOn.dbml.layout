@@ -20,7 +20,7 @@
         <elementListCompartment Id="d4c9f315-5dca-4d1d-8058-186569cf91a7" absoluteBounds="5.2650000000000006, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(6.25 : 5.14589680989583); (6.25 : 6.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.25 : 5.14589680989583); (6.25 : 6.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/KHACHHANG/KHACHHANG_HOADON" />
       <nodes>
         <classShapeMoniker Id="6bd3366e-0959-4a8c-904b-644f7ea1452d" />
@@ -39,7 +39,7 @@
         <elementListCompartment Id="58da623d-f3f0-4da0-8460-706e78775d58" absoluteBounds="8.39, 6.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.25 : 7.19314697265625); (8.375 : 7.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.25 : 7.19314697265625); (8.375 : 7.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/HOADON/HOADON_PHIEUBAN" />
       <nodes>
         <classShapeMoniker Id="d12aa161-eed4-4326-ad45-72ace573f800" />
@@ -58,14 +58,14 @@
         <elementListCompartment Id="7b14d789-baa8-417f-8474-459123f5f670" absoluteBounds="7.765, 8.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(9.0625 : 8.5); (9.0625 : 7.6362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.0625 : 8.5); (9.0625 : 7.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/SACH/SACH_PHIEUBAN" />
       <nodes>
         <classShapeMoniker Id="d8bb7836-752d-4b98-9de3-53019aa4c032" />
         <classShapeMoniker Id="1f9ae8a7-b8ce-4159-b52f-33048710e9b3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(9.75 : 9.26044840494792); (11 : 9.26044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.75 : 9.26044840494792); (11 : 9.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/SACH/SACH_PHIEUNHAP" />
       <nodes>
         <classShapeMoniker Id="d8bb7836-752d-4b98-9de3-53019aa4c032" />
