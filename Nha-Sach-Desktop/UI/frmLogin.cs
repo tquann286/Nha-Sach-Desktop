@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
 
 namespace Nha_Sach_Desktop.UI
 {
@@ -59,7 +62,16 @@ namespace Nha_Sach_Desktop.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            BUSLogin lg = new BUSLogin();
+            DTOLogin acc = new DTOLogin();
+            if(lg.BLLKTraTKhoan(acc) == true)
+            {
+                MessageBox.Show("Bạn đã đăng nhập thành công");
+            }    
+            else
+            {
+                MessageBox.Show("Vui lòng kiểm tra lại");
+            }    
         }
     }
 }

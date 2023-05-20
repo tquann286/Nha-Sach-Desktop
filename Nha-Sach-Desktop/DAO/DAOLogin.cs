@@ -21,7 +21,7 @@ namespace Nha_Sach_Desktop.DAO
                        select a);
             if (svt.Count() > 0)
             {
-                MessageBox.Show("Đăng nhập thành công" + svt.ToString());
+                //MessageBox.Show("Đăng nhập thành công" + svt.ToString());
                 return true;
                 
             }
