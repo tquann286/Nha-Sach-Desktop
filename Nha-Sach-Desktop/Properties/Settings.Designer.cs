@@ -28,6 +28,7 @@ namespace Nha_Sach_Desktop.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-1TEJ4NIL;Initial Catalog=BatOnBookStore;Integrated Security=Tr" +
             "ue")]
+            "Security=True")]
         public string BatOnBookStoreConnectionString {
             get {
                 return ((string)(this["BatOnBookStoreConnectionString"]));
