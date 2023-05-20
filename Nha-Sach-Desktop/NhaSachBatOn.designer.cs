@@ -42,12 +42,12 @@ namespace Nha_Sach_Desktop
     partial void InsertNHANVIEN(NHANVIEN instance);
     partial void UpdateNHANVIEN(NHANVIEN instance);
     partial void DeleteNHANVIEN(NHANVIEN instance);
-    partial void InsertPHIEUBAN(PHIEUBAN instance);
-    partial void UpdatePHIEUBAN(PHIEUBAN instance);
-    partial void DeletePHIEUBAN(PHIEUBAN instance);
     partial void InsertPHIEUNHAP(PHIEUNHAP instance);
     partial void UpdatePHIEUNHAP(PHIEUNHAP instance);
     partial void DeletePHIEUNHAP(PHIEUNHAP instance);
+    partial void InsertPHIEUBAN(PHIEUBAN instance);
+    partial void UpdatePHIEUBAN(PHIEUBAN instance);
+    partial void DeletePHIEUBAN(PHIEUBAN instance);
     partial void InsertSACH(SACH instance);
     partial void UpdateSACH(SACH instance);
     partial void DeleteSACH(SACH instance);
@@ -115,19 +115,19 @@ namespace Nha_Sach_Desktop
 			}
 		}
 		
-		public System.Data.Linq.Table<PHIEUBAN> PHIEUBANs
-		{
-			get
-			{
-				return this.GetTable<PHIEUBAN>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PHIEUNHAP> PHIEUNHAPs
 		{
 			get
 			{
 				return this.GetTable<PHIEUNHAP>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PHIEUBAN> PHIEUBANs
+		{
+			get
+			{
+				return this.GetTable<PHIEUBAN>();
 			}
 		}
 		
@@ -797,198 +797,6 @@ namespace Nha_Sach_Desktop
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PHIEUBAN")]
-	public partial class PHIEUBAN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _maphieuban;
-		
-		private string _masach;
-		
-		private int _soluong;
-		
-		private EntityRef<HOADON> _HOADON;
-		
-		private EntityRef<SACH> _SACH;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnmaphieubanChanging(string value);
-    partial void OnmaphieubanChanged();
-    partial void OnmasachChanging(string value);
-    partial void OnmasachChanged();
-    partial void OnsoluongChanging(int value);
-    partial void OnsoluongChanged();
-    #endregion
-		
-		public PHIEUBAN()
-		{
-			this._HOADON = default(EntityRef<HOADON>);
-			this._SACH = default(EntityRef<SACH>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphieuban", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string maphieuban
-		{
-			get
-			{
-				return this._maphieuban;
-			}
-			set
-			{
-				if ((this._maphieuban != value))
-				{
-					if (this._HOADON.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnmaphieubanChanging(value);
-					this.SendPropertyChanging();
-					this._maphieuban = value;
-					this.SendPropertyChanged("maphieuban");
-					this.OnmaphieubanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masach", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string masach
-		{
-			get
-			{
-				return this._masach;
-			}
-			set
-			{
-				if ((this._masach != value))
-				{
-					if (this._SACH.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnmasachChanging(value);
-					this.SendPropertyChanging();
-					this._masach = value;
-					this.SendPropertyChanged("masach");
-					this.OnmasachChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
-		public int soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this.OnsoluongChanging(value);
-					this.SendPropertyChanging();
-					this._soluong = value;
-					this.SendPropertyChanged("soluong");
-					this.OnsoluongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HOADON_PHIEUBAN", Storage="_HOADON", ThisKey="maphieuban", OtherKey="mahd", IsForeignKey=true)]
-		public HOADON HOADON
-		{
-			get
-			{
-				return this._HOADON.Entity;
-			}
-			set
-			{
-				HOADON previousValue = this._HOADON.Entity;
-				if (((previousValue != value) 
-							|| (this._HOADON.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._HOADON.Entity = null;
-						previousValue.PHIEUBANs.Remove(this);
-					}
-					this._HOADON.Entity = value;
-					if ((value != null))
-					{
-						value.PHIEUBANs.Add(this);
-						this._maphieuban = value.mahd;
-					}
-					else
-					{
-						this._maphieuban = default(string);
-					}
-					this.SendPropertyChanged("HOADON");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SACH_PHIEUBAN", Storage="_SACH", ThisKey="masach", OtherKey="masach", IsForeignKey=true)]
-		public SACH SACH
-		{
-			get
-			{
-				return this._SACH.Entity;
-			}
-			set
-			{
-				SACH previousValue = this._SACH.Entity;
-				if (((previousValue != value) 
-							|| (this._SACH.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._SACH.Entity = null;
-						previousValue.PHIEUBANs.Remove(this);
-					}
-					this._SACH.Entity = value;
-					if ((value != null))
-					{
-						value.PHIEUBANs.Add(this);
-						this._masach = value.masach;
-					}
-					else
-					{
-						this._masach = default(string);
-					}
-					this.SendPropertyChanged("SACH");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PHIEUNHAP")]
 	public partial class PHIEUNHAP : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1188,6 +996,198 @@ namespace Nha_Sach_Desktop
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PHIEUBAN")]
+	public partial class PHIEUBAN : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _maphieuban;
+		
+		private string _masach;
+		
+		private int _soluong;
+		
+		private EntityRef<HOADON> _HOADON;
+		
+		private EntityRef<SACH> _SACH;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmaphieubanChanging(string value);
+    partial void OnmaphieubanChanged();
+    partial void OnmasachChanging(string value);
+    partial void OnmasachChanged();
+    partial void OnsoluongChanging(int value);
+    partial void OnsoluongChanged();
+    #endregion
+		
+		public PHIEUBAN()
+		{
+			this._HOADON = default(EntityRef<HOADON>);
+			this._SACH = default(EntityRef<SACH>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphieuban", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string maphieuban
+		{
+			get
+			{
+				return this._maphieuban;
+			}
+			set
+			{
+				if ((this._maphieuban != value))
+				{
+					if (this._HOADON.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaphieubanChanging(value);
+					this.SendPropertyChanging();
+					this._maphieuban = value;
+					this.SendPropertyChanged("maphieuban");
+					this.OnmaphieubanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masach", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string masach
+		{
+			get
+			{
+				return this._masach;
+			}
+			set
+			{
+				if ((this._masach != value))
+				{
+					if (this._SACH.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmasachChanging(value);
+					this.SendPropertyChanging();
+					this._masach = value;
+					this.SendPropertyChanged("masach");
+					this.OnmasachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int NOT NULL")]
+		public int soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this.OnsoluongChanging(value);
+					this.SendPropertyChanging();
+					this._soluong = value;
+					this.SendPropertyChanged("soluong");
+					this.OnsoluongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HOADON_PHIEUBAN", Storage="_HOADON", ThisKey="maphieuban", OtherKey="mahd", IsForeignKey=true)]
+		public HOADON HOADON
+		{
+			get
+			{
+				return this._HOADON.Entity;
+			}
+			set
+			{
+				HOADON previousValue = this._HOADON.Entity;
+				if (((previousValue != value) 
+							|| (this._HOADON.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._HOADON.Entity = null;
+						previousValue.PHIEUBANs.Remove(this);
+					}
+					this._HOADON.Entity = value;
+					if ((value != null))
+					{
+						value.PHIEUBANs.Add(this);
+						this._maphieuban = value.mahd;
+					}
+					else
+					{
+						this._maphieuban = default(string);
+					}
+					this.SendPropertyChanged("HOADON");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SACH_PHIEUBAN", Storage="_SACH", ThisKey="masach", OtherKey="masach", IsForeignKey=true)]
+		public SACH SACH
+		{
+			get
+			{
+				return this._SACH.Entity;
+			}
+			set
+			{
+				SACH previousValue = this._SACH.Entity;
+				if (((previousValue != value) 
+							|| (this._SACH.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._SACH.Entity = null;
+						previousValue.PHIEUBANs.Remove(this);
+					}
+					this._SACH.Entity = value;
+					if ((value != null))
+					{
+						value.PHIEUBANs.Add(this);
+						this._masach = value.masach;
+					}
+					else
+					{
+						this._masach = default(string);
+					}
+					this.SendPropertyChanged("SACH");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SACH")]
 	public partial class SACH : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1214,9 +1214,9 @@ namespace Nha_Sach_Desktop
 		
 		private string _toncuoi;
 		
-		private EntitySet<PHIEUBAN> _PHIEUBANs;
-		
 		private EntitySet<PHIEUNHAP> _PHIEUNHAPs;
+		
+		private EntitySet<PHIEUBAN> _PHIEUBANs;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1246,8 +1246,8 @@ namespace Nha_Sach_Desktop
 		
 		public SACH()
 		{
-			this._PHIEUBANs = new EntitySet<PHIEUBAN>(new Action<PHIEUBAN>(this.attach_PHIEUBANs), new Action<PHIEUBAN>(this.detach_PHIEUBANs));
 			this._PHIEUNHAPs = new EntitySet<PHIEUNHAP>(new Action<PHIEUNHAP>(this.attach_PHIEUNHAPs), new Action<PHIEUNHAP>(this.detach_PHIEUNHAPs));
+			this._PHIEUBANs = new EntitySet<PHIEUBAN>(new Action<PHIEUBAN>(this.attach_PHIEUBANs), new Action<PHIEUBAN>(this.detach_PHIEUBANs));
 			OnCreated();
 		}
 		
@@ -1451,19 +1451,6 @@ namespace Nha_Sach_Desktop
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SACH_PHIEUBAN", Storage="_PHIEUBANs", ThisKey="masach", OtherKey="masach")]
-		public EntitySet<PHIEUBAN> PHIEUBANs
-		{
-			get
-			{
-				return this._PHIEUBANs;
-			}
-			set
-			{
-				this._PHIEUBANs.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SACH_PHIEUNHAP", Storage="_PHIEUNHAPs", ThisKey="masach", OtherKey="masach")]
 		public EntitySet<PHIEUNHAP> PHIEUNHAPs
 		{
@@ -1474,6 +1461,19 @@ namespace Nha_Sach_Desktop
 			set
 			{
 				this._PHIEUNHAPs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="SACH_PHIEUBAN", Storage="_PHIEUBANs", ThisKey="masach", OtherKey="masach")]
+		public EntitySet<PHIEUBAN> PHIEUBANs
+		{
+			get
+			{
+				return this._PHIEUBANs;
+			}
+			set
+			{
+				this._PHIEUBANs.Assign(value);
 			}
 		}
 		
@@ -1497,18 +1497,6 @@ namespace Nha_Sach_Desktop
 			}
 		}
 		
-		private void attach_PHIEUBANs(PHIEUBAN entity)
-		{
-			this.SendPropertyChanging();
-			entity.SACH = this;
-		}
-		
-		private void detach_PHIEUBANs(PHIEUBAN entity)
-		{
-			this.SendPropertyChanging();
-			entity.SACH = null;
-		}
-		
 		private void attach_PHIEUNHAPs(PHIEUNHAP entity)
 		{
 			this.SendPropertyChanging();
@@ -1516,6 +1504,18 @@ namespace Nha_Sach_Desktop
 		}
 		
 		private void detach_PHIEUNHAPs(PHIEUNHAP entity)
+		{
+			this.SendPropertyChanging();
+			entity.SACH = null;
+		}
+		
+		private void attach_PHIEUBANs(PHIEUBAN entity)
+		{
+			this.SendPropertyChanging();
+			entity.SACH = this;
+		}
+		
+		private void detach_PHIEUBANs(PHIEUBAN entity)
 		{
 			this.SendPropertyChanging();
 			entity.SACH = null;
