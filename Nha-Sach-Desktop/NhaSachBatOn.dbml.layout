@@ -44,14 +44,14 @@
         <elementListCompartment Id="16334dd8-04c9-44c5-8080-4c53c6fe08aa" absoluteBounds="0.765, 2.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 7.89589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.125 : 9.125); (2.125 : 8.6651025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/KHACHHANG/KHACHHANG_HOADON" />
       <nodes>
         <classShapeMoniker Id="244b40a7-51b0-48ae-9929-a2371ed6715c" />
         <classShapeMoniker Id="e4602f94-9497-4555-983e-1ea61463b950" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 6.125); (3.125 : 5.75); (3.125 : 1.94314697265625); (3.5 : 1.94314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 6.12653746153846); (3.125 : 5.75153746153846); (3.125 : 1.76985822949219); (3.5 : 1.76985822949219)]" fixedFrom="NotFixed" fixedTo="Algorithm">
       <AssociationMoniker Name="/NhaSachBatOnDataContext/HOADON/HOADON_PHIEUBAN" />
       <nodes>
         <classShapeMoniker Id="e4602f94-9497-4555-983e-1ea61463b950" />
