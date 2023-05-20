@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +18,20 @@ namespace Nha_Sach_Desktop.UI
         {
             InitializeComponent();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        void LoadCTDT()
         {
+            List<DTOChiTietDoanhThu> ctdt = BUSChiTietDoanhThu.GetCTDoanhThu();
+            dgvCTDT.DataSource = ctdt;
+        }
 
+        private void frmChiTietDoanhThu_Load(object sender, EventArgs e)
+        {
+            LoadCTDT();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

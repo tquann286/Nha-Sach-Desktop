@@ -100,6 +100,7 @@
             this.btnThoat.Text = "  THOÁT  ";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panel1
             // 
@@ -164,6 +165,7 @@
             this.btnChiTiet.TabIndex = 56;
             this.btnChiTiet.Text = "CHI TIẾT";
             this.btnChiTiet.UseVisualStyleBackColor = false;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // batOnBookStoreDataSet
             // 

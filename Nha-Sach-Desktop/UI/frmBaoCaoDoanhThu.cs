@@ -16,5 +16,18 @@ namespace Nha_Sach_Desktop.UI
         {
             InitializeComponent();
         }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            frmChiTietDoanhThu frmCTDoanhthu = new frmChiTietDoanhThu();
+            this.Hide();
+            frmCTDoanhthu.ShowDialog();
+            this.Show();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
