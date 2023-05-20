@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BatOnBookStore" Class="NhaSachBatOnDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-R6I8CPR\SQLEXPRESS;Initial Catalog=BatOnBookStore;Integrated Security=True" SettingsObjectName="Nha_Sach_Desktop.Properties.Settings" SettingsPropertyName="BatOnBookStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=QUANTRUNG286\QUANTRUNG;Initial Catalog=BatOnBookStore;Integrated Security=True" SettingsObjectName="Nha_Sach_Desktop.Properties.Settings" SettingsPropertyName="BatOnBookStoreConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.DANGNHAP" Member="DANGNHAPs">
     <Type Name="DANGNHAP">
       <Column Name="taikhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -13,10 +13,6 @@
       <Column Name="tenkh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ngaylap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="tongtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Member="tensach" Type="System.String" CanBeNull="false" />
-      <Column Member="masach" Type="System.String" CanBeNull="false" />
-      <Column Member="soluong" Type="System.String" CanBeNull="false" />
-      <Column Member="dongia" Type="System.String" CanBeNull="false" />
       <Association Name="HOADON_PHIEUBAN" Member="PHIEUBANs" ThisKey="mahd" OtherKey="maphieuban" Type="PHIEUBAN" />
       <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="makh" OtherKey="makh" Type="KHACHHANG" IsForeignKey="true" />
     </Type>

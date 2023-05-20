@@ -54,7 +54,7 @@ namespace Nha_Sach_Desktop
     #endregion
 		
 		public NhaSachBatOnDataContext() : 
-				base(global::Nha_Sach_Desktop.Properties.Settings.Default.BatOnBookStoreConnectionString, mappingSource)
+				base(global::Nha_Sach_Desktop.Properties.Settings.Default.BatOnBookStoreConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
@@ -242,14 +242,6 @@ namespace Nha_Sach_Desktop
 		
 		private System.Nullable<int> _tongtien;
 		
-		private string _tensach;
-		
-		private string _masach;
-		
-		private string _soluong;
-		
-		private string _dongia;
-		
 		private EntitySet<PHIEUBAN> _PHIEUBANs;
 		
 		private EntityRef<KHACHHANG> _KHACHHANG;
@@ -268,14 +260,6 @@ namespace Nha_Sach_Desktop
     partial void OnngaylapChanged();
     partial void OntongtienChanging(System.Nullable<int> value);
     partial void OntongtienChanged();
-    partial void OntensachChanging(string value);
-    partial void OntensachChanged();
-    partial void OnmasachChanging(string value);
-    partial void OnmasachChanged();
-    partial void OnsoluongChanging(string value);
-    partial void OnsoluongChanged();
-    partial void OndongiaChanging(string value);
-    partial void OndongiaChanged();
     #endregion
 		
 		public HOADON()
@@ -385,86 +369,6 @@ namespace Nha_Sach_Desktop
 					this._tongtien = value;
 					this.SendPropertyChanged("tongtien");
 					this.OntongtienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tensach", CanBeNull=false)]
-		public string tensach
-		{
-			get
-			{
-				return this._tensach;
-			}
-			set
-			{
-				if ((this._tensach != value))
-				{
-					this.OntensachChanging(value);
-					this.SendPropertyChanging();
-					this._tensach = value;
-					this.SendPropertyChanged("tensach");
-					this.OntensachChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_masach", CanBeNull=false)]
-		public string masach
-		{
-			get
-			{
-				return this._masach;
-			}
-			set
-			{
-				if ((this._masach != value))
-				{
-					this.OnmasachChanging(value);
-					this.SendPropertyChanging();
-					this._masach = value;
-					this.SendPropertyChanged("masach");
-					this.OnmasachChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", CanBeNull=false)]
-		public string soluong
-		{
-			get
-			{
-				return this._soluong;
-			}
-			set
-			{
-				if ((this._soluong != value))
-				{
-					this.OnsoluongChanging(value);
-					this.SendPropertyChanging();
-					this._soluong = value;
-					this.SendPropertyChanged("soluong");
-					this.OnsoluongChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dongia", CanBeNull=false)]
-		public string dongia
-		{
-			get
-			{
-				return this._dongia;
-			}
-			set
-			{
-				if ((this._dongia != value))
-				{
-					this.OndongiaChanging(value);
-					this.SendPropertyChanging();
-					this._dongia = value;
-					this.SendPropertyChanged("dongia");
-					this.OndongiaChanged();
 				}
 			}
 		}
