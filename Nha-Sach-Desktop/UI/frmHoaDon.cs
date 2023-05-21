@@ -27,7 +27,7 @@ namespace Nha_Sach_Desktop.UI
         {
             SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-1TEJ4NIL;Initial Catalog=BatOnBookStore;Integrated Security=True");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from HOADON", conn);
+            SqlCommand cmd = new SqlCommand("SELECT DISTINCT HOADON.mahd, HOADON.makh, HOADON.tenkh, HOADON.ngaylap, HOADON.tongtien, PHIEUBAN.masach, PHIEUBAN.soluong\r\nFROM HOADON\r\nJOIN PHIEUBAN ON HOADON.mahd = PHIEUBAN.maphieuban;", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
