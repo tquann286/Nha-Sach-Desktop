@@ -14,8 +14,8 @@ namespace Nha_Sach_Desktop.DTO
         private string masach;
         private string tensach;
         private string dongia;
-        private string soluong;
-        private string tongtien;
+        private int soluong;
+        private int tongtien;
 
         public string Masach
         {
@@ -56,7 +56,7 @@ namespace Nha_Sach_Desktop.DTO
             }
         }
 
-        public string Soluong
+        public int Soluong
         {
             get
             {
@@ -105,7 +105,7 @@ namespace Nha_Sach_Desktop.DTO
                 tenkh = value;
             }
         }
-        public string Tongtien
+        public int Tongtien
         {
             get
             {

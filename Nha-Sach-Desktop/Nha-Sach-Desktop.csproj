@@ -63,6 +63,7 @@
       <DependentUpon>BatOnBookStoreDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="BUS\BUSChiTietDoanhThu.cs" />
+    <Compile Include="BUS\BUSHoaDon.cs" />
     <Compile Include="BUS\BUSLogin.cs" />
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAOLogin.cs" />

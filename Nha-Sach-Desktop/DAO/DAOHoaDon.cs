@@ -7,9 +7,9 @@ using Nha_Sach_Desktop.DTO;
 
 namespace Nha_Sach_Desktop.DAO
 {
-    public class DAOHoaDon
+    class DAOHoaDon
     {
-        public bool InsertHoaDon(DTOHoaDon dTOHoaDon)
+        public static bool InsertHoaDon(DTOHoaDon dTOHoaDon)
         {
             try
             {
@@ -18,6 +18,14 @@ namespace Nha_Sach_Desktop.DAO
                 hd.mahd = dTOHoaDon.Mahd;
                 hd.makh = dTOHoaDon.Makh;
                 hd.tenkh = dTOHoaDon.Tenkh;
+                hd.tongtien = dTOHoaDon.Tongtien;
+                dbMain.HOADONs.InsertOnSubmit(hd);
+
+                PHIEUBAN pb = new PHIEUBAN();
+                pb.maphieuban = dTOHoaDon.Mahd;
+                pb.masach = dTOHoaDon.Makh;
+                pb.soluong = dTOHoaDon.Soluong;
+                dbMain.PHIEUBANs.InsertOnSubmit(pb);
                 return true;
             }
             catch (Exception e)
