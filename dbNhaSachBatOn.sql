@@ -46,7 +46,8 @@ CREATE TABLE PhieuNhap (
     MaSach nvarchar(50) not null,
     SoLuong int,
     DonGia int,
-    TongTien int
+    TongTien int,
+    Email nvarchar(50) not null,
 	primary key(MaPhieuNhap, MaSach)
 );
 
@@ -71,6 +72,8 @@ add constraint fk_phieuban_sach foreign key (MaSach) references Sach(MaSach)
 alter table PhieuBan
 add constraint fk_phieuban_hoadon foreign key (MaPhieuBan) references HoaDon(MaHD)
 
+alter table PhieuNhap
+add constraint fk_email_phieunhap foreign key (Email) references NhanVien(Email)
 
 ---DANG NHAP
 INSERT INTO DangNhap (TaiKhoan, MatKhau)
@@ -157,8 +160,8 @@ INSERT INTO PhieuBan (MaPhieuBan, MaSach, SoLuong)
 VALUES ('HD03', 'S03', 2);
 
 ---PHIEU NHAP
-INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
-VALUES ('PN1', 'S01', 5, 99000, 495000);
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien, Email)
+VALUES ('PN1', 'S01', 5, 99000, 495000, 'huyn@gmail.com');
 
-INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
-VALUES ('PN2', 'S06', 5, 180000, 900000);
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien, Email)
+VALUES ('PN2', 'S06', 5, 180000, 900000, 'huyn@gmail.com');

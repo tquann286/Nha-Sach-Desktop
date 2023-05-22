@@ -64,16 +64,19 @@
     </Compile>
     <Compile Include="BUS\BUSChiTietDoanhThu.cs" />
     <Compile Include="BUS\BUSLogin.cs" />
+    <Compile Include="BUS\BUSNhanVien.cs" />
     <Compile Include="BUS\BUSDSSach.cs" />
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAODSSach.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
+    <Compile Include="DAO\DAONhanVien.cs" />
     <Compile Include="DTO\DTOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAOHoaDon.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
     <Compile Include="DTO\DTODSSach.cs" />
     <Compile Include="DTO\DTOHoaDon.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
+    <Compile Include="DTO\DTONhanVien.cs" />
     <Compile Include="NhaSachBatOn.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
