@@ -107,23 +107,23 @@ VALUES ('KH05', 'Vu Hoang Kiet', '03748347344', 'TPHCM', 'kiethg483@gmail.com');
 
 
 ---Sach
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
 VALUES ('S01', 'Tuoi tre dang gia bao nhieu', 'Tu truyen', 'Rosie Nguyen', 99000, 15, 30, 6, 39);
 
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
 VALUES ('S02', 'Cay cam ngot cua toi', 'Tieu thuyet', 'Jose Mauro De Vasconcelos', 120000, 3, 20, 10, 13);
 
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S03', 'Nha gia kim', 'Tieu thuyet', 'Paulo Coelho', 80000, 5, 10, 4, 11);
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+VALUES ('S03', 'Nha gia kim', 'Ki su', 'Paulo Coelho', 80000, 5, 10, 4, 11);
 
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Tu truyen', 'Andrew Matthews', 150000, 7, 20, 12, 15);
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Xa hoi', 'Andrew Matthews', 150000, 7, 20, 12, 15);
 
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S05', 'Dac nhan tam', 'Tu truyen', 'Dale Carnegie', 200000, 2, 15, 7, 10);
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+VALUES ('S05', 'Dac nhan tam', 'Self-help', 'Dale Carnegie', 200000, 2, 15, 7, 10);
 
-INSERT INTO Sach (MaSach, tensach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Tieu thuyet', 'Nguyen Nhat Anh', 180000, 5, 16, 6, 15);
+INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
+VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Truyen ngan', 'Nguyen Nhat Anh', 180000, 5, 16, 6, 15);
 
 ---NHAN VIEN
 INSERT INTO NhanVien (Email, HoTen, DiaChi, Sdt, Password)
