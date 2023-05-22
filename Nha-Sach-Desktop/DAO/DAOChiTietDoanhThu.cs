@@ -16,15 +16,15 @@ namespace Nha_Sach_Desktop.DAO
 
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                var query = from p in dbMain.SACHes select p;
+                var query = from p in dbMain.Saches select p;
                 foreach (var row in query)
                 {
                     DTOChiTietDoanhThu s = new DTOChiTietDoanhThu();
-                    s.Masach = row.masach;
-                    s.Tensach = row.tensach;
-                    s.Soluong = row.tongban;
-                    s.Dongia = row.dongia;
-                    s.Tongtien = row.dongia * row.tongban;
+                    s.Masach = row.MaSach;
+                    s.Tensach = row.TenSach;
+                    s.Soluong = row.TongBan;
+                    s.Dongia = row.DonGia;
+                    s.Tongtien = row.DonGia * row.TongBan;
                     CTDT.Add(s);
                 }
             }

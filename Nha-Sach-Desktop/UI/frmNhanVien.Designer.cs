@@ -32,14 +32,10 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtTongNo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLuuNhanVien = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -48,12 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnchon = new System.Windows.Forms.Button();
             this.dgvDSNV = new System.Windows.Forms.DataGridView();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTim = new System.Windows.Forms.Button();
@@ -61,6 +52,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -69,7 +64,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(151, 122);
+            this.txtEmail.Location = new System.Drawing.Point(151, 46);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(207, 30);
@@ -91,14 +86,6 @@
             this.txtTen.Size = new System.Drawing.Size(208, 30);
             this.txtTen.TabIndex = 9;
             // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(151, 46);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(207, 30);
-            this.txtMaKH.TabIndex = 8;
-            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(511, 82);
@@ -106,24 +93,6 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(208, 30);
             this.txtDiaChi.TabIndex = 7;
-            // 
-            // txtTongNo
-            // 
-            this.txtTongNo.Location = new System.Drawing.Point(511, 122);
-            this.txtTongNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTongNo.Name = "txtTongNo";
-            this.txtTongNo.Size = new System.Drawing.Size(208, 30);
-            this.txtTongNo.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(395, 125);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 25);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Doanh thu:";
             // 
             // label7
             // 
@@ -148,22 +117,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 129);
+            this.label5.Location = new System.Drawing.Point(72, 53);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Email:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 49);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã KH:";
             // 
             // groupBox2
             // 
@@ -175,15 +134,11 @@
             this.groupBox2.Controls.Add(this.txtEmail);
             this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.txtTen);
-            this.groupBox2.Controls.Add(this.txtMaKH);
             this.groupBox2.Controls.Add(this.txtDiaChi);
-            this.groupBox2.Controls.Add(this.txtTongNo);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(105)))), ((int)(((byte)(22)))));
             this.groupBox2.Location = new System.Drawing.Point(34, 462);
@@ -278,11 +233,10 @@
             this.dgvDSNV.BackgroundColor = System.Drawing.Color.Teal;
             this.dgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaNV,
+            this.email,
             this.Fullname,
             this.phone,
-            this.address,
-            this.email});
+            this.address});
             this.dgvDSNV.Location = new System.Drawing.Point(34, 287);
             this.dgvDSNV.Name = "dgvDSNV";
             this.dgvDSNV.RowHeadersWidth = 51;
@@ -290,53 +244,13 @@
             this.dgvDSNV.Size = new System.Drawing.Size(869, 150);
             this.dgvDSNV.TabIndex = 45;
             // 
-            // MaNV
+            // txtTenNV
             // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã NV";
-            this.MaNV.MinimumWidth = 6;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 125;
-            // 
-            // Fullname
-            // 
-            this.Fullname.DataPropertyName = "fullname";
-            this.Fullname.HeaderText = "Họ và tên";
-            this.Fullname.MinimumWidth = 6;
-            this.Fullname.Name = "Fullname";
-            this.Fullname.Width = 200;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "Số điện thoại";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.Width = 145;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Địa chỉ";
-            this.address.MinimumWidth = 6;
-            this.address.Name = "address";
-            this.address.Width = 125;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 225;
-            // 
-            // txtTenKhachHang
-            // 
-            this.txtTenKhachHang.Location = new System.Drawing.Point(195, 49);
-            this.txtTenKhachHang.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenKhachHang.Name = "txtTenKhachHang";
-            this.txtTenKhachHang.Size = new System.Drawing.Size(237, 30);
-            this.txtTenKhachHang.TabIndex = 1;
+            this.txtTenNV.Location = new System.Drawing.Point(195, 49);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(237, 30);
+            this.txtTenNV.TabIndex = 1;
             // 
             // label3
             // 
@@ -344,15 +258,15 @@
             this.label3.Location = new System.Drawing.Point(24, 53);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 25);
+            this.label3.Size = new System.Drawing.Size(140, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Tên KH/ Mã KH:";
+            this.label3.Text = "Tên/Email NV:";
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnTim);
-            this.groupBox1.Controls.Add(this.txtTenKhachHang);
+            this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(105)))), ((int)(((byte)(22)))));
@@ -363,7 +277,7 @@
             this.groupBox1.Size = new System.Drawing.Size(639, 107);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tra cứu khách hàng";
+            this.groupBox1.Text = "Tra cứu nhân viên";
             // 
             // btnTim
             // 
@@ -380,6 +294,7 @@
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label1
             // 
@@ -430,6 +345,38 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // email
+            // 
+            this.email.DataPropertyName = "Email";
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 225;
+            // 
+            // Fullname
+            // 
+            this.Fullname.DataPropertyName = "HoTen";
+            this.Fullname.HeaderText = "Họ và tên";
+            this.Fullname.MinimumWidth = 6;
+            this.Fullname.Name = "Fullname";
+            this.Fullname.Width = 200;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "Sdt";
+            this.phone.HeaderText = "Số điện thoại";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.Width = 145;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "DiaChi";
+            this.address.HeaderText = "Địa chỉ";
+            this.address.MinimumWidth = 6;
+            this.address.Name = "address";
+            this.address.Width = 125;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -466,17 +413,13 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtTen;
-        private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txtTongNo;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnTim;
-        private System.Windows.Forms.TextBox txtTenKhachHang;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label3;
         internal System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.Button btnchon;
@@ -484,12 +427,11 @@
         internal System.Windows.Forms.GroupBox groupBox1;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panel2;
     }
 }

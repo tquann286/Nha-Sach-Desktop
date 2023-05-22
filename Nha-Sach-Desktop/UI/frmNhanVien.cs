@@ -1,4 +1,5 @@
-﻿using Nha_Sach_Desktop.DTO;
+﻿using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,17 @@ namespace Nha_Sach_Desktop.UI
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            LoadDSNhanVien();
+        }
+        private void timKiem(string strNhanVien)
+        {
+            List<DTONhanVien> dsNV = BUSNhanVien.TimDSNV(strNhanVien);
+            dgvDSNV.DataSource = dsNV;
+        }
 
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            timKiem(txtTenNV.Text);
         }
     }
 }

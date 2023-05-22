@@ -1,9 +1,6 @@
-﻿using Nha_Sach_Desktop.DTO;
-using System;
+﻿using Nha_Sach_Desktop.DAO;
+using Nha_Sach_Desktop.DTO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nha_Sach_Desktop.BUS
 {
@@ -12,6 +9,11 @@ namespace Nha_Sach_Desktop.BUS
         public static List<DTONhanVien> GetDSNhanVien()
         {
             return DAONhanVien.GetDSNV();
+        }
+
+        public static List<DTONhanVien> TimDSNV(string strNV)
+        {
+            return DAONhanVien.TimNhanVien(strNV);
         }
     }
 }
