@@ -16,8 +16,8 @@ namespace Nha_Sach_Desktop.DAO
         {
             NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext();
 
-            var svt = (from a in dbMain.DANGNHAPs
-                       where a.taikhoan == user.taiKhoan && a.matkhau == user.matKhau
+            var svt = (from a in dbMain.DangNhaps
+                       where a.TaiKhoan == user.taiKhoan && a.MatKhau == user.matKhau
                        select a);
             if (svt.Count() > 0)
             {

@@ -14,10 +14,10 @@ namespace Nha_Sach_Desktop.DAO
             try
             {
                 NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext();
-                HOADON hd = new HOADON();
-                hd.mahd = dTOHoaDon.Mahd;
-                hd.makh = dTOHoaDon.Makh;
-                hd.tenkh = dTOHoaDon.Tenkh;
+                HoaDon hd = new HoaDon();
+                hd.MaHD = dTOHoaDon.Mahd;
+                hd.MaKH = dTOHoaDon.Makh;
+                hd.TenKH = dTOHoaDon.Tenkh;
                 return true;
             }
             catch (Exception e)
