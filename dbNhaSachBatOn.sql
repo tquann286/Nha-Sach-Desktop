@@ -114,16 +114,16 @@ INSERT INTO SACH (masach, tensach, theloai, tacgia, dongia, tondau, tongnhap, to
 VALUES ('S02', 'Cay cam ngot cua toi', 'Tieu thuyet', 'Jose Mauro De Vasconcelos', 120000, 3, 20, 10, 13);
 
 INSERT INTO SACH (masach, tensach, theloai, tacgia, dongia, tondau, tongnhap, tongban, toncuoi)
-VALUES ('S03', 'Nha gia kim', 'Tieu thuyet', 'Paulo Coelho', 80000, 5, 10, 4, 11);
+VALUES ('S03', 'Nha gia kim', 'Ki su', 'Paulo Coelho', 80000, 5, 10, 4, 11);
 
 INSERT INTO SACH (masach, tensach, theloai, tacgia, dongia, tondau, tongnhap, tongban, toncuoi)
-VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Tu truyen', 'Andrew Matthews', 150000, 7, 20, 12, 15);
+VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Xa hoi', 'Andrew Matthews', 150000, 7, 20, 12, 15);
 
 INSERT INTO SACH (masach, tensach, theloai, tacgia, dongia, tondau, tongnhap, tongban, toncuoi)
-VALUES ('S05', 'Dac nhan tam', 'Tu truyen', 'Dale Carnegie', 200000, 2, 15, 7, 10);
+VALUES ('S05', 'Dac nhan tam', 'Self-help', 'Dale Carnegie', 200000, 2, 15, 7, 10);
 
 INSERT INTO SACH (masach, tensach, theloai, tacgia, dongia, tondau, tongnhap, tongban, toncuoi)
-VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Tieu thuyet', 'Nguyen Nhat Anh', 180000, 5, 16, 6, 15);
+VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Truyen ngan', 'Nguyen Nhat Anh', 180000, 5, 16, 6, 15);
 
 ---NHAN VIEN
 INSERT INTO NHANVIEN (email, hoten, diachi, sdt, password)
