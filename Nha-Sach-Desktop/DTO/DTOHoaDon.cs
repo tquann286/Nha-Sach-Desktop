@@ -14,8 +14,10 @@ namespace Nha_Sach_Desktop.DTO
         private string masach;
         private string tensach;
         private string dongia;
+        private string ngaylap;
         private string soluong;
         private string tongtien;
+
 
         public string Masach
         {
@@ -117,5 +119,7 @@ namespace Nha_Sach_Desktop.DTO
                 tongtien = value;
             }
         }
+
+        public string Ngaylap { get => ngaylap; set => ngaylap = value; }
     }
 }

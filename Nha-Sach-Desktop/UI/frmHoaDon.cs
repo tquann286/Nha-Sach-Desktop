@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Nha_Sach_Desktop.UI.frmHoaDon;
 
 namespace Nha_Sach_Desktop.UI
 {
@@ -25,14 +28,75 @@ namespace Nha_Sach_Desktop.UI
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-1TEJ4NIL;Initial Catalog=BatOnBookStore;Integrated Security=True");
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from HOADON", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
+        }
+        public class GetMaHD
+        {
+            public static string getMaHD;
+        }
+        public void hienthimaKH()
+        {
+            txtMaKH2.Text = GetMaKH.getMaKH;
+            KhachHang kh = KhachHangBUS.GetTenKH(txtMaKH2.Text);
+            txtTenKH2.Text = kh.HoTen;
+        }
 
-            dataGridView1.DataSource = ds.Tables[0];
+        private void btnDSKH_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frmKH = new frmKhachHang();
+            frmKH.ShowDialog();
+            hienthimaKH();
+        }
+
+        void loadDS()
+        {
+            List<DTOHoaDon> dsHD = BUSHoaDon.GetDSHD();
+            dgvDSHD.DataSource = dsHD;
+
+            for (int i = 0; i < dgvDSHD.Rows.Count; i++)
+            {
+                dgvDSHD.Rows[i].Cells[0].Value = i + 1;
+            }
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+
+            txtMaMoi.Enabled = true;
+            btnLuu.Enabled = false;
+        }
+
+        private void btnbsct_Click(object sender, EventArgs e)
+        {
+            if (txtMaMoi.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn phiếu nhập");
+                return;
+            }
+            for (int i = 0; i < dgvDSHD.Rows.Count; i++)
+            {
+                if ((string)dgvDSHD.Rows[i].Cells[1].Value == (string)txtMaMoi.Text)
+                {
+                    GetMaHD.getMaHD = txtMaMoi.Text;
+                    GetMaKH.getMaKH = txtMaKH2.Text;
+                    frmBanSach frmBS = new frmBanSach();
+                    frmBS.ShowDialog();
+                    loadDS();
+                }
+            }
+        }
+        void InsertHD()
+        {
+            if (txtMaMoi.Text == "" || txtMaKH2.Text == "" || dtpNgayLapHD.Value.Date.ToString() == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
+            string mahd = txtMaMoi.Text;
+            string makh = txtMaKH2.Text;
+            string tenkh = txtTenKH2.Text;
+            int tongtien = 0;
+            DateTime ngaynhap = dtpNgayLapHD.Value.Date;
+            BUSHoaDon.InsertHD(mahd, makh, tenkh, ngaynhap, tongtien);
+            MessageBox.Show("Thêm hoá đơn thành công");
+
         }
     }
 }
