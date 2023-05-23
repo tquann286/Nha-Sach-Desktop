@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,11 @@ namespace Nha_Sach_Desktop.UI
         public frmBaoCaoDoanhThu()
         {
             InitializeComponent();
+        }
+        void LoadBCDT()
+        {
+            List<DTOBaoCaoDoanhThu> bcdt = BUSBaoCaoDoanhThu.GetBCDoanhThu();
+            dgvBCDT.DataSource = bcdt;
         }
 
         private void btnChiTiet_Click(object sender, EventArgs e)

@@ -30,10 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoDoanhThu));
-            this.dgvBaoCaoNo = new System.Windows.Forms.DataGridView();
-            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBCDT = new System.Windows.Forms.DataGridView();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
@@ -42,48 +39,25 @@
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).BeginInit();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBCDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvBaoCaoNo
+            // dgvBCDT
             // 
-            this.dgvBaoCaoNo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCaoNo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDT,
+            this.dgvBCDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBCDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Thang,
-            this.doanhthu});
-            this.dgvBaoCaoNo.Location = new System.Drawing.Point(37, 215);
-            this.dgvBaoCaoNo.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvBaoCaoNo.Name = "dgvBaoCaoNo";
-            this.dgvBaoCaoNo.RowHeadersWidth = 51;
-            this.dgvBaoCaoNo.Size = new System.Drawing.Size(697, 218);
-            this.dgvBaoCaoNo.TabIndex = 55;
-            // 
-            // MaDT
-            // 
-            this.MaDT.DataPropertyName = "MaDT";
-            this.MaDT.HeaderText = "Mã Doanh thu";
-            this.MaDT.MinimumWidth = 6;
-            this.MaDT.Name = "MaDT";
-            this.MaDT.Width = 125;
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.MinimumWidth = 6;
-            this.Thang.Name = "Thang";
-            this.Thang.Width = 125;
-            // 
-            // doanhthu
-            // 
-            this.doanhthu.DataPropertyName = "doanhthu";
-            this.doanhthu.HeaderText = "Doanh thu";
-            this.doanhthu.MinimumWidth = 6;
-            this.doanhthu.Name = "doanhthu";
-            this.doanhthu.Width = 125;
+            this.DoanhThu});
+            this.dgvBCDT.Location = new System.Drawing.Point(37, 215);
+            this.dgvBCDT.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvBCDT.Name = "dgvBCDT";
+            this.dgvBCDT.RowHeadersWidth = 51;
+            this.dgvBCDT.Size = new System.Drawing.Size(697, 218);
+            this.dgvBCDT.TabIndex = 55;
             // 
             // btnThoat
             // 
@@ -177,13 +151,27 @@
             this.batOnBookStoreDataSetBindingSource.DataSource = this.batOnBookStoreDataSet;
             this.batOnBookStoreDataSetBindingSource.Position = 0;
             // 
+            // Thang
+            // 
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.MinimumWidth = 6;
+            this.Thang.Name = "Thang";
+            this.Thang.Width = 125;
+            // 
+            // DoanhThu
+            // 
+            this.DoanhThu.HeaderText = "Doanh Thu";
+            this.DoanhThu.MinimumWidth = 6;
+            this.DoanhThu.Name = "DoanhThu";
+            this.DoanhThu.Width = 125;
+            // 
             // frmBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 462);
             this.Controls.Add(this.btnChiTiet);
-            this.Controls.Add(this.dgvBaoCaoNo);
+            this.Controls.Add(this.dgvBCDT);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label62);
@@ -191,7 +179,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmBaoCaoDoanhThu";
             this.Text = "frmBaoCaoDoanhThu";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBCDT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -201,17 +189,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvBaoCaoNo;
+        private System.Windows.Forms.DataGridView dgvBCDT;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Thang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doanhthu;
         internal System.Windows.Forms.Button btnChiTiet;
         private BatOnBookStoreDataSet batOnBookStoreDataSet;
         private System.Windows.Forms.BindingSource batOnBookStoreDataSetBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Thang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DoanhThu;
     }
 }

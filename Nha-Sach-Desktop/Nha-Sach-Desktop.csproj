@@ -62,12 +62,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BatOnBookStoreDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BUSBaoCaoDoanhThu.cs" />
     <Compile Include="BUS\BUSChiTietDoanhThu.cs" />
     <Compile Include="BUS\BUSLogin.cs" />
     <Compile Include="BUS\BUSDSSach.cs" />
+    <Compile Include="DAO\DAOBaoCaoDoanhThu.cs" />
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAODSSach.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
+    <Compile Include="DTO\DTOBaoCaoDoanhThu.cs" />
     <Compile Include="DTO\DTOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAOHoaDon.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
