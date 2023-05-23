@@ -35,12 +35,15 @@
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.txtTenSach = new System.Windows.Forms.TextBox();
             this.txtTacGia = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
-            this.txtLuongton = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,15 +63,11 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnchon = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnLoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtLuongton = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -117,6 +116,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtLuongton);
             this.groupBox2.Controls.Add(this.btnLuu);
             this.groupBox2.Controls.Add(this.btnSua);
             this.groupBox2.Controls.Add(this.btnXoa);
@@ -126,7 +126,6 @@
             this.groupBox2.Controls.Add(this.txtTacGia);
             this.groupBox2.Controls.Add(this.txtMaSach);
             this.groupBox2.Controls.Add(this.txtDonGia);
-            this.groupBox2.Controls.Add(this.txtLuongton);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label4);
@@ -142,6 +141,64 @@
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Sách";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(759, 162);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(125, 42);
+            this.btnLuu.TabIndex = 54;
+            this.btnLuu.Text = " LƯU    ";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(759, 122);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(125, 33);
+            this.btnSua.TabIndex = 30;
+            this.btnSua.Text = "  SỬA";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(759, 79);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(125, 36);
+            this.btnXoa.TabIndex = 29;
+            this.btnXoa.Text = "  XÓA";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(759, 36);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(125, 34);
+            this.btnThem.TabIndex = 28;
+            this.btnThem.Text = "  THÊM";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTheLoai
             // 
@@ -182,15 +239,6 @@
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(208, 30);
             this.txtDonGia.TabIndex = 7;
-            // 
-            // txtLuongton
-            // 
-            this.txtLuongton.Location = new System.Drawing.Point(511, 122);
-            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLuongton.Name = "txtLuongton";
-            this.txtLuongton.ReadOnly = true;
-            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
-            this.txtLuongton.TabIndex = 6;
             // 
             // label8
             // 
@@ -278,6 +326,7 @@
             this.dgvKetQua.RowHeadersWidth = 51;
             this.dgvKetQua.Size = new System.Drawing.Size(975, 191);
             this.dgvKetQua.TabIndex = 48;
+            this.dgvKetQua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetQua_CellClick);
             // 
             // STT
             // 
@@ -339,6 +388,7 @@
             this.cbTimTheLoai.Name = "cbTimTheLoai";
             this.cbTimTheLoai.Size = new System.Drawing.Size(188, 28);
             this.cbTimTheLoai.TabIndex = 15;
+            this.cbTimTheLoai.SelectedIndexChanged += new System.EventHandler(this.cbTimTheLoai_SelectedIndexChanged);
             // 
             // radTenSach
             // 
@@ -351,6 +401,7 @@
             this.radTenSach.TabStop = true;
             this.radTenSach.Text = "Tên sách";
             this.radTenSach.UseVisualStyleBackColor = true;
+            this.radTenSach.CheckedChanged += new System.EventHandler(this.radTenSach_CheckedChanged);
             // 
             // radTacGia
             // 
@@ -363,6 +414,7 @@
             this.radTacGia.TabStop = true;
             this.radTacGia.Text = "Tác giả";
             this.radTacGia.UseVisualStyleBackColor = true;
+            this.radTacGia.CheckedChanged += new System.EventHandler(this.radTacGia_CheckedChanged);
             // 
             // radTatCa
             // 
@@ -384,6 +436,7 @@
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(200, 29);
             this.txtTimKiem.TabIndex = 10;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label2
             // 
@@ -407,20 +460,6 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "Danh sách Sách:";
             // 
-            // btnchon
-            // 
-            this.btnchon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchon.BackgroundImage")));
-            this.btnchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnchon.ForeColor = System.Drawing.Color.White;
-            this.btnchon.Location = new System.Drawing.Point(757, 527);
-            this.btnchon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnchon.Name = "btnchon";
-            this.btnchon.Size = new System.Drawing.Size(100, 41);
-            this.btnchon.TabIndex = 53;
-            this.btnchon.Text = "Chọn";
-            this.btnchon.UseVisualStyleBackColor = true;
-            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.PeachPuff;
@@ -435,60 +474,7 @@
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(759, 162);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(125, 42);
-            this.btnLuu.TabIndex = 54;
-            this.btnLuu.Text = " LƯU    ";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(759, 122);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(125, 33);
-            this.btnSua.TabIndex = 30;
-            this.btnSua.Text = "  SỬA";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(759, 79);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(125, 36);
-            this.btnXoa.TabIndex = 29;
-            this.btnXoa.Text = "  XÓA";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(759, 36);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(125, 34);
-            this.btnThem.TabIndex = 28;
-            this.btnThem.Text = "  THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnLoc
             // 
@@ -504,6 +490,7 @@
             this.btnLoc.Text = "LỌC LẠI";
             this.btnLoc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoc.UseVisualStyleBackColor = false;
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // panel2
             // 
@@ -524,13 +511,20 @@
             this.panel1.Size = new System.Drawing.Size(997, 108);
             this.panel1.TabIndex = 52;
             // 
+            // txtLuongton
+            // 
+            this.txtLuongton.Location = new System.Drawing.Point(511, 122);
+            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuongton.Name = "txtLuongton";
+            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
+            this.txtLuongton.TabIndex = 55;
+            // 
             // frmDSSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 784);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnchon);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox2);
@@ -541,6 +535,7 @@
             this.Controls.Add(this.label6);
             this.Name = "frmDSSach";
             this.Text = "frmDSSach";
+            this.Load += new System.EventHandler(this.frmDSSach_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
@@ -552,8 +547,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnchon;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
@@ -570,7 +563,6 @@
         private System.Windows.Forms.TextBox txtTacGia;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.TextBox txtDonGia;
-        private System.Windows.Forms.TextBox txtLuongton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
@@ -593,5 +585,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtLuongton;
     }
 }
