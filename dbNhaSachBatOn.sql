@@ -54,8 +54,11 @@ CREATE TABLE PhieuNhap (
 CREATE TABLE HoaDon (
     MaHD nvarchar(50) primary key not null,
     MaKH nvarchar(50) not null,
-    TenKH nvarchar(50),
-    NgayLap datetime,
+    TenKH nvarchar(100) not null,
+    MaSach nvarchar(50) not null,
+    TenSach nvarchar(100) not null,
+    NgayLap datetime not null,
+    SoLuong int,
     TongTien int
 );
 
@@ -65,6 +68,8 @@ add constraint fk_phieunhap_sach foreign key (MaSach) references Sach(MaSach)
 alter table HoaDon
 add constraint fk_hoadon_KhachHang foreign key (MaKH) references KhachHang(MaKH)
 
+alter table HoaDon
+add constraint fk_hoadon_sach foreign key (MaSach) references Sach(MaSach)
 
 alter table PhieuBan
 add constraint fk_phieuban_sach foreign key (MaSach) references Sach(MaSach)
@@ -136,14 +141,14 @@ INSERT INTO NhanVien (Email, HoTen, DiaChi, Sdt, Password)
 VALUES ('phath@gmail.com', 'Huynh Phuong Thanh Phat', 'TPHCM', '03424233411', 'phathuynh01');
 
 ---HOA DON
-INSERT INTO HoaDon (MaHD, MaKH, TenKH, NgayLap, TongTien)
-VALUES ('HD01', 'KH01', 'Dinh Thi My', '10-05-2023', 180000);
+INSERT INTO HoaDon
+VALUES ('HD01', 'KH01', 'Dinh Thi My', 'S01', 'Tuoi tre dang gia bao nhieu', '10-05-2023', 2, 180000);
 
-INSERT INTO HoaDon (MaHD, MaKH, TenKH, NgayLap, TongTien)
-VALUES ('HD02', 'KH02', 'Tran Ngoc Trang', '10-05-2023', 350000);
+INSERT INTO HoaDon
+VALUES ('HD02', 'KH02', 'Tran Ngoc Trang', 'S02', 'Cay cam ngot cua toi', '10-05-2023', 3, 350000);
 
-INSERT INTO HoaDon (MaHD, MaKH, TenKH, NgayLap, TongTien)
-VALUES ('HD03', 'KH04', 'Dao Vu Luan', '11-05-2023', 260000);
+INSERT INTO HoaDon
+VALUES ('HD03', 'KH04', 'Dao Vu Luan', 'S03', 'Nha gia kim', '11-05-2023', 4, 260000);
 
 
 ---PHIEU BAN
