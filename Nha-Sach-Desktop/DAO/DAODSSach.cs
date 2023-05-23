@@ -32,15 +32,13 @@ namespace Nha_Sach_Desktop.DAO
             }
             return DsSach;
         }
-        public static List<DTODSSach> GetDSSachTheoTheLoai(string strTheLoai)
+        public static List<DTODSSach> GetSachLikeTatCa(string tk, string theLoai)
         {
-            List<DTODSSach> DsSachTTL = new List<DTODSSach>();
+            List<DTODSSach> DsSachTTC = GetSachLikeTheLoai(theLoai);
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                // var timKiem = dbMain.Saches.Where(p => p.TheLoai == (strTheLoai)).ToList(); ;
-                var lst = from tk in dbMain.Saches where tk.TheLoai.Contains(strTheLoai) select tk;
-                //from tk in dbMain.Saches where tk.TheLoai.Contains(strTheLoai) select tk;
-                foreach (var row in lst)
+                var sachs = from p in dbMain.Saches where p.TacGia.Contains(tk) || p.TenSach.Contains(tk) select p;
+                foreach (var row in sachs)
                 {
                     DTODSSach sach = new DTODSSach();
 
@@ -50,18 +48,15 @@ namespace Nha_Sach_Desktop.DAO
                     sach.TacGia = row.TacGia;
                     sach.DonGia = row.DonGia.ToString();
                     sach.Luongton = row.TonCuoi.ToString();
-                    DsSachTTL.Add(sach);
+                    DsSachTTC.Add(sach);
                 }
             }
-
-            return DsSachTTL;
+            return DsSachTTC;
         }
-        public static List<DTODSSach> GetSachLikeTacGia(string strTacGia)
+        public static List<DTODSSach> GetSachLikeTacGia(string strTacGia, string theLoai)
         {
-            List<DTODSSach> DsSachTTG = new List<DTODSSach>();
-            using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
-            {
-                var tk = from p in dbMain.Saches where p.TacGia.Contains(strTacGia) select p;
+            List<DTODSSach> DsSachTTG = GetSachLikeTheLoai(theLoai);
+                var tk = from p in DsSachTTG where p.TacGia.Contains(strTacGia) select p;
                 foreach (var row in tk)
                 {
                     DTODSSach sach = new DTODSSach();
@@ -74,12 +69,11 @@ namespace Nha_Sach_Desktop.DAO
                     sach.Luongton = row.TonCuoi.ToString();
                     DsSachTTG.Add(sach);
                 }
-            }
             return DsSachTTG;
         }
-        public static List<DTODSSach> GetSachLikeTenSach(string strTenSach)
+        public static List<DTODSSach> GetSachLikeTenSach(string strTenSach, string theLoai)
         {
-            List<DTODSSach> DsSachTTS = new List<DTODSSach>();
+            List<DTODSSach> DsSachTTS = GetSachLikeTheLoai(theLoai);
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 var tk = from p in dbMain.Saches where p.TenSach.Contains(strTenSach) select p;
@@ -97,6 +91,27 @@ namespace Nha_Sach_Desktop.DAO
                 }
             }
             return DsSachTTS;
+        }
+        public static List<DTODSSach> GetSachLikeTheLoai(string strLoai)
+        {
+            List<DTODSSach> DsSachTTL = new List<DTODSSach>();
+            using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
+            {
+                var tk = from p in dbMain.Saches where p.TheLoai.Contains(strLoai) select p;
+                foreach (var row in tk)
+                {
+                    DTODSSach sach = new DTODSSach();
+
+                    sach.MaSach = row.MaSach;
+                    sach.TenSach = row.TenSach;
+                    sach.TheLoai = row.TheLoai;
+                    sach.TacGia = row.TacGia;
+                    sach.DonGia = row.DonGia.ToString();
+                    sach.Luongton = row.TonCuoi.ToString();
+                    DsSachTTL.Add(sach);
+                }
+            }
+            return DsSachTTL;
         }
         public static Sach getThongTinSach(string masach)
         {

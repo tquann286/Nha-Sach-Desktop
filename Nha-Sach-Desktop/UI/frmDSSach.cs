@@ -18,6 +18,8 @@ namespace Nha_Sach_Desktop.UI
         public frmDSSach()
         {
             InitializeComponent();
+            
+
         }
         int flag = -1;
         public bool IsNumber(string pValue)
@@ -35,10 +37,6 @@ namespace Nha_Sach_Desktop.UI
             List<DTODSSach> dsSach = BUSDSSach.GetDsSach();
 
             dgvKetQua.DataSource = dsSach;
-            for (int i = 0; i < dgvKetQua.Rows.Count; i++)
-            {
-                dgvKetQua.Rows[i].Cells[0].Value = i + 1;
-            }
             btnThem.Enabled = true;
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
@@ -49,102 +47,73 @@ namespace Nha_Sach_Desktop.UI
         {
             public static string getMaSach;
         }*/
-        void LoadDsSachTTL(string theLoai)
+        void LoadDsSachTTC(string tk, string theLoai)
         {
+            List<DTODSSach> dsSachTTC = BUSDSSach.GetDSSachTheoTatCa(tk, theLoai);
 
-
-            List<DTODSSach> dsSachTTL = BUSDSSach.GetDSSachTheoTheLoai(theLoai);
-
-            dgvKetQua.DataSource = dsSachTTL;
-            for (int i = 0; i < dgvKetQua.Rows.Count; i++)
-            {
-                dgvKetQua.Rows[i].Cells[0].Value = i + 1;
-            }
+            dgvKetQua.DataSource = dsSachTTC;
 
 
         }
-        void LoadDsSachTTG(string tacGia)
+        void LoadDsSachTTG(string tacGia, string theLoai)
         {
-
-
-            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTacGia(tacGia);
+            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTacGia(tacGia, theLoai);
 
             dgvKetQua.DataSource = dsSachTTG;
-            for (int i = 0; i < dgvKetQua.Rows.Count; i++)
-            {
-                dgvKetQua.Rows[i].Cells[0].Value = i + 1;
-            }
 
 
         }
-        void LoadDsSachTTS(string tenSach)
+        void LoadDsSachTTS(string tenSach, string theLoai)
         {
-
-
-            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTenSach(tenSach);
+            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTenSach(tenSach, theLoai);
 
             dgvKetQua.DataSource = dsSachTTG;
-            for (int i = 0; i < dgvKetQua.Rows.Count; i++)
-            {
-                dgvKetQua.Rows[i].Cells[0].Value = i + 1;
-            }
 
 
         }
         private void frmDSSach_Load(object sender, EventArgs e)
         {
-            cbTimTheLoai.DataSource = DAODSSach.GetDSSach();
+            // Lấy danh sách sách từ cơ sở dữ liệu
+            var data = DAODSSach.GetDSSach();
+
+            // Chuyển đổi kiểu dữ liệu sang List<Sach>
+            List<Sach> danhSachSach = data.Select(item => new Sach { TheLoai = item.TheLoai }).ToList();
+
+            Sach externalSach = new Sach { TheLoai = "Tất cả" };
+          
+            danhSachSach.Insert(0, externalSach);
+          
+
+            cbTimTheLoai.DataSource = danhSachSach;
+
+
             cbTimTheLoai.DisplayMember = "TheLoai";
-            // cbTimTheLoai.ValueMember = "MaSach";
+
             cbTimTheLoai.SelectedIndex = 0;
 
             LoadDSSach();
-        }
 
-        private void cbTimTheLoai_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string theloai = cbTimTheLoai.Text.ToString();
-            LoadDsSachTTL(theloai);
         }
 
         private void radTenSach_CheckedChanged(object sender, EventArgs e)
         {
-            if (radTenSach.Checked == true)
-            {
-                string tenSach = txtTimKiem.Text;
-                LoadDsSachTTS(tenSach);
-            }
+            //if (radTenSach.Checked == true)
+            //{
+            //    string tenSach = txtTimKiem.Text;
+            //    LoadDsSachTTS(tenSach);
+            //}
         }
 
         private void radTacGia_CheckedChanged(object sender, EventArgs e)
         {
-            if (radTacGia.Checked == true)
-            {
-                string TacGia = txtTimKiem.Text;
+            //if (radTacGia.Checked == true)
+            //{
+            //    string TacGia = txtTimKiem.Text;
 
-                LoadDsSachTTG(TacGia);
-            }
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            if (radTenSach.Checked == true)
-            {
-                string tenSach = txtTimKiem.Text;
-                LoadDsSachTTS(tenSach);
-            }
-            if (radTacGia.Checked == true)
-            {
-                string TacGia = txtTimKiem.Text;
-
-                LoadDsSachTTG(TacGia);
-            }
-            if (radTatCa.Checked == true)
-                LoadDSSach();
-        }
-
-     
-
+            //    LoadDsSachTTG(TacGia);
+            //}
+        }       
+   
         private void dgvKetQua_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -272,7 +241,23 @@ namespace Nha_Sach_Desktop.UI
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            LoadDSSach();
+            string tk = txtTimKiem.Text;
+            string tl = cbTimTheLoai.Text;
+            if (radTenSach.Checked == true)
+            {
+                LoadDsSachTTS(tk, tl);
+                //txtTimKiem.Text = "";
+            }
+            if (radTacGia.Checked == true)
+            {
+                LoadDsSachTTG(tk, tl);
+               // txtTimKiem.Text = "";
+            }
+            if (radTatCa.Checked == true)
+            {
+                LoadDsSachTTC(tk, tl);
+            }
+            // txtTimKiem.Text = "";
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
