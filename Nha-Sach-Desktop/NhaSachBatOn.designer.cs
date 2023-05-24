@@ -54,7 +54,7 @@ namespace Nha_Sach_Desktop
     #endregion
 		
 		public NhaSachBatOnDataContext() : 
-				base(global::Nha_Sach_Desktop.Properties.Settings.Default.BatOnBookStoreConnectionString5, mappingSource)
+				base(global::Nha_Sach_Desktop.Properties.Settings.Default.BatOnBookStoreConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}

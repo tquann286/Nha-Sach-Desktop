@@ -14,17 +14,9 @@ namespace Nha_Sach_Desktop.BUS
         {
             return DAODSSach.GetDSSach();
         }
-        public static List<DTODSSach> GetDSSachTheoTheLoai(string strTheLoai)
+        public static List<DTODSSach> LocDSSach(string timKiem, string theLoai)
         {
-            return DAODSSach.GetDSSachTheoTheLoai(strTheLoai);
-        }
-        public static List<DTODSSach> GetDSSachTheoTacGia(string strTacGia)
-        {
-            return DAODSSach.GetSachLikeTacGia(strTacGia);
-        }
-        public static List<DTODSSach> GetDSSachTheoTenSach(string strTenSach)
-        {
-            return DAODSSach.GetSachLikeTenSach(strTenSach);
+            return DAODSSach.LocDSSach(timKiem, theLoai);
         }
         public static Sach getThongTinSach(string masach)
         {
@@ -34,13 +26,13 @@ namespace Nha_Sach_Desktop.BUS
         {
             DAODSSach.UpdateSoLuongSach(masach, soluong, tondau, tongnhap, tongban);
         }
-        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
-            DAODSSach.InsertSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            DAODSSach.InsertSach(masach, tensach, theloai, tacgia, dongia);
         }
-        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
-            DAODSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            DAODSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia);
         }
         public static void DeleteSach(string masach)
         {
