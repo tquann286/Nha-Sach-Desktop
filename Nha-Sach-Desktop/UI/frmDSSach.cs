@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Nha_Sach_Desktop.DTO;
 using Nha_Sach_Desktop.DAO;
 using Nha_Sach_Desktop.BUS;
+using System.Reflection;
 
 namespace Nha_Sach_Desktop.UI
 {
@@ -43,33 +44,11 @@ namespace Nha_Sach_Desktop.UI
             //  btnLuu.Enabled = false;
 
         }
-        /*public class GetMaSach
+        private void LocDSSach(string timKiem, string theLoai)
         {
-            public static string getMaSach;
-        }*/
-        void LoadDsSachTTC(string tk, string theLoai)
-        {
-            List<DTODSSach> dsSachTTC = BUSDSSach.GetDSSachTheoTatCa(tk, theLoai);
+            List<DTODSSach> dsSach = BUSDSSach.LocDSSach(timKiem, theLoai);
 
-            dgvKetQua.DataSource = dsSachTTC;
-
-
-        }
-        void LoadDsSachTTG(string tacGia, string theLoai)
-        {
-            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTacGia(tacGia, theLoai);
-
-            dgvKetQua.DataSource = dsSachTTG;
-
-
-        }
-        void LoadDsSachTTS(string tenSach, string theLoai)
-        {
-            List<DTODSSach> dsSachTTG = BUSDSSach.GetDSSachTheoTenSach(tenSach, theLoai);
-
-            dgvKetQua.DataSource = dsSachTTG;
-
-
+            dgvKetQua.DataSource = dsSach;
         }
         private void frmDSSach_Load(object sender, EventArgs e)
         {
@@ -77,7 +56,7 @@ namespace Nha_Sach_Desktop.UI
             var data = DAODSSach.GetDSSach();
 
             // Chuyển đổi kiểu dữ liệu sang List<Sach>
-            List<Sach> danhSachSach = data.Select(item => new Sach { TheLoai = item.TheLoai }).ToList();
+            List<Sach> danhSachSach = data.Select(item => new Sach { TheLoai = item.TheLoai }).Distinct().ToList();
 
             Sach externalSach = new Sach { TheLoai = "Tất cả" };
           
@@ -95,37 +74,17 @@ namespace Nha_Sach_Desktop.UI
 
         }
 
-        private void radTenSach_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (radTenSach.Checked == true)
-            //{
-            //    string tenSach = txtTimKiem.Text;
-            //    LoadDsSachTTS(tenSach);
-            //}
-        }
-
-        private void radTacGia_CheckedChanged(object sender, EventArgs e)
-        {
-            //if (radTacGia.Checked == true)
-            //{
-            //    string TacGia = txtTimKiem.Text;
-
-            //    LoadDsSachTTG(TacGia);
-            //}
-        }       
-   
-        private void dgvKetQua_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvKetQua_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
                 int index = dgvKetQua.CurrentRow.Index; //dòng chọn
-                txtMaSach.Text = dgvKetQua.Rows[index].Cells[1].Value.ToString();
-                txtTenSach.Text = dgvKetQua.Rows[index].Cells[2].Value.ToString();//1
-                txtTheLoai.Text = dgvKetQua.Rows[index].Cells[3].Value.ToString();
-                txtTacGia.Text = dgvKetQua.Rows[index].Cells[4].Value.ToString();
-                txtDonGia.Text = dgvKetQua.Rows[index].Cells[5].Value.ToString();
-                txtLuongton.Text = dgvKetQua.Rows[index].Cells[6].Value.ToString();
-
+                txtMaSach.Text = dgvKetQua.Rows[index].Cells[0].Value.ToString();
+                txtTenSach.Text = dgvKetQua.Rows[index].Cells[1].Value.ToString();//1
+                txtTheLoai.Text = dgvKetQua.Rows[index].Cells[2].Value.ToString();
+                txtTacGia.Text = dgvKetQua.Rows[index].Cells[3].Value.ToString();
+                txtDonGia.Text = dgvKetQua.Rows[index].Cells[4].Value.ToString();
+                txtMaSach.Enabled = false;
             }
             catch
             {
@@ -134,11 +93,6 @@ namespace Nha_Sach_Desktop.UI
         }
         void InsertSach()
         {
-            if (IsNumber(txtLuongton.Text) == false)
-            {
-                MessageBox.Show("Số lượng tồn phải là số và không được âm", "Thông báo");
-                return;
-            }
             if (IsNumber(txtDonGia.Text) == false)
             {
                 MessageBox.Show("Đơn giá phải là số và không được âm", "Thông báo");
@@ -149,7 +103,6 @@ namespace Nha_Sach_Desktop.UI
             string theloai = txtTheLoai.Text;
             string tacgia = txtTacGia.Text;
             int dongia = txtDonGia.Text == "" ? 0 : int.Parse(txtDonGia.Text);
-            int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
 
             if (masach == "" || tensach == "" || theloai == "" || tacgia == "" )
             {
@@ -161,7 +114,7 @@ namespace Nha_Sach_Desktop.UI
                 MessageBox.Show("Mã sách không được trùng");
                 return;
             }
-            BUSDSSach.InsertSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            BUSDSSach.InsertSach(masach, tensach, theloai, tacgia, dongia);
             MessageBox.Show("Thêm sách thành công!");
 
         }
@@ -176,11 +129,6 @@ namespace Nha_Sach_Desktop.UI
         }
         void ChangeSach()
         {
-            if (IsNumber(txtLuongton.Text) == false)
-            {
-                MessageBox.Show("Số lượng tồn phải là số và không được âm", "Thông báo");
-                return;
-            }
             if (IsNumber(txtDonGia.Text) == false)
             {
                 MessageBox.Show("Đơn giá phải là số và không được âm", "Thông báo");
@@ -191,14 +139,13 @@ namespace Nha_Sach_Desktop.UI
             string theloai = txtTheLoai.Text;
             string tacgia = txtTacGia.Text;
             int dongia = txtDonGia.Text == "" ? 0 : int.Parse(txtDonGia.Text);
-            int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
 
             if (masach == "" || tensach == "" || theloai == "" || tacgia == "" )
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            BUSDSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            BUSDSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia);
             MessageBox.Show("Sửa thông tin sách thành công!");
 
         }
@@ -237,27 +184,21 @@ namespace Nha_Sach_Desktop.UI
                 LoadDSSach();
                 txtMaSach.Enabled = true;
             }
+            var data = DAODSSach.GetDSSach();
+
+            Sach externalSach = new Sach { TheLoai = "Tất cả" };
+
+            cbTimTheLoai.DataSource = data;
+            txtMaSach.Text = "";
+            txtTenSach.Text = "";
+            txtTheLoai.Text = "";
+            txtTacGia.Text = "";
+            txtDonGia.Text = "";
         }
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            string tk = txtTimKiem.Text;
-            string tl = cbTimTheLoai.Text;
-            if (radTenSach.Checked == true)
-            {
-                LoadDsSachTTS(tk, tl);
-                //txtTimKiem.Text = "";
-            }
-            if (radTacGia.Checked == true)
-            {
-                LoadDsSachTTG(tk, tl);
-               // txtTimKiem.Text = "";
-            }
-            if (radTatCa.Checked == true)
-            {
-                LoadDsSachTTC(tk, tl);
-            }
-            // txtTimKiem.Text = "";
+            LocDSSach(txtTimKiem.Text, cbTimTheLoai.Text);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
