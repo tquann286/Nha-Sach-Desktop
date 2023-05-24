@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nha_Sach_Desktop.BUS;
+using Nha_Sach_Desktop.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,22 @@ namespace Nha_Sach_Desktop.UI
         {
             InitializeComponent();
         }
+        void LoadBCTonKho()
+        {
+            List<DTOTonKho> dsTK = BUSTonKho.GetDSTonKho();
+            dgvBaoCaoTon.DataSource = dsTK;
+        }
+
+        private void frmBaoCaoTonKho_Load(object sender, EventArgs e)
+        {
+            LoadBCTonKho();
+        }
+
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

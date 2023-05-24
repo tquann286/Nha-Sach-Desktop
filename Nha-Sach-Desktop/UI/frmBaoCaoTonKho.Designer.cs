@@ -30,18 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoTonKho));
             this.dgvBaoCaoTon = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ton = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phatsinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toncuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXuat = new System.Windows.Forms.Button();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ton = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toncuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +54,6 @@
             this.ton,
             this.TongNhap,
             this.TongBan,
-            this.phatsinh,
             this.toncuoi});
             this.dgvBaoCaoTon.Location = new System.Drawing.Point(15, 233);
             this.dgvBaoCaoTon.Margin = new System.Windows.Forms.Padding(4);
@@ -63,62 +61,6 @@
             this.dgvBaoCaoTon.RowHeadersWidth = 51;
             this.dgvBaoCaoTon.Size = new System.Drawing.Size(1017, 224);
             this.dgvBaoCaoTon.TabIndex = 48;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.Width = 125;
-            // 
-            // ts
-            // 
-            this.ts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ts.DataPropertyName = "TenSach";
-            this.ts.HeaderText = "Tên Sách";
-            this.ts.MinimumWidth = 6;
-            this.ts.Name = "ts";
-            // 
-            // ton
-            // 
-            this.ton.DataPropertyName = "TonDau";
-            this.ton.HeaderText = "Tồn Đầu";
-            this.ton.MinimumWidth = 6;
-            this.ton.Name = "ton";
-            this.ton.Width = 125;
-            // 
-            // TongNhap
-            // 
-            this.TongNhap.DataPropertyName = "TongNhap";
-            this.TongNhap.HeaderText = "Tổng nhập";
-            this.TongNhap.MinimumWidth = 6;
-            this.TongNhap.Name = "TongNhap";
-            this.TongNhap.Width = 125;
-            // 
-            // TongBan
-            // 
-            this.TongBan.DataPropertyName = "TongBan";
-            this.TongBan.HeaderText = "Tổng bán";
-            this.TongBan.MinimumWidth = 6;
-            this.TongBan.Name = "TongBan";
-            this.TongBan.Width = 125;
-            // 
-            // phatsinh
-            // 
-            this.phatsinh.DataPropertyName = "PhatSinh";
-            this.phatsinh.HeaderText = "Phát sinh";
-            this.phatsinh.MinimumWidth = 6;
-            this.phatsinh.Name = "phatsinh";
-            this.phatsinh.Width = 125;
-            // 
-            // toncuoi
-            // 
-            this.toncuoi.DataPropertyName = "TonCuoi";
-            this.toncuoi.HeaderText = "Tồn cuối";
-            this.toncuoi.MinimumWidth = 6;
-            this.toncuoi.Name = "toncuoi";
-            this.toncuoi.Width = 125;
             // 
             // label1
             // 
@@ -158,6 +100,7 @@
             this.btnThoat.Text = "  THOÁT  ";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // panel1
             // 
@@ -185,6 +128,53 @@
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            // 
+            // ts
+            // 
+            this.ts.DataPropertyName = "TenSach";
+            this.ts.HeaderText = "Tên Sách";
+            this.ts.MinimumWidth = 6;
+            this.ts.Name = "ts";
+            this.ts.Width = 295;
+            // 
+            // ton
+            // 
+            this.ton.DataPropertyName = "TonDau";
+            this.ton.HeaderText = "Tồn Đầu";
+            this.ton.MinimumWidth = 6;
+            this.ton.Name = "ton";
+            this.ton.Width = 75;
+            // 
+            // TongNhap
+            // 
+            this.TongNhap.DataPropertyName = "TongNhap";
+            this.TongNhap.HeaderText = "Tổng nhập";
+            this.TongNhap.MinimumWidth = 6;
+            this.TongNhap.Name = "TongNhap";
+            this.TongNhap.Width = 85;
+            // 
+            // TongBan
+            // 
+            this.TongBan.DataPropertyName = "TongBan";
+            this.TongBan.HeaderText = "Tổng bán";
+            this.TongBan.MinimumWidth = 6;
+            this.TongBan.Name = "TongBan";
+            this.TongBan.Width = 80;
+            // 
+            // toncuoi
+            // 
+            this.toncuoi.DataPropertyName = "TonCuoi";
+            this.toncuoi.HeaderText = "Tồn cuối";
+            this.toncuoi.MinimumWidth = 6;
+            this.toncuoi.Name = "toncuoi";
+            this.toncuoi.Width = 75;
+            // 
             // frmBaoCaoTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,6 +188,7 @@
             this.Controls.Add(this.btnXuat);
             this.Name = "frmBaoCaoTonKho";
             this.Text = "frmBaoCaoTonKho";
+            this.Load += new System.EventHandler(this.frmBaoCaoTonKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,17 +198,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvBaoCaoTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongBan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phatsinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn toncuoi;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn toncuoi;
     }
 }
