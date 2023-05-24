@@ -1,4 +1,5 @@
-﻿using Nha_Sach_Desktop.BUS;
+﻿using DemoDataGridView;
+using Nha_Sach_Desktop.BUS;
 using Nha_Sach_Desktop.DTO;
 using System;
 using System.Collections.Generic;
@@ -35,5 +36,16 @@ namespace Nha_Sach_Desktop.UI
             this.Close();
         }
 
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = ".xlsx";
+            ExportToExcel excel = new ExportToExcel();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
+                excel.ToExcel(dgvBaoCaoTon, saveFileDialog.FileName);
+            }
+        }
     }
 }

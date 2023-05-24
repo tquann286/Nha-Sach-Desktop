@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoTonKho));
             this.dgvBaoCaoTon = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toncuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +61,54 @@
             this.dgvBaoCaoTon.RowHeadersWidth = 51;
             this.dgvBaoCaoTon.Size = new System.Drawing.Size(1017, 224);
             this.dgvBaoCaoTon.TabIndex = 48;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.Width = 125;
+            // 
+            // ts
+            // 
+            this.ts.DataPropertyName = "TenSach";
+            this.ts.HeaderText = "Tên Sách";
+            this.ts.MinimumWidth = 6;
+            this.ts.Name = "ts";
+            this.ts.Width = 295;
+            // 
+            // ton
+            // 
+            this.ton.DataPropertyName = "TonDau";
+            this.ton.HeaderText = "Tồn Đầu";
+            this.ton.MinimumWidth = 6;
+            this.ton.Name = "ton";
+            this.ton.Width = 75;
+            // 
+            // TongNhap
+            // 
+            this.TongNhap.DataPropertyName = "TongNhap";
+            this.TongNhap.HeaderText = "Tổng nhập";
+            this.TongNhap.MinimumWidth = 6;
+            this.TongNhap.Name = "TongNhap";
+            this.TongNhap.Width = 85;
+            // 
+            // TongBan
+            // 
+            this.TongBan.DataPropertyName = "TongBan";
+            this.TongBan.HeaderText = "Tổng bán";
+            this.TongBan.MinimumWidth = 6;
+            this.TongBan.Name = "TongBan";
+            this.TongBan.Width = 80;
+            // 
+            // toncuoi
+            // 
+            this.toncuoi.DataPropertyName = "TonCuoi";
+            this.toncuoi.HeaderText = "Tồn cuối";
+            this.toncuoi.MinimumWidth = 6;
+            this.toncuoi.Name = "toncuoi";
+            this.toncuoi.Width = 75;
             // 
             // label1
             // 
@@ -127,53 +175,7 @@
             this.btnXuat.Text = "IN BÁO CÁO";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            // 
-            // ts
-            // 
-            this.ts.DataPropertyName = "TenSach";
-            this.ts.HeaderText = "Tên Sách";
-            this.ts.MinimumWidth = 6;
-            this.ts.Name = "ts";
-            this.ts.Width = 295;
-            // 
-            // ton
-            // 
-            this.ton.DataPropertyName = "TonDau";
-            this.ton.HeaderText = "Tồn Đầu";
-            this.ton.MinimumWidth = 6;
-            this.ton.Name = "ton";
-            this.ton.Width = 75;
-            // 
-            // TongNhap
-            // 
-            this.TongNhap.DataPropertyName = "TongNhap";
-            this.TongNhap.HeaderText = "Tổng nhập";
-            this.TongNhap.MinimumWidth = 6;
-            this.TongNhap.Name = "TongNhap";
-            this.TongNhap.Width = 85;
-            // 
-            // TongBan
-            // 
-            this.TongBan.DataPropertyName = "TongBan";
-            this.TongBan.HeaderText = "Tổng bán";
-            this.TongBan.MinimumWidth = 6;
-            this.TongBan.Name = "TongBan";
-            this.TongBan.Width = 80;
-            // 
-            // toncuoi
-            // 
-            this.toncuoi.DataPropertyName = "TonCuoi";
-            this.toncuoi.HeaderText = "Tồn cuối";
-            this.toncuoi.MinimumWidth = 6;
-            this.toncuoi.Name = "toncuoi";
-            this.toncuoi.Width = 75;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // frmBaoCaoTonKho
             // 
