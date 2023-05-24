@@ -34,13 +34,13 @@ namespace Nha_Sach_Desktop.BUS
         {
             DAODSSach.UpdateSoLuongSach(masach, soluong, tondau, tongnhap, tongban);
         }
-        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
-            DAODSSach.InsertSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            DAODSSach.InsertSach(masach, tensach, theloai, tacgia, dongia);
         }
-        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
-            DAODSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            DAODSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia);
         }
         public static void DeleteSach(string masach)
         {

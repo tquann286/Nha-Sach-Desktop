@@ -11,6 +11,7 @@ using Nha_Sach_Desktop.DTO;
 using Nha_Sach_Desktop.DAO;
 using Nha_Sach_Desktop.BUS;
 
+
 namespace Nha_Sach_Desktop.UI
 {
     public partial class frmDSSach : Form
@@ -20,6 +21,10 @@ namespace Nha_Sach_Desktop.UI
             InitializeComponent();
         }
         int flag = -1;
+        public class GetMaSach
+        {
+            public static string getMaSach;
+        }
         public bool IsNumber(string pValue)
         {
             foreach (Char c in pValue)
@@ -180,7 +185,7 @@ namespace Nha_Sach_Desktop.UI
             string theloai = txtTheLoai.Text;
             string tacgia = txtTacGia.Text;
             int dongia = txtDonGia.Text == "" ? 0 : int.Parse(txtDonGia.Text);
-            int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
+           // int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
 
             if (masach == "" || tensach == "" || theloai == "" || tacgia == "" )
             {
@@ -192,7 +197,7 @@ namespace Nha_Sach_Desktop.UI
                 MessageBox.Show("Mã sách không được trùng");
                 return;
             }
-            BUSDSSach.InsertSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            BUSDSSach.InsertSach(masach, tensach, theloai, tacgia, dongia);
             MessageBox.Show("Thêm sách thành công!");
 
         }
@@ -202,7 +207,7 @@ namespace Nha_Sach_Desktop.UI
             btnThem.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
-           // txtLuongton.Text = "0";
+            txtLuongton.Text = "0";
             flag = 0;
         }
         void ChangeSach()
@@ -222,14 +227,14 @@ namespace Nha_Sach_Desktop.UI
             string theloai = txtTheLoai.Text;
             string tacgia = txtTacGia.Text;
             int dongia = txtDonGia.Text == "" ? 0 : int.Parse(txtDonGia.Text);
-            int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
+           // int luongton = txtLuongton.Text == "" ? 0 : int.Parse(txtLuongton.Text);
 
             if (masach == "" || tensach == "" || theloai == "" || tacgia == "" )
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            BUSDSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia, luongton);
+            BUSDSSach.ChangeSach(masach, tensach, theloai, tacgia, dongia);
             MessageBox.Show("Sửa thông tin sách thành công!");
 
         }
@@ -277,6 +282,14 @@ namespace Nha_Sach_Desktop.UI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnchon_Click(object sender, EventArgs e)
+        {
+            int index = dgvKetQua.CurrentRow.Index;
+            GetMaSach.getMaSach = dgvKetQua.Rows[index].Cells[1].Value.ToString();
+
             this.Close();
         }
     }

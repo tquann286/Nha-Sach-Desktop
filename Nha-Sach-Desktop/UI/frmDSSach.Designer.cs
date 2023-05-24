@@ -35,6 +35,7 @@
             this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLuongton = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -67,7 +68,7 @@
             this.btnLoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtLuongton = new System.Windows.Forms.TextBox();
+            this.btnchon = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -141,6 +142,15 @@
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Sách";
+            // 
+            // txtLuongton
+            // 
+            this.txtLuongton.Enabled = false;
+            this.txtLuongton.Location = new System.Drawing.Point(511, 122);
+            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuongton.Name = "txtLuongton";
+            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
+            this.txtLuongton.TabIndex = 55;
             // 
             // btnLuu
             // 
@@ -511,19 +521,27 @@
             this.panel1.Size = new System.Drawing.Size(997, 108);
             this.panel1.TabIndex = 52;
             // 
-            // txtLuongton
+            // btnchon
             // 
-            this.txtLuongton.Location = new System.Drawing.Point(511, 122);
-            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLuongton.Name = "txtLuongton";
-            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
-            this.txtLuongton.TabIndex = 55;
+            this.btnchon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchon.BackgroundImage")));
+            this.btnchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchon.ForeColor = System.Drawing.Color.White;
+            this.btnchon.Location = new System.Drawing.Point(786, 528);
+            this.btnchon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnchon.Name = "btnchon";
+            this.btnchon.Size = new System.Drawing.Size(100, 41);
+            this.btnchon.TabIndex = 55;
+            this.btnchon.Text = "Chọn";
+            this.btnchon.UseVisualStyleBackColor = true;
+            this.btnchon.Click += new System.EventHandler(this.btnchon_Click);
             // 
             // frmDSSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 784);
+            this.Controls.Add(this.btnchon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
@@ -586,5 +604,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtLuongton;
+        private System.Windows.Forms.Button btnchon;
     }
 }

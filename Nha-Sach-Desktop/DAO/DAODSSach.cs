@@ -132,7 +132,7 @@ namespace Nha_Sach_Desktop.DAO
                 dbMain.SubmitChanges();
             }
         }
-        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
@@ -146,14 +146,14 @@ namespace Nha_Sach_Desktop.DAO
                 s.TongBan = 0;
                 s.TongNhap = 0;
                 // s.PhatSinh = "0";
-                  s.TonCuoi = luongton;
+                //  s.TonCuoi = luongton;
                 dbMain.Saches.InsertOnSubmit(s);
                 dbMain.SubmitChanges();
 
             }
 
         }
-        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia, int luongton)
+        public static void ChangeSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
@@ -166,7 +166,7 @@ namespace Nha_Sach_Desktop.DAO
                 s.TheLoai = theloai;
                 s.TacGia = tacgia;
                 s.DonGia = dongia;
-                 s.TonCuoi = luongton;
+               //  s.TonCuoi = luongton;
                 dbMain.SubmitChanges();
 
 

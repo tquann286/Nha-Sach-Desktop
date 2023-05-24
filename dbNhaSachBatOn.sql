@@ -46,8 +46,7 @@ CREATE TABLE PhieuNhap (
     MaSach nvarchar(50) not null,
     SoLuong int,
     DonGia int,
-    TongTien int,
-    Email nvarchar(50) not null,
+    TongTien int,   
 	primary key(MaPhieuNhap, MaSach)
 );
 
@@ -72,8 +71,7 @@ add constraint fk_phieuban_sach foreign key (MaSach) references Sach(MaSach)
 alter table PhieuBan
 add constraint fk_phieuban_hoadon foreign key (MaPhieuBan) references HoaDon(MaHD)
 
-alter table PhieuNhap
-add constraint fk_email_phieunhap foreign key (Email) references NhanVien(Email)
+
 
 ---DANG NHAP
 INSERT INTO DangNhap (TaiKhoan, MatKhau)
@@ -111,22 +109,22 @@ VALUES ('KH05', 'Vu Hoang Kiet', '03748347344', 'TPHCM', 'kiethg483@gmail.com');
 
 ---Sach
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S01', 'Tuoi tre dang gia bao nhieu', 'Tu truyen', 'Rosie Nguyen', 99000, 15, 30, 6, 39);
+VALUES ('S01', 'Tuoi tre dang gia bao nhieu', 'Tu truyen', 'Rosie Nguyen', 99000, 0, 200, 6, 194);
 
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S02', 'Cay cam ngot cua toi', 'Tieu thuyet', 'Jose Mauro De Vasconcelos', 120000, 3, 20, 10, 13);
+VALUES ('S02', 'Cay cam ngot cua toi', 'Tieu thuyet', 'Jose Mauro De Vasconcelos', 120000, 0, 200, 10, 190);
 
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S03', 'Nha gia kim', 'Ki su', 'Paulo Coelho', 80000, 5, 10, 4, 11);
+VALUES ('S03', 'Nha gia kim', 'Ki su', 'Paulo Coelho', 80000, 0, 100, 4, 96);
 
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Xa hoi', 'Andrew Matthews', 150000, 7, 20, 12, 15);
+VALUES ('S04', 'Doi thay doi khi chung ta thay doi', 'Xa hoi', 'Andrew Matthews', 150000, 0, 300, 12, 288);
 
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S05', 'Dac nhan tam', 'Self-help', 'Dale Carnegie', 200000, 2, 15, 7, 10);
+VALUES ('S05', 'Dac nhan tam', 'Self-help', 'Dale Carnegie', 200000, 0, 250, 7, 243);
 
 INSERT INTO Sach (MaSach, TenSach, TheLoai, TacGia, DonGia, TonDau, TongNhap, TongBan, TonCuoi)
-VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Truyen ngan', 'Nguyen Nhat Anh', 180000, 5, 16, 6, 15);
+VALUES ('S06', 'Cho toi mot ve di tuoi tho', 'Truyen ngan', 'Nguyen Nhat Anh', 180000, 0, 300, 6, 294);
 
 ---NHAN VIEN
 INSERT INTO NhanVien (Email, HoTen, DiaChi, Sdt, Password)
@@ -160,8 +158,18 @@ INSERT INTO PhieuBan (MaPhieuBan, MaSach, SoLuong)
 VALUES ('HD03', 'S03', 2);
 
 ---PHIEU NHAP
-INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien, Email)
-VALUES ('PN1', 'S01', 5, 99000, 495000, 'huyn@gmail.com');
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN1', 'S01', 200, 99000, 19800000);
 
-INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien, Email)
-VALUES ('PN2', 'S06', 5, 180000, 900000, 'huyn@gmail.com');
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN1', 'S02', 200, 120000, 24000000);
+
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN2', 'S03', 100, 80000, 8000000);
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN2', 'S04', 200, 120000, 24000000);
+
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN3', 'S05', 250, 200000, 50000000);
+INSERT INTO PhieuNhap (MaPhieuNhap, MaSach, SoLuong, DonGia, TongTien)
+VALUES ('PN4', 'S06', 300, 180000, 54000000);
