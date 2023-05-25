@@ -32,16 +32,6 @@ namespace Nha_Sach_Desktop.DAO
                     }
                 }
 
-                List<string> uniqueMonths = new List<string>();
-                foreach (var item in query)
-                {
-                    string monthYear = item.NgayLap.ToString("MM/yyyy");
-                    if (!uniqueMonths.Contains(monthYear))
-                    {
-                        uniqueMonths.Add(monthYear);
-                    }
-                }
-
                 foreach (var month in doanhThuTheoThang)
                 {
                     DTODoanhThu dt = new DTODoanhThu();
