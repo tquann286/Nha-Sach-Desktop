@@ -30,7 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoDoanhThu));
-            this.dgvBaoCaoNo = new System.Windows.Forms.DataGridView();
+            this.dgvDSDT = new System.Windows.Forms.DataGridView();
+            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
@@ -39,27 +42,48 @@
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThoat = new System.Windows.Forms.Button();
-            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvBaoCaoNo
+            // dgvDSDT
             // 
-            this.dgvBaoCaoNo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCaoNo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDSDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaDT,
             this.Thang,
             this.doanhthu});
-            this.dgvBaoCaoNo.Location = new System.Drawing.Point(37, 215);
-            this.dgvBaoCaoNo.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvBaoCaoNo.Name = "dgvBaoCaoNo";
-            this.dgvBaoCaoNo.RowHeadersWidth = 51;
-            this.dgvBaoCaoNo.Size = new System.Drawing.Size(637, 218);
-            this.dgvBaoCaoNo.TabIndex = 55;
+            this.dgvDSDT.Location = new System.Drawing.Point(28, 214);
+            this.dgvDSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDSDT.Name = "dgvDSDT";
+            this.dgvDSDT.RowHeadersWidth = 51;
+            this.dgvDSDT.Size = new System.Drawing.Size(637, 218);
+            this.dgvDSDT.TabIndex = 55;
+            // 
+            // MaDT
+            // 
+            this.MaDT.DataPropertyName = "MaDT";
+            this.MaDT.HeaderText = "Mã Doanh thu";
+            this.MaDT.MinimumWidth = 6;
+            this.MaDT.Name = "MaDT";
+            this.MaDT.Width = 143;
+            // 
+            // Thang
+            // 
+            this.Thang.DataPropertyName = "Thang";
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.MinimumWidth = 6;
+            this.Thang.Name = "Thang";
+            this.Thang.Width = 143;
+            // 
+            // doanhthu
+            // 
+            this.doanhthu.DataPropertyName = "doanhthu";
+            this.doanhthu.HeaderText = "Doanh thu";
+            this.doanhthu.MinimumWidth = 6;
+            this.doanhthu.Name = "doanhthu";
+            this.doanhthu.Width = 143;
             // 
             // panel1
             // 
@@ -76,7 +100,7 @@
             this.label62.AutoSize = true;
             this.label62.BackColor = System.Drawing.SystemColors.Control;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label62.Location = new System.Drawing.Point(33, 178);
+            this.label62.Location = new System.Drawing.Point(24, 177);
             this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(154, 20);
@@ -90,7 +114,7 @@
             this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnXuat.Image")));
             this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuat.Location = new System.Drawing.Point(231, 463);
+            this.btnXuat.Location = new System.Drawing.Point(222, 462);
             this.btnXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(245, 52);
@@ -117,7 +141,7 @@
             this.btnChiTiet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChiTiet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(124)))), ((int)(((byte)(35)))));
-            this.btnChiTiet.Location = new System.Drawing.Point(37, 460);
+            this.btnChiTiet.Location = new System.Drawing.Point(28, 459);
             this.btnChiTiet.Margin = new System.Windows.Forms.Padding(4);
             this.btnChiTiet.Name = "btnChiTiet";
             this.btnChiTiet.Size = new System.Drawing.Size(150, 55);
@@ -143,7 +167,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(517, 463);
+            this.btnThoat.Location = new System.Drawing.Point(508, 462);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(157, 52);
@@ -153,30 +177,6 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // MaDT
-            // 
-            this.MaDT.DataPropertyName = "MaDT";
-            this.MaDT.HeaderText = "Mã Doanh thu";
-            this.MaDT.MinimumWidth = 6;
-            this.MaDT.Name = "MaDT";
-            this.MaDT.Width = 143;
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.MinimumWidth = 6;
-            this.Thang.Name = "Thang";
-            this.Thang.Width = 143;
-            // 
-            // doanhthu
-            // 
-            this.doanhthu.DataPropertyName = "doanhthu";
-            this.doanhthu.HeaderText = "Doanh thu";
-            this.doanhthu.MinimumWidth = 6;
-            this.doanhthu.Name = "doanhthu";
-            this.doanhthu.Width = 143;
-            // 
             // frmBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,14 +184,15 @@
             this.ClientSize = new System.Drawing.Size(692, 550);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnChiTiet);
-            this.Controls.Add(this.dgvBaoCaoNo);
+            this.Controls.Add(this.dgvDSDT);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label62);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.label1);
             this.Name = "frmBaoCaoDoanhThu";
             this.Text = "frmBaoCaoDoanhThu";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoNo)).EndInit();
+            this.Load += new System.EventHandler(this.frmBaoCaoDoanhThu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSDT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -201,7 +202,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvBaoCaoNo;
+        private System.Windows.Forms.DataGridView dgvDSDT;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Button btnXuat;
