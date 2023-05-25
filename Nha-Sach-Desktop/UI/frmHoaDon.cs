@@ -31,10 +31,6 @@ namespace Nha_Sach_Desktop.UI
             List<DTOHoaDon> dsHD = BUSHoaDon.GetDSHD();
             dgvDSHD.DataSource = dsHD;
 
-            for (int i = 0; i < dgvDSHD.Rows.Count; i++)
-            {
-                dgvDSHD.Rows[i].Cells[0].Value = i + 1;
-            }
             btnThem.Enabled = true;
             btnSua.Enabled = true;
 
@@ -141,26 +137,6 @@ namespace Nha_Sach_Desktop.UI
             txtMaMoi.Enabled = false;
         }
 
-        private void dgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                int index = dgvDSHD.CurrentRow.Index; //dòng chọn
-
-                txtMaMoi.Text = dgvDSHD.Rows[index].Cells[1].Value.ToString();
-                txtMaKH2.Text = dgvDSHD.Rows[index].Cells[2].Value.ToString();//1
-                txtTenKH2.Text = dgvDSHD.Rows[index].Cells[3].Value.ToString();
-                txtMaSach.Text = dgvDSHD.Rows[index].Cells[4].Value.ToString();
-                txtTenSach.Text = dgvDSHD.Rows[index].Cells[5].Value.ToString();
-                txtTongTien.Text = dgvDSHD.Rows[index].Cells[8].Value.ToString();
-                txtSoLuong.Text = dgvDSHD.Rows[index].Cells[7].Value.ToString();
-                dtpNgayLapHD.Text = dgvDSHD.Rows[index].Cells[6].Value.ToString();
-            }
-            catch
-            {
-
-            }
-        }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -172,6 +148,49 @@ namespace Nha_Sach_Desktop.UI
         {
             string thongtin = txtMaKH.Text;
             timKiem(thongtin);
+        }
+
+        //private void dgvDSHD_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        //{
+        //    try
+        //    {
+        //        int index = dgvDSHD.CurrentRow.Index; //dòng chọn
+
+        //        txtMaMoi.Text = dgvDSHD.Rows[index].Cells[0].Value.ToString();
+        //        MessageBox.Show(dgvDSHD.Rows[index].Cells[0].Value.ToString());
+        //        //txtMaKH2.Text = dgvDSHD.Rows[index].Cells[1].Value.ToString();//1
+        //        //txtTenKH2.Text = dgvDSHD.Rows[index].Cells[2].Value.ToString();
+        //        //txtMaSach.Text = dgvDSHD.Rows[index].Cells[3].Value.ToString();
+        //        //txtTenSach.Text = dgvDSHD.Rows[index].Cells[4].Value.ToString();
+        //        //txtTongTien.Text = dgvDSHD.Rows[index].Cells[7].Value.ToString();
+        //        //txtSoLuong.Text = dgvDSHD.Rows[index].Cells[5].Value.ToString();
+        //        //dtpNgayLapHD.Text = dgvDSHD.Rows[index].Cells[6].Value.ToString();
+        //    }
+        //    catch
+        //    {
+
+        //    }
+        //}
+
+        private void dgvDSHD_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int index = dgvDSHD.CurrentRow.Index; //dòng chọn
+
+                txtMaMoi.Text = dgvDSHD.Rows[index].Cells[0].Value.ToString();
+                txtMaKH2.Text = dgvDSHD.Rows[index].Cells[1].Value.ToString();//1
+                txtTenKH2.Text = dgvDSHD.Rows[index].Cells[2].Value.ToString();
+                txtMaSach.Text = dgvDSHD.Rows[index].Cells[3].Value.ToString();
+                txtTenSach.Text = dgvDSHD.Rows[index].Cells[4].Value.ToString();
+                txtTongTien.Text = dgvDSHD.Rows[index].Cells[6].Value.ToString();
+                txtSoLuong.Text = dgvDSHD.Rows[index].Cells[5].Value.ToString();
+                dtpNgayLapHD.Text = dgvDSHD.Rows[index].Cells[7].Value.ToString();
+            }
+            catch
+            {
+
+            }
         }
     }
 }
