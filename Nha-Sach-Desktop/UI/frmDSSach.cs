@@ -32,6 +32,11 @@ namespace Nha_Sach_Desktop.UI
             }
             return true;
         }
+
+        public void SetButtonEnabled(bool enabled)
+        {
+            btnchon.Enabled = enabled; // Gán giá trị cho thuộc tính Enabled của button cụ thể
+        }
         public class GetMaSach
         {
             public static string getMaSach;

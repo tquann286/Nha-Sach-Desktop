@@ -94,17 +94,16 @@ namespace Nha_Sach_Desktop.DAO
             }
             return s;
         }
-        public static void UpdateSoLuongSach(string masach, int soluong, int tondau, int tongnhap, int tongban)
+        public static void UpdateSoLuongSach(string masach, int toncuoi, int tongnhap, int tongban)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 Sach s = dbMain.Saches.SingleOrDefault(p => p.MaSach ==
                  masach);
-                s.TonCuoi = soluong;
-                s.TonDau = tondau;
+                s.TonCuoi = toncuoi;
                 s.TongNhap = tongnhap;
                 s.TongBan = tongban;
-                dbMain.SubmitChanges();
+                dbMain.SubmitChanges(); ;
             }
         }
         public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia)
