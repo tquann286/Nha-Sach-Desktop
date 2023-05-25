@@ -6,7 +6,7 @@ namespace Nha_Sach_Desktop.DAO
 {
     internal class DAODoanhThu
     {
-        public static List<DTODoanhThu> GetDSdt()
+        public static List<DTODoanhThu> GetDSDT()
         {
             List<DTODoanhThu> DSDoanhThu = new List<DTODoanhThu>();
 
