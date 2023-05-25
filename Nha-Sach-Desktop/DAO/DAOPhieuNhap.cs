@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Nha_Sach_Desktop.DAO
 {
     internal class DAOPhieuNhap
@@ -51,12 +53,15 @@ namespace Nha_Sach_Desktop.DAO
             }   
             return pn;
         }
-        public static void UpdateTongtien(string mapn, int tongTien)
+        public static void UpdateTongtien(string mapn, int tongTien, string masach)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                PhieuNhap pn = dbMain.PhieuNhaps.SingleOrDefault(p => p.MaPhieuNhap ==
-                 mapn);
+
+                PhieuNhap pn = dbMain.PhieuNhaps
+                     .Where(p => p.MaPhieuNhap == mapn && p.MaSach == masach)
+                     .Select(p => p)
+                     .FirstOrDefault();
                 pn.TongTien = tongTien;
                 dbMain.SubmitChanges();
             }
@@ -90,6 +95,21 @@ namespace Nha_Sach_Desktop.DAO
                 ctpn.DonGia = dongia;
                 ctpn.TongTien = tongtien;
                 dbMain.SubmitChanges();
+            }
+        }
+        public static void DeleteCTPhieuNhap(string mapn, string masach)
+        {
+            using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
+            {
+
+                var query = from h in dbMain.PhieuNhaps where h.MaPhieuNhap == mapn && h.MaSach == masach select h;
+                //ChiTietPhieuNhap ctpn = dbMain.ChiTietPhieuNhaps.SingleOrDefault(p => p.MaPhieuNhap ==
+                //mapn and p=> p.MaSach == masach);
+                PhieuNhap ctpn = query.SingleOrDefault();
+                dbMain.PhieuNhaps.DeleteOnSubmit(ctpn);
+                dbMain.SubmitChanges();
+
+
             }
         }
         public static bool checkTrung(string mapn, string masach)
