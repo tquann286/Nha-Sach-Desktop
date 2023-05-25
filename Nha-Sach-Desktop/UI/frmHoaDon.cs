@@ -34,7 +34,7 @@ namespace Nha_Sach_Desktop.UI
         }
         public void hienthimaKH()
         {
-            txtMaKH2.Text = GetMaKH.getMaKH;
+             txtMaKH2.Text = GetMaKH.getMaKH;
             KhachHang kh = BUSKhachHang.GetTenKH(txtMaKH2.Text);
             txtTenKH2.Text = kh.HoTen;
         }
@@ -124,11 +124,7 @@ namespace Nha_Sach_Desktop.UI
             }
         }
 
-        private void txtMaKH_TextChanged(object sender, EventArgs e)
-        {
-            string thongtin = txtMaKH.Text;
-            timKiem(thongtin);
-        }
+
         void UpdateHD()
         {
             if (txtMaMoi.Text == "" || txtMaKH2.Text == "" || dtpNgayLapHD.Value.Date.ToString() == "")
@@ -181,6 +177,12 @@ namespace Nha_Sach_Desktop.UI
         {
             UpdateHD();
             loadDS();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string thongtin = txtMaKH.Text;
+            timKiem(thongtin);
         }
     }
 }

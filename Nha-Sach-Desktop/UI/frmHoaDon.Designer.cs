@@ -47,6 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSHD = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.dtpNgayLapHD = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.btnMaKH = new System.Windows.Forms.Button();
@@ -57,9 +60,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -262,6 +262,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lập hóa đơn";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(503, 11);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(107, 38);
+            this.btnSearch.TabIndex = 52;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtMaKH
+            // 
+            this.txtMaKH.Location = new System.Drawing.Point(303, 17);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(188, 28);
+            this.txtMaKH.TabIndex = 51;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Teal;
+            this.label11.Location = new System.Drawing.Point(167, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(130, 20);
+            this.label11.TabIndex = 50;
+            this.label11.Text = "Mã khách hàng";
+            // 
             // dtpNgayLapHD
             // 
             this.dtpNgayLapHD.Location = new System.Drawing.Point(144, 170);
@@ -287,7 +314,6 @@
             this.btnMaKH.TabIndex = 26;
             this.btnMaKH.Text = ">";
             this.btnMaKH.UseVisualStyleBackColor = true;
-            this.btnMaKH.Click += new System.EventHandler(this.btnMaKH_Click);
             // 
             // txtMaSach
             // 
@@ -373,33 +399,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 114);
             this.panel1.TabIndex = 48;
-            // 
-            // txtMaKH
-            // 
-            this.txtMaKH.Location = new System.Drawing.Point(303, 17);
-            this.txtMaKH.Name = "txtMaKH";
-            this.txtMaKH.Size = new System.Drawing.Size(188, 28);
-            this.txtMaKH.TabIndex = 51;
-            this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(167, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 20);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "Mã khách hàng";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(503, 11);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(107, 38);
-            this.btnSearch.TabIndex = 52;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // frmHoaDon
             // 
