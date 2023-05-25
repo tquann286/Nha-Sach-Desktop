@@ -44,7 +44,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dgvKetQua = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,18 +55,25 @@
             this.btnLoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnchon = new System.Windows.Forms.Button();
+            this.txtLuongton = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvKetQua = new System.Windows.Forms.DataGridView();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtLuongton);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btnLuu);
             this.groupBox2.Controls.Add(this.btnSua);
             this.groupBox2.Controls.Add(this.btnXoa);
@@ -83,11 +89,11 @@
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(14, 563);
+            this.groupBox2.Location = new System.Drawing.Point(16, 581);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(960, 212);
+            this.groupBox2.Size = new System.Drawing.Size(960, 209);
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Sách";
@@ -98,7 +104,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(759, 162);
+            this.btnLuu.Location = new System.Drawing.Point(801, 162);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(125, 42);
@@ -113,7 +119,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(759, 122);
+            this.btnSua.Location = new System.Drawing.Point(801, 121);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(125, 33);
@@ -127,7 +133,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(759, 79);
+            this.btnXoa.Location = new System.Drawing.Point(801, 79);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(125, 36);
@@ -141,7 +147,7 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(759, 36);
+            this.btnThem.Location = new System.Drawing.Point(801, 37);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(125, 34);
@@ -152,7 +158,7 @@
             // 
             // txtTheLoai
             // 
-            this.txtTheLoai.Location = new System.Drawing.Point(514, 82);
+            this.txtTheLoai.Location = new System.Drawing.Point(514, 86);
             this.txtTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtTheLoai.Name = "txtTheLoai";
             this.txtTheLoai.Size = new System.Drawing.Size(207, 30);
@@ -168,7 +174,7 @@
             // 
             // txtTacGia
             // 
-            this.txtTacGia.Location = new System.Drawing.Point(511, 43);
+            this.txtTacGia.Location = new System.Drawing.Point(514, 44);
             this.txtTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtTacGia.Name = "txtTacGia";
             this.txtTacGia.Size = new System.Drawing.Size(208, 30);
@@ -193,7 +199,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(53, 128);
+            this.label7.Location = new System.Drawing.Point(41, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 25);
@@ -240,24 +246,6 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Mã Sách:";
             // 
-            // dgvKetQua
-            // 
-            this.dgvKetQua.AllowUserToOrderColumns = true;
-            this.dgvKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKetQua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaSach,
-            this.TenSach,
-            this.TacGia,
-            this.TheLoai,
-            this.DonGia});
-            this.dgvKetQua.Location = new System.Drawing.Point(-1, 343);
-            this.dgvKetQua.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvKetQua.Name = "dgvKetQua";
-            this.dgvKetQua.RowHeadersWidth = 51;
-            this.dgvKetQua.Size = new System.Drawing.Size(975, 191);
-            this.dgvKetQua.TabIndex = 48;
-            this.dgvKetQua.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKetQua_RowHeaderMouseClick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -277,7 +265,7 @@
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 168);
+            this.groupBox1.Location = new System.Drawing.Point(20, 157);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -345,7 +333,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(815, 288);
+            this.btnThoat.Location = new System.Drawing.Point(815, 281);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(137, 47);
@@ -361,7 +349,7 @@
             this.btnLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Image = ((System.Drawing.Image)(resources.GetObject("btnLoc.Image")));
             this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoc.Location = new System.Drawing.Point(663, 288);
+            this.btnLoc.Location = new System.Drawing.Point(646, 281);
             this.btnLoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(144, 47);
@@ -390,6 +378,59 @@
             this.panel1.Size = new System.Drawing.Size(997, 108);
             this.panel1.TabIndex = 52;
             // 
+            // btnchon
+            // 
+            this.btnchon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchon.BackgroundImage")));
+            this.btnchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnchon.Enabled = false;
+            this.btnchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchon.ForeColor = System.Drawing.Color.White;
+            this.btnchon.Location = new System.Drawing.Point(817, 532);
+            this.btnchon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnchon.Name = "btnchon";
+            this.btnchon.Size = new System.Drawing.Size(125, 41);
+            this.btnchon.TabIndex = 55;
+            this.btnchon.Text = "Chọn";
+            this.btnchon.UseVisualStyleBackColor = true;
+            // 
+            // txtLuongton
+            // 
+            this.txtLuongton.Location = new System.Drawing.Point(514, 128);
+            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuongton.Name = "txtLuongton";
+            this.txtLuongton.ReadOnly = true;
+            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
+            this.txtLuongton.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(390, 128);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 25);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Lượng tồn:";
+            // 
+            // dgvKetQua
+            // 
+            this.dgvKetQua.AllowUserToOrderColumns = true;
+            this.dgvKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKetQua.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSach,
+            this.TenSach,
+            this.TheLoai,
+            this.TacGia,
+            this.DonGia,
+            this.LuongTon});
+            this.dgvKetQua.Location = new System.Drawing.Point(11, 333);
+            this.dgvKetQua.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvKetQua.Name = "dgvKetQua";
+            this.dgvKetQua.RowHeadersWidth = 51;
+            this.dgvKetQua.Size = new System.Drawing.Size(965, 191);
+            this.dgvKetQua.TabIndex = 56;
+            this.dgvKetQua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetQua_CellClick);
+            // 
             // MaSach
             // 
             this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -406,14 +447,6 @@
             this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
             // 
-            // TacGia
-            // 
-            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TacGia.DataPropertyName = "TacGia";
-            this.TacGia.HeaderText = "Tác Giả";
-            this.TacGia.MinimumWidth = 6;
-            this.TacGia.Name = "TacGia";
-            // 
             // TheLoai
             // 
             this.TheLoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -423,6 +456,14 @@
             this.TheLoai.Name = "TheLoai";
             this.TheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // TacGia
+            // 
+            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TacGia.DataPropertyName = "TacGia";
+            this.TacGia.HeaderText = "Tác Giả";
+            this.TacGia.MinimumWidth = 6;
+            this.TacGia.Name = "TacGia";
+            // 
             // DonGia
             // 
             this.DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -431,16 +472,25 @@
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             // 
+            // LuongTon
+            // 
+            this.LuongTon.DataPropertyName = "LuongTon";
+            this.LuongTon.HeaderText = "Lượng Tồn";
+            this.LuongTon.MinimumWidth = 6;
+            this.LuongTon.Name = "LuongTon";
+            this.LuongTon.Width = 125;
+            // 
             // frmDSSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 784);
+            this.ClientSize = new System.Drawing.Size(999, 792);
+            this.Controls.Add(this.dgvKetQua);
+            this.Controls.Add(this.btnchon);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvKetQua);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLoc);
@@ -450,9 +500,9 @@
             this.Load += new System.EventHandler(this.frmDSSach_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +525,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgvKetQua;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
@@ -486,10 +535,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtLuongton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnchon;
+        private System.Windows.Forms.DataGridView dgvKetQua;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LuongTon;
     }
 }

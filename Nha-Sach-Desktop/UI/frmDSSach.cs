@@ -32,6 +32,10 @@ namespace Nha_Sach_Desktop.UI
             }
             return true;
         }
+        public class GetMaSach
+        {
+            public static string getMaSach;
+        }
         void LoadDSSach()
         {
 
@@ -74,7 +78,7 @@ namespace Nha_Sach_Desktop.UI
 
         }
 
-        private void dgvKetQua_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvKetQua_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -84,6 +88,7 @@ namespace Nha_Sach_Desktop.UI
                 txtTheLoai.Text = dgvKetQua.Rows[index].Cells[2].Value.ToString();
                 txtTacGia.Text = dgvKetQua.Rows[index].Cells[3].Value.ToString();
                 txtDonGia.Text = dgvKetQua.Rows[index].Cells[4].Value.ToString();
+                txtLuongton.Text = dgvKetQua.Rows[index].Cells[5].Value.ToString();
                 txtMaSach.Enabled = false;
             }
             catch
@@ -205,5 +210,7 @@ namespace Nha_Sach_Desktop.UI
         {
             this.Close();
         }
+
+       
     }
 }

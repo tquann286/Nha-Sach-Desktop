@@ -26,6 +26,7 @@ namespace Nha_Sach_Desktop.DAO
                     sach.TheLoai = row.TheLoai;
                     sach.TacGia = row.TacGia;
                     sach.DonGia = row.DonGia.ToString();
+                    sach.LuongTon = row.TonCuoi.ToString();
                     DsSach.Add(sach);
                 }
             }
@@ -48,6 +49,7 @@ namespace Nha_Sach_Desktop.DAO
                     sach.TheLoai = row.TheLoai;
                     sach.TacGia = row.TacGia;
                     sach.DonGia = row.DonGia.ToString();
+                    sach.LuongTon = row.TonCuoi.ToString();
                     DsSach.Add(sach);
                 }
             }
