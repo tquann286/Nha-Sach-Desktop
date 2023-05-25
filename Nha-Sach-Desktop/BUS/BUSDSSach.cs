@@ -14,21 +14,25 @@ namespace Nha_Sach_Desktop.BUS
         {
             return DAODSSach.GetDSSach();
         }
-        public static List<DTODSSach> LocDSSach(string timKiem, string theLoai)
-        {
-            return DAODSSach.LocDSSach(timKiem, theLoai);
-        }
         public static List<DTODSSach> GetDSSachTheoTheLoai(string strTheLoai)
         {
-            return DAODSSach.GetSachLikeTheLoai(strTheLoai);
+            return DAODSSach.GetDSSachTheoTheLoai(strTheLoai);
+        }
+        public static List<DTODSSach> GetDSSachTheoTacGia(string strTacGia)
+        {
+            return DAODSSach.GetSachLikeTacGia(strTacGia);
+        }
+        public static List<DTODSSach> GetDSSachTheoTenSach(string strTenSach)
+        {
+            return DAODSSach.GetSachLikeTenSach(strTenSach);
         }
         public static Sach getThongTinSach(string masach)
         {
             return DAODSSach.getThongTinSach(masach);
         }
-        public static void UpdateSoLuongSach(string masach, int toncuoi, int tongnhap, int tongban)
+        public static void UpdateSoLuongSach(string masach, int soluong, int tondau, int tongnhap, int tongban)
         {
-            DAODSSach.UpdateSoLuongSach( masach,  toncuoi,  tongnhap,  tongban);
+            DAODSSach.UpdateSoLuongSach(masach, soluong, tondau, tongnhap, tongban);
         }
         public static void InsertSach(string masach, string tensach, string theloai, string tacgia, int dongia)
         {

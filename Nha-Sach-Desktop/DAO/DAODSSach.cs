@@ -31,15 +31,15 @@ namespace Nha_Sach_Desktop.DAO
             }
             return DsSach;
         }
-        public static List<DTODSSach> LocDSSach(string timKiem, string _theLoai)
+        public static List<DTODSSach> GetDSSachTheoTheLoai(string strTheLoai)
         {
-            List<DTODSSach> DsSach = new List<DTODSSach>();
-            string theLoai = _theLoai == "Tất cả" ? "" : _theLoai;
-
+            List<DTODSSach> DsSachTTL = new List<DTODSSach>();
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                var sachs = from p in dbMain.Saches where (p.TacGia.Contains(timKiem) || p.TenSach.Contains(timKiem)) && p.TheLoai.Contains(timKiem) select p;
-                foreach (var row in sachs)
+                // var timKiem = dbMain.Saches.Where(p => p.TheLoai == (strTheLoai)).ToList(); ;
+                var lst = from tk in dbMain.Saches where tk.TheLoai.Contains(strTheLoai) select tk;
+                //from tk in dbMain.Saches where tk.TheLoai.Contains(strTheLoai) select tk;
+                foreach (var row in lst)
                 {
                     DTODSSach sach = new DTODSSach();
 
@@ -49,17 +49,18 @@ namespace Nha_Sach_Desktop.DAO
                     sach.TacGia = row.TacGia;
                     sach.DonGia = row.DonGia.ToString();
                     sach.Luongton = row.TonCuoi.ToString();
-                    DsSach.Add(sach);
+                    DsSachTTL.Add(sach);
                 }
             }
-            return DsSach;
+
+            return DsSachTTL;
         }
-        public static List<DTODSSach> GetSachLikeTheLoai(string strLoai)
+        public static List<DTODSSach> GetSachLikeTacGia(string strTacGia)
         {
-            List<DTODSSach> DsSachTTL = new List<DTODSSach>();
+            List<DTODSSach> DsSachTTG = new List<DTODSSach>();
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                var tk = from p in dbMain.Saches where p.TheLoai.Contains(strLoai) select p;
+                var tk = from p in dbMain.Saches where p.TacGia.Contains(strTacGia) select p;
                 foreach (var row in tk)
                 {
                     DTODSSach sach = new DTODSSach();
@@ -69,10 +70,32 @@ namespace Nha_Sach_Desktop.DAO
                     sach.TheLoai = row.TheLoai;
                     sach.TacGia = row.TacGia;
                     sach.DonGia = row.DonGia.ToString();
-                    DsSachTTL.Add(sach);
+                    sach.Luongton = row.TonCuoi.ToString();
+                    DsSachTTG.Add(sach);
                 }
             }
-            return DsSachTTL;
+            return DsSachTTG;
+        }
+        public static List<DTODSSach> GetSachLikeTenSach(string strTenSach)
+        {
+            List<DTODSSach> DsSachTTS = new List<DTODSSach>();
+            using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
+            {
+                var tk = from p in dbMain.Saches where p.TenSach.Contains(strTenSach) select p;
+                foreach (var row in tk)
+                {
+                    DTODSSach sach = new DTODSSach();
+
+                    sach.MaSach = row.MaSach;
+                    sach.TenSach = row.TenSach;
+                    sach.TheLoai = row.TheLoai;
+                    sach.TacGia = row.TacGia;
+                    sach.DonGia = row.DonGia.ToString();
+                    sach.Luongton = row.TonCuoi.ToString();
+                    DsSachTTS.Add(sach);
+                }
+            }
+            return DsSachTTS;
         }
         public static Sach getThongTinSach(string masach)
         {
@@ -93,13 +116,14 @@ namespace Nha_Sach_Desktop.DAO
             }
             return s;
         }
-        public static void UpdateSoLuongSach(string masach, int toncuoi, int tongnhap, int tongban)
+        public static void UpdateSoLuongSach(string masach, int soluong, int tondau, int tongnhap, int tongban)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 Sach s = dbMain.Saches.SingleOrDefault(p => p.MaSach ==
                  masach);
-                s.TonCuoi = toncuoi;              
+                s.TonCuoi = soluong;
+                s.TonDau = tondau;
                 s.TongNhap = tongnhap;
                 s.TongBan = tongban;
                 dbMain.SubmitChanges();
@@ -118,7 +142,7 @@ namespace Nha_Sach_Desktop.DAO
                 s.TonDau = 0;
                 s.TongBan = 0;
                 s.TongNhap = 0;
-                s.TonCuoi = 0;
+                // s.PhatSinh = "0";
                 //  s.TonCuoi = luongton;
                 dbMain.Saches.InsertOnSubmit(s);
                 dbMain.SubmitChanges();
