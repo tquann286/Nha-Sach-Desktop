@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaoCaoDoanhThu));
             this.dgvDSDT = new System.Windows.Forms.DataGridView();
-            this.MaDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label62 = new System.Windows.Forms.Label();
             this.btnXuat = new System.Windows.Forms.Button();
@@ -42,6 +39,8 @@
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThoat = new System.Windows.Forms.Button();
+            this.Thang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doanhthu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
@@ -51,7 +50,6 @@
             // 
             this.dgvDSDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDT,
             this.Thang,
             this.doanhthu});
             this.dgvDSDT.Location = new System.Drawing.Point(28, 214);
@@ -60,30 +58,6 @@
             this.dgvDSDT.RowHeadersWidth = 51;
             this.dgvDSDT.Size = new System.Drawing.Size(637, 218);
             this.dgvDSDT.TabIndex = 55;
-            // 
-            // MaDT
-            // 
-            this.MaDT.DataPropertyName = "MaDT";
-            this.MaDT.HeaderText = "Mã Doanh thu";
-            this.MaDT.MinimumWidth = 6;
-            this.MaDT.Name = "MaDT";
-            this.MaDT.Width = 143;
-            // 
-            // Thang
-            // 
-            this.Thang.DataPropertyName = "Thang";
-            this.Thang.HeaderText = "Tháng";
-            this.Thang.MinimumWidth = 6;
-            this.Thang.Name = "Thang";
-            this.Thang.Width = 143;
-            // 
-            // doanhthu
-            // 
-            this.doanhthu.DataPropertyName = "doanhthu";
-            this.doanhthu.HeaderText = "Doanh thu";
-            this.doanhthu.MinimumWidth = 6;
-            this.doanhthu.Name = "doanhthu";
-            this.doanhthu.Width = 143;
             // 
             // panel1
             // 
@@ -177,6 +151,22 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // Thang
+            // 
+            this.Thang.DataPropertyName = "Thang";
+            this.Thang.HeaderText = "Tháng";
+            this.Thang.MinimumWidth = 6;
+            this.Thang.Name = "Thang";
+            this.Thang.Width = 175;
+            // 
+            // doanhthu
+            // 
+            this.doanhthu.DataPropertyName = "doanhthu";
+            this.doanhthu.HeaderText = "Doanh thu";
+            this.doanhthu.MinimumWidth = 6;
+            this.doanhthu.Name = "doanhthu";
+            this.doanhthu.Width = 250;
+            // 
             // frmBaoCaoDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,7 +201,6 @@
         private BatOnBookStoreDataSet batOnBookStoreDataSet;
         private System.Windows.Forms.BindingSource batOnBookStoreDataSetBindingSource;
         private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Thang;
         private System.Windows.Forms.DataGridViewTextBoxColumn doanhthu;
     }

@@ -39,7 +39,7 @@ namespace Nha_Sach_Desktop.UI
         }
         void InsertHD()
         {
-            if (txtMaMoi.Text == "" || txtMaKH2.Text == "" || dtpNgayLapHD.Value.Date.ToString() == "")
+            if (txtMaMoi.Text == "" || txtMaKH2.Text == "" || dtpNgayLapHD.Value.Date.ToString() == "" || txtSoLuong.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
@@ -58,7 +58,7 @@ namespace Nha_Sach_Desktop.UI
             string masach = txtMaSach.Text;
             string tensach = txtTenSach.Text;
             int soluong = int.Parse(txtSoLuong.Text);
-            int tongtien = 0;
+            int tongtien = int.Parse(txtSoLuong.Text);
             DateTime ngaynhap = dtpNgayLapHD.Value.Date;
             BUSHoaDon.InsertHD(mahd, makh, tenkh, ngaynhap,masach, tensach, soluong, tongtien);
             MessageBox.Show("Thêm hoá đơn thành công");
@@ -123,7 +123,7 @@ namespace Nha_Sach_Desktop.UI
             string masach = txtMaSach.Text;
             string tensach = txtTenSach.Text;
             int soluong = int.Parse(txtSoLuong.Text);
-            int tongtien = 0;
+            int tongtien = int.Parse(txtTongTien.Text);
 
             DateTime ngaynhap = dtpNgayLapHD.Value.Date;
             BUSHoaDon.UpdateHD(mahd, makh, tenkh, ngaynhap, masach, tensach, soluong, tongtien);
