@@ -57,11 +57,13 @@
             this.btnLoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnchon = new System.Windows.Forms.Button();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -266,7 +268,7 @@
             this.dgvKetQua.RowHeadersWidth = 51;
             this.dgvKetQua.Size = new System.Drawing.Size(975, 191);
             this.dgvKetQua.TabIndex = 48;
-            this.dgvKetQua.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvKetQua_RowHeaderMouseClick);
+            this.dgvKetQua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKetQua_CellClick);
             // 
             // label1
             // 
@@ -317,6 +319,43 @@
             this.cbTimTheLoai.Name = "cbTimTheLoai";
             this.cbTimTheLoai.Size = new System.Drawing.Size(209, 28);
             this.cbTimTheLoai.TabIndex = 15;
+            // 
+            // radTenSach
+            // 
+            this.radTenSach.AutoSize = true;
+            this.radTenSach.Location = new System.Drawing.Point(727, 41);
+            this.radTenSach.Margin = new System.Windows.Forms.Padding(4);
+            this.radTenSach.Name = "radTenSach";
+            this.radTenSach.Size = new System.Drawing.Size(99, 24);
+            this.radTenSach.TabIndex = 13;
+            this.radTenSach.TabStop = true;
+            this.radTenSach.Text = "Tên sách";
+            this.radTenSach.UseVisualStyleBackColor = true;
+            // 
+            // radTacGia
+            // 
+            this.radTacGia.AutoSize = true;
+            this.radTacGia.Location = new System.Drawing.Point(844, 41);
+            this.radTacGia.Margin = new System.Windows.Forms.Padding(4);
+            this.radTacGia.Name = "radTacGia";
+            this.radTacGia.Size = new System.Drawing.Size(85, 24);
+            this.radTacGia.TabIndex = 12;
+            this.radTacGia.TabStop = true;
+            this.radTacGia.Text = "Tác giả";
+            this.radTacGia.UseVisualStyleBackColor = true;
+            // 
+            // radTatCa
+            // 
+            this.radTatCa.AutoSize = true;
+            this.radTatCa.Checked = true;
+            this.radTatCa.Location = new System.Drawing.Point(633, 41);
+            this.radTatCa.Margin = new System.Windows.Forms.Padding(4);
+            this.radTatCa.Name = "radTatCa";
+            this.radTatCa.Size = new System.Drawing.Size(77, 24);
+            this.radTatCa.TabIndex = 11;
+            this.radTatCa.TabStop = true;
+            this.radTatCa.Text = "Tất cả";
+            this.radTatCa.UseVisualStyleBackColor = true;
             // 
             // txtTimKiem
             // 
@@ -416,13 +455,35 @@
             this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
             // 
-            // TacGia
+            this.btnchon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchon.BackgroundImage")));
+            this.btnchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnchon.Enabled = false;
+            this.btnchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchon.ForeColor = System.Drawing.Color.White;
+            this.btnchon.Location = new System.Drawing.Point(786, 528);
+            this.btnchon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnchon.Name = "btnchon";
+            this.btnchon.Size = new System.Drawing.Size(100, 41);
+            this.btnchon.TabIndex = 55;
+            this.btnchon.Text = "Chọn";
+            this.btnchon.UseVisualStyleBackColor = true;
+            this.btnchon.Click += new System.EventHandler(this.btnchon_Click);
             // 
-            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TacGia.DataPropertyName = "TacGia";
-            this.TacGia.HeaderText = "Tác Giả";
-            this.TacGia.MinimumWidth = 6;
-            this.TacGia.Name = "TacGia";
+            // MaSach
+            // 
+            this.MaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã Sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            // 
+            // TenSach
+            // 
+            this.TenSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
             // 
             // TheLoai
             // 
@@ -433,6 +494,14 @@
             this.TheLoai.Name = "TheLoai";
             this.TheLoai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // TacGia
+            // 
+            this.TacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TacGia.DataPropertyName = "TacGia";
+            this.TacGia.HeaderText = "Tác Giả";
+            this.TacGia.MinimumWidth = 6;
+            this.TacGia.Name = "TacGia";
+            // 
             // DonGia
             // 
             this.DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -440,6 +509,14 @@
             this.DonGia.HeaderText = "Đơn Giá";
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
+            // 
+            // LuongTon
+            // 
+            this.LuongTon.DataPropertyName = "LuongTon";
+            this.LuongTon.HeaderText = "Lượng Tồn";
+            this.LuongTon.MinimumWidth = 6;
+            this.LuongTon.Name = "LuongTon";
+            this.LuongTon.Width = 125;
             // 
             // frmDSSach
             // 
@@ -497,10 +574,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtLuongton;
+        private System.Windows.Forms.Button btnchon;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LuongTon;
     }
 }

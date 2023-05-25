@@ -31,9 +31,13 @@ namespace Nha_Sach_Desktop.BUS
         {
             return DAOPhieuNhap.getThongTinPhieuNhap(mapn);
         }
-        public static void UpdateTongtien(string mapn, int soluong)
+        public static void UpdateTongtien(string mapn, int tongTien, string masach)
         {
-            DAOPhieuNhap.UpdateTongtien(mapn, soluong);
+            DAOPhieuNhap.UpdateTongtien(mapn, tongTien, masach);
+        }
+        public static void DeleteCTPhieuNhap(string mapn, string masach)
+        {
+            DAOPhieuNhap.DeleteCTPhieuNhap(mapn, masach);
         }
     }
 }

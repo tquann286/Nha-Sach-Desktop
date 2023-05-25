@@ -37,6 +37,11 @@ namespace Nha_Sach_Desktop.UI
             }
             return true;
         }
+
+        public void SetButtonEnabled(bool enabled)
+        {
+            btnchon.Enabled = enabled; // Gán giá trị cho thuộc tính Enabled của button cụ thể
+        }
         void LoadDSSach()
         {
 
@@ -55,6 +60,16 @@ namespace Nha_Sach_Desktop.UI
 
             dgvKetQua.DataSource = dsSach;
         }
+        void LoadDsSachTTL(string theLoai)
+        {
+            List<DTODSSach> dsSachTTL = DAODSSach.GetSachLikeTheLoai(theLoai);
+            dgvKetQua.DataSource = dsSachTTL;        
+
+        }
+
+            // Chuyển đổi kiểu dữ liệu sang List<Sach>
+            List<Sach> danhSachSach = data.Select(item => new Sach { TheLoai = item.TheLoai }).Distinct().ToList();
+
         private void frmDSSach_Load(object sender, EventArgs e)
         {
             // Lấy danh sách sách từ cơ sở dữ liệu
@@ -64,9 +79,9 @@ namespace Nha_Sach_Desktop.UI
             List<Sach> danhSachSach = data.Select(item => new Sach { TheLoai = item.TheLoai }).Distinct().ToList();
 
             Sach externalSach = new Sach { TheLoai = "Tất cả" };
-          
+
             danhSachSach.Insert(0, externalSach);
-          
+
 
             cbTimTheLoai.DataSource = danhSachSach;
 
@@ -76,10 +91,12 @@ namespace Nha_Sach_Desktop.UI
             cbTimTheLoai.SelectedIndex = 0;
 
             LoadDSSach();
-
         }
+     
 
-        private void dgvKetQua_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+     
+
+        private void dgvKetQua_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -89,7 +106,8 @@ namespace Nha_Sach_Desktop.UI
                 txtTheLoai.Text = dgvKetQua.Rows[index].Cells[2].Value.ToString();
                 txtTacGia.Text = dgvKetQua.Rows[index].Cells[3].Value.ToString();
                 txtDonGia.Text = dgvKetQua.Rows[index].Cells[4].Value.ToString();
-                txtMaSach.Enabled = false;
+                txtLuongton.Text = dgvKetQua.Rows[index].Cells[5].Value.ToString();
+
             }
             catch
             {
@@ -202,8 +220,10 @@ namespace Nha_Sach_Desktop.UI
         }
 
         private void btnLoc_Click(object sender, EventArgs e)
-        {
-            LocDSSach(txtTimKiem.Text, cbTimTheLoai.Text);
+        {          
+            {
+                LocDSSach(txtTimKiem.Text, cbTimTheLoai.Text);
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -211,7 +231,7 @@ namespace Nha_Sach_Desktop.UI
             this.Close();
         }
 
-        private void btnchon_Click(object sender, EventArgs e)
+        public void btnchon_Click(object sender, EventArgs e)
         {
             int index = dgvKetQua.CurrentRow.Index;
             GetMaSach.getMaSach = dgvKetQua.Rows[index].Cells[1].Value.ToString();
