@@ -13,62 +13,11 @@ namespace Nha_Sach_Desktop.DTO
         private string tenkh;
         private string masach;
         private string tensach;
-        private string dongia;
         private string soluong;
         private string tongtien;
         private string ngaylap;
 
-        public string Masach
-        {
-            get
-            {
-                return masach;
-            }
 
-            set
-            {
-                masach = value;
-            }
-        }
-
-        public string Tensach
-        {
-            get
-            {
-                return tensach;
-            }
-
-            set
-            {
-                tensach = value;
-            }
-        }
-
-        public string Dongia
-        {
-            get
-            {
-                return dongia;
-            }
-
-            set
-            {
-                dongia = value;
-            }
-        }
-
-        public string Soluong
-        {
-            get
-            {
-                return soluong;
-            }
-
-            set
-            {
-                soluong = value;
-            }
-        }
         public string Mahd
         {
             get
@@ -106,6 +55,45 @@ namespace Nha_Sach_Desktop.DTO
                 tenkh = value;
             }
         }
+        public string Masach
+        {
+            get
+            {
+                return masach;
+            }
+
+            set
+            {
+                masach = value;
+            }
+        }
+
+        public string Tensach
+        {
+            get
+            {
+                return tensach;
+            }
+
+            set
+            {
+                tensach = value;
+            }
+        }
+
+        public string Soluong
+        {
+            get
+            {
+                return soluong;
+            }
+
+            set
+            {
+                soluong = value;
+            }
+        }
+
         public string Tongtien
         {
             get

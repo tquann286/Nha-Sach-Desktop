@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.label10 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSHD = new System.Windows.Forms.DataGridView();
+            this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtMaKH = new System.Windows.Forms.TextBox();
@@ -60,7 +63,17 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MaHd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +82,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(34, 432);
+            this.label10.Location = new System.Drawing.Point(25, 430);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 19);
             this.label10.TabIndex = 30;
@@ -219,13 +232,33 @@
             // dgvDSHD
             // 
             this.dgvDSHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSHD.Location = new System.Drawing.Point(37, 462);
+            this.dgvDSHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHd,
+            this.makh,
+            this.TenKH,
+            this.TenSach,
+            this.MaSach,
+            this.SoLuong,
+            this.NgayLap,
+            this.TongTien});
+            this.dgvDSHD.Location = new System.Drawing.Point(27, 473);
             this.dgvDSHD.Name = "dgvDSHD";
+            this.dgvDSHD.ReadOnly = true;
             this.dgvDSHD.RowHeadersWidth = 51;
             this.dgvDSHD.RowTemplate.Height = 24;
-            this.dgvDSHD.Size = new System.Drawing.Size(735, 87);
+            this.dgvDSHD.Size = new System.Drawing.Size(735, 150);
             this.dgvDSHD.TabIndex = 29;
             this.dgvDSHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSHD_CellClick);
+            // 
+            // batOnBookStoreDataSetBindingSource
+            // 
+            this.batOnBookStoreDataSetBindingSource.DataSource = this.batOnBookStoreDataSet;
+            this.batOnBookStoreDataSetBindingSource.Position = 0;
+            // 
+            // batOnBookStoreDataSet
+            // 
+            this.batOnBookStoreDataSet.DataSetName = "BatOnBookStoreDataSet";
+            this.batOnBookStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -400,11 +433,83 @@
             this.panel1.Size = new System.Drawing.Size(797, 114);
             this.panel1.TabIndex = 48;
             // 
+            // MaHd
+            // 
+            this.MaHd.DataPropertyName = "Mahd";
+            this.MaHd.HeaderText = "Mã hóa đơn";
+            this.MaHd.MinimumWidth = 6;
+            this.MaHd.Name = "MaHd";
+            this.MaHd.ReadOnly = true;
+            this.MaHd.Width = 125;
+            // 
+            // makh
+            // 
+            this.makh.DataPropertyName = "Makh";
+            this.makh.HeaderText = "Mã khách hàng";
+            this.makh.MinimumWidth = 6;
+            this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
+            this.makh.Width = 125;
+            // 
+            // TenKH
+            // 
+            this.TenKH.DataPropertyName = "Tenkh";
+            this.TenKH.HeaderText = "Tên khách hàng";
+            this.TenKH.MinimumWidth = 6;
+            this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
+            this.TenKH.Width = 125;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "Tensach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            this.TenSach.Width = 125;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "Masach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "Soluong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 125;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "Ngaylap";
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.MinimumWidth = 6;
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            this.NgayLap.Width = 125;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "Tongtien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            this.TongTien.Width = 125;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.ClientSize = new System.Drawing.Size(932, 646);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
@@ -416,6 +521,8 @@
             this.Text = "frmHoaDon";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -456,5 +563,15 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.BindingSource batOnBookStoreDataSetBindingSource;
+        private BatOnBookStoreDataSet batOnBookStoreDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongTien;
     }
 }

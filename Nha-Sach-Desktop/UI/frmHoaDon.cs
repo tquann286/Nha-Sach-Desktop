@@ -26,25 +26,6 @@ namespace Nha_Sach_Desktop.UI
 
         }
 
-        
-
-        public class GetMaHD
-        {
-            public static string getMaHD;
-        }
-        public void hienthimaKH()
-        {
-             txtMaKH2.Text = GetMaKH.getMaKH;
-            KhachHang kh = BUSKhachHang.GetTenKH(txtMaKH2.Text);
-            txtTenKH2.Text = kh.HoTen;
-        }
-
-        private void btnMaKH_Click(object sender, EventArgs e)
-        {
-            frmKhachHang frmKH = new frmKhachHang();
-            frmKH.ShowDialog();
-            hienthimaKH();
-        }
         void loadDS()
         {
             List<DTOHoaDon> dsHD = BUSHoaDon.GetDSHD();
@@ -67,6 +48,14 @@ namespace Nha_Sach_Desktop.UI
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
+            //using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
+            //{
+            //    HoaDon hd = new HoaDon();
+            //    if(txtMaSach.Text != hd.MaSach.ToString() || txtMaKH2.Text != hd.MaKH.ToString())
+            //    {
+            //        MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập");
+            //    }    
+            //}    
             string mahd = txtMaMoi.Text;
             string makh = txtMaKH2.Text;
             string tenkh = txtTenKH2.Text;
