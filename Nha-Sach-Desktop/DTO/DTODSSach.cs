@@ -13,11 +13,13 @@ namespace Nha_Sach_Desktop.DTO
         private string theLoai;
         private string tacGia;
         private string donGia;
+        private string luongTon;
 
         public string MaSach { get => maSach; set => maSach = value; }
         public string TenSach { get => tenSach; set => tenSach = value; }
         public string TheLoai { get => theLoai; set => theLoai = value; }
         public string TacGia { get => tacGia; set => tacGia = value; }
         public string DonGia { get => donGia; set => donGia = value; }
+        public string LuongTon { get => luongTon; set => luongTon = value; }
     }
 }
