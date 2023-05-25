@@ -8,76 +8,26 @@ namespace Nha_Sach_Desktop.DTO
 {
     public class DTOHoaDon
     {
-        private string mahd;
-        private string makh;
-        private string tenkh;
-        private string masach;
-        private string tensach;
-        private string dongia;
-        private string soluong;
-        private string tongtien;
+        private string maHD;
+        private string maKH;
+        private string tenKH;
+        private string maSach;
+        private string tenSach;
+        private string soLuong;
+        private string tongTien;
+        private string ngayLap;
 
-        public string Masach
-        {
-            get
-            {
-                return masach;
-            }
 
-            set
-            {
-                masach = value;
-            }
-        }
-
-        public string Tensach
-        {
-            get
-            {
-                return tensach;
-            }
-
-            set
-            {
-                tensach = value;
-            }
-        }
-
-        public string Dongia
-        {
-            get
-            {
-                return dongia;
-            }
-
-            set
-            {
-                dongia = value;
-            }
-        }
-
-        public string Soluong
-        {
-            get
-            {
-                return soluong;
-            }
-
-            set
-            {
-                soluong = value;
-            }
-        }
         public string Mahd
         {
             get
             {
-                return mahd;
+                return maHD;
             }
 
             set
             {
-                mahd = value;
+                maHD = value;
             }
         }
 
@@ -85,37 +35,78 @@ namespace Nha_Sach_Desktop.DTO
         {
             get
             {
-                return makh;
+                return maKH;
             }
 
             set
             {
-                makh = value;
+                maKH = value;
             }
         }
         public string Tenkh
         {
             get
             {
-                return tenkh;
+                return tenKH;
             }
 
             set
             {
-                tenkh = value;
+                tenKH = value;
             }
         }
+        public string Masach
+        {
+            get
+            {
+                return maSach;
+            }
+
+            set
+            {
+                maSach = value;
+            }
+        }
+
+        public string Tensach
+        {
+            get
+            {
+                return tenSach;
+            }
+
+            set
+            {
+                tenSach = value;
+            }
+        }
+
+        public string Soluong
+        {
+            get
+            {
+                return soLuong;
+            }
+
+            set
+            {
+                soLuong = value;
+            }
+        }
+
         public string Tongtien
         {
             get
             {
-                return tongtien;
+                return tongTien;
             }
 
             set
             {
-                tongtien = value;
+                tongTien = value;
             }
         }
+
+        public string Ngaylap { get => ngayLap; set => ngayLap = value; }
     }
 }
