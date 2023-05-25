@@ -8,26 +8,26 @@ namespace Nha_Sach_Desktop.DTO
 {
     public class DTOHoaDon
     {
-        private string mahd;
-        private string makh;
-        private string tenkh;
-        private string masach;
-        private string tensach;
-        private string soluong;
-        private string tongtien;
-        private string ngaylap;
+        private string maHD;
+        private string maKH;
+        private string tenKH;
+        private string maSach;
+        private string tenSach;
+        private string soLuong;
+        private string tongTien;
+        private string ngayLap;
 
 
         public string Mahd
         {
             get
             {
-                return mahd;
+                return maHD;
             }
 
             set
             {
-                mahd = value;
+                maHD = value;
             }
         }
 
@@ -35,36 +35,36 @@ namespace Nha_Sach_Desktop.DTO
         {
             get
             {
-                return makh;
+                return maKH;
             }
 
             set
             {
-                makh = value;
+                maKH = value;
             }
         }
         public string Tenkh
         {
             get
             {
-                return tenkh;
+                return tenKH;
             }
 
             set
             {
-                tenkh = value;
+                tenKH = value;
             }
         }
         public string Masach
         {
             get
             {
-                return masach;
+                return maSach;
             }
 
             set
             {
-                masach = value;
+                maSach = value;
             }
         }
 
@@ -72,12 +72,12 @@ namespace Nha_Sach_Desktop.DTO
         {
             get
             {
-                return tensach;
+                return tenSach;
             }
 
             set
             {
-                tensach = value;
+                tenSach = value;
             }
         }
 
@@ -85,12 +85,12 @@ namespace Nha_Sach_Desktop.DTO
         {
             get
             {
-                return soluong;
+                return soLuong;
             }
 
             set
             {
-                soluong = value;
+                soLuong = value;
             }
         }
 
@@ -98,15 +98,15 @@ namespace Nha_Sach_Desktop.DTO
         {
             get
             {
-                return tongtien;
+                return tongTien;
             }
 
             set
             {
-                tongtien = value;
+                tongTien = value;
             }
         }
 
-        public string Ngaylap { get => ngaylap; set => ngaylap = value; }
+        public string Ngaylap { get => ngayLap; set => ngayLap = value; }
     }
 }

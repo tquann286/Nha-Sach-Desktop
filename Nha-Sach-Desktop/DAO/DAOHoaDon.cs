@@ -36,83 +36,83 @@ namespace Nha_Sach_Desktop.DAO
             }
             return DSHD;
         }
-        public static void InsertHD(string mahd, string makh, string tenkh, DateTime ngaynhap, string masach, string tensach, int soluong, int tongtien)
+        public static void InsertHD(string maHD, string maKH, string tenKH, DateTime ngayNhap, string maSach, string tenSach, int soLuong, int tongTien)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 HoaDon hd = new HoaDon();
-                hd.MaHD = mahd;
-                hd.MaKH = makh;
-                hd.TenKH = tenkh;
-                hd.NgayLap = ngaynhap;
-                hd.TongTien = tongtien;
-                hd.MaSach = masach;
-                hd.TenSach = tensach;
-                hd.SoLuong = soluong;
-                hd.TongTien = tongtien;
+                hd.MaHD = maHD;
+                hd.MaKH = maKH;
+                hd.TenKH = tenKH;
+                hd.NgayLap = ngayNhap;
+                hd.TongTien = tongTien;
+                hd.MaSach = maSach;
+                hd.TenSach = tenSach;
+                hd.SoLuong = soLuong;
+                hd.TongTien = tongTien;
                 dbMain.HoaDons.InsertOnSubmit(hd);
                 dbMain.SubmitChanges();
 
             }
         }
-        public static void UpdateHD(string mahd, string makh, string tenkh, DateTime ngaynhap, string masach, string tensach, int soluong, int tongtien)
+        public static void UpdateHD(string maHD, string maKH, string tenKH, DateTime ngayNhap, string maSach, string tenSach, int soLuong, int tongTien)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
 
 
                 HoaDon hd = dbMain.HoaDons.SingleOrDefault(p => p.MaHD ==
-                 mahd);
-                hd.MaKH = makh;
-                hd.TenKH = tenkh;
-                hd.NgayLap = ngaynhap;
-                hd.TongTien = tongtien;
-                hd.MaSach = masach;
-                hd.TenSach = tensach;
-                hd.SoLuong = soluong;
-                hd.TongTien = tongtien;
+                 maHD);
+                hd.MaKH = maKH;
+                hd.TenKH = tenKH;
+                hd.NgayLap = ngayNhap;
+                hd.TongTien = tongTien;
+                hd.MaSach = maSach;
+                hd.TenSach = tenSach;
+                hd.SoLuong = soLuong;
+                hd.TongTien = tongTien;
 
                 dbMain.SubmitChanges();
             }
         }
-        public static bool checkTrung(string mahd)
+        public static bool checkTrung(string maHD)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                var query = from p in dbMain.HoaDons where p.MaHD == mahd select p;
+                var query = from p in dbMain.HoaDons where p.MaHD == maHD select p;
                 if (query.Count() > 0)
                     return false;
             }
             return true;
         }
-        public static void DeleteHoaDon(string mahd)
+        public static void DeleteHoaDon(string maHD)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 HoaDon hd = dbMain.HoaDons.SingleOrDefault(p => p.MaHD ==
-                mahd);
+                maHD);
 
                 dbMain.HoaDons.DeleteOnSubmit(hd);
                 dbMain.SubmitChanges();
             }
         }
-        public static void UpdateTongtien(string mahd, int soluong)
+        public static void UpdateTongtien(string maHD, int soLuong)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
                 HoaDon hd = dbMain.HoaDons.SingleOrDefault(p => p.MaHD ==
-                 mahd);
-                hd.TongTien = soluong;
+                 maHD);
+                hd.TongTien = soLuong;
                 dbMain.SubmitChanges();
             }
         }
-        public static HoaDon getThongTinHD(string mahd)
+        public static HoaDon getThongTinHD(string maHD)
         {
             HoaDon hd = new HoaDon();
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
 
-                var query = from p in dbMain.HoaDons where p.MaHD == mahd select p;
+                var query = from p in dbMain.HoaDons where p.MaHD == maHD select p;
                 foreach (var row in query)
                 {
                     hd.TongTien = row.TongTien;
