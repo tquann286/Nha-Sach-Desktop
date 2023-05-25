@@ -47,14 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSHD = new System.Windows.Forms.DataGridView();
-            this.MaHd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -70,6 +62,14 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MaHd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayLap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
@@ -245,81 +245,9 @@
             this.dgvDSHD.ReadOnly = true;
             this.dgvDSHD.RowHeadersWidth = 51;
             this.dgvDSHD.RowTemplate.Height = 24;
-            this.dgvDSHD.Size = new System.Drawing.Size(735, 150);
+            this.dgvDSHD.Size = new System.Drawing.Size(735, 217);
             this.dgvDSHD.TabIndex = 29;
             this.dgvDSHD.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDSHD_RowHeaderMouseClick);
-            // 
-            // MaHd
-            // 
-            this.MaHd.DataPropertyName = "Mahd";
-            this.MaHd.HeaderText = "Mã hóa đơn";
-            this.MaHd.MinimumWidth = 6;
-            this.MaHd.Name = "MaHd";
-            this.MaHd.ReadOnly = true;
-            this.MaHd.Width = 125;
-            // 
-            // makh
-            // 
-            this.makh.DataPropertyName = "Makh";
-            this.makh.HeaderText = "Mã khách hàng";
-            this.makh.MinimumWidth = 6;
-            this.makh.Name = "makh";
-            this.makh.ReadOnly = true;
-            this.makh.Width = 125;
-            // 
-            // TenKH
-            // 
-            this.TenKH.DataPropertyName = "Tenkh";
-            this.TenKH.HeaderText = "Tên khách hàng";
-            this.TenKH.MinimumWidth = 6;
-            this.TenKH.Name = "TenKH";
-            this.TenKH.ReadOnly = true;
-            this.TenKH.Width = 125;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "Masach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.MinimumWidth = 6;
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            this.MaSach.Width = 125;
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "Tensach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.MinimumWidth = 6;
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            this.TenSach.Width = 125;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "Soluong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 125;
-            // 
-            // NgayLap
-            // 
-            this.NgayLap.DataPropertyName = "Ngaylap";
-            this.NgayLap.HeaderText = "Ngày lập";
-            this.NgayLap.MinimumWidth = 6;
-            this.NgayLap.Name = "NgayLap";
-            this.NgayLap.ReadOnly = true;
-            this.NgayLap.Width = 125;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "Tongtien";
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            this.TongTien.Width = 125;
             // 
             // batOnBookStoreDataSetBindingSource
             // 
@@ -386,7 +314,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(167, 20);
+            this.label11.Location = new System.Drawing.Point(153, 20);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 20);
             this.label11.TabIndex = 50;
@@ -494,11 +422,82 @@
             this.panel1.Size = new System.Drawing.Size(797, 114);
             this.panel1.TabIndex = 48;
             // 
+            // MaHd
+            // 
+            this.MaHd.DataPropertyName = "Mahd";
+            this.MaHd.HeaderText = "Mã hóa đơn";
+            this.MaHd.MinimumWidth = 6;
+            this.MaHd.Name = "MaHd";
+            this.MaHd.ReadOnly = true;
+            this.MaHd.Width = 75;
+            // 
+            // makh
+            // 
+            this.makh.DataPropertyName = "Makh";
+            this.makh.HeaderText = "Mã khách hàng";
+            this.makh.MinimumWidth = 6;
+            this.makh.Name = "makh";
+            this.makh.ReadOnly = true;
+            this.makh.Width = 75;
+            // 
+            // TenKH
+            // 
+            this.TenKH.DataPropertyName = "Tenkh";
+            this.TenKH.HeaderText = "Tên khách hàng";
+            this.TenKH.MinimumWidth = 6;
+            this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
+            this.TenKH.Width = 125;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "Masach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.MinimumWidth = 6;
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            this.MaSach.Width = 75;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "Tensach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.MinimumWidth = 6;
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            this.TenSach.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "Soluong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 75;
+            // 
+            // NgayLap
+            // 
+            this.NgayLap.DataPropertyName = "Ngaylap";
+            this.NgayLap.HeaderText = "Ngày lập";
+            this.NgayLap.MinimumWidth = 6;
+            this.NgayLap.Name = "NgayLap";
+            this.NgayLap.ReadOnly = true;
+            this.NgayLap.Width = 75;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "Tongtien";
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 646);
+            this.ClientSize = new System.Drawing.Size(796, 702);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
