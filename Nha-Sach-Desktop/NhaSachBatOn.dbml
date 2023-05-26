@@ -30,15 +30,6 @@
       <Association Name="KhachHang_HoaDon" Member="HoaDons" ThisKey="MaKH" OtherKey="MaKH" Type="HoaDon" />
     </Type>
   </Table>
-  <Table Name="dbo.NhanVien" Member="NhanViens">
-    <Type Name="NhanVien">
-      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Sdt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.PhieuNhap" Member="PhieuNhaps">
     <Type Name="PhieuNhap">
       <Column Name="MaPhieuNhap" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -47,6 +38,15 @@
       <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Sach_PhieuNhap" Member="Sach" ThisKey="MaSach" OtherKey="MaSach" Type="Sach" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sdt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.Sach" Member="Saches">
@@ -62,16 +62,6 @@
       <Column Name="TonCuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Sach_HoaDon" Member="HoaDons" ThisKey="MaSach" OtherKey="MaSach" Type="HoaDon" />
       <Association Name="Sach_PhieuNhap" Member="PhieuNhaps" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuNhap" />
-      <Association Name="Sach_PhieuBan" Member="PhieuBans" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuBan" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PhieuBan" Member="PhieuBans">
-    <Type Name="PhieuBan">
-      <Column Name="MaPhieuBan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaSach" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="HoaDon_PhieuBan" Member="HoaDon" ThisKey="MaPhieuBan" OtherKey="MaHD" Type="HoaDon" IsForeignKey="true" />
-      <Association Name="Sach_PhieuBan" Member="Sach" ThisKey="MaSach" OtherKey="MaSach" Type="Sach" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
