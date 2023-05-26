@@ -134,7 +134,7 @@ namespace Nha_Sach_Desktop.UI
             btnThem.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
-           // txtLuongton.Text = "0";
+            txtLuongton.Text = "0";
             flag = 0;
         }
         void ChangeSach()
@@ -216,6 +216,13 @@ namespace Nha_Sach_Desktop.UI
             this.Close();
         }
 
-       
+        private void btnchon_Click(object sender, EventArgs e)
+        {
+
+            int index = dgvKetQua.CurrentRow.Index;
+            GetMaSach.getMaSach = dgvKetQua.Rows[index].Cells[0].Value.ToString();
+
+            this.Close();
+        }
     }
 }

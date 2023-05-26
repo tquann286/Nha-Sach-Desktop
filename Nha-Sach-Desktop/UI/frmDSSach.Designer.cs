@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSSach));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLuongton = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnchon = new System.Windows.Forms.Button();
-            this.txtLuongton = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.dgvKetQua = new System.Windows.Forms.DataGridView();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +97,25 @@
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin Sách";
+            // 
+            // txtLuongton
+            // 
+            this.txtLuongton.Location = new System.Drawing.Point(514, 128);
+            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLuongton.Name = "txtLuongton";
+            this.txtLuongton.ReadOnly = true;
+            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
+            this.txtLuongton.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(390, 128);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 25);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Lượng tồn:";
             // 
             // btnLuu
             // 
@@ -392,25 +411,7 @@
             this.btnchon.TabIndex = 55;
             this.btnchon.Text = "Chọn";
             this.btnchon.UseVisualStyleBackColor = true;
-            // 
-            // txtLuongton
-            // 
-            this.txtLuongton.Location = new System.Drawing.Point(514, 128);
-            this.txtLuongton.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLuongton.Name = "txtLuongton";
-            this.txtLuongton.ReadOnly = true;
-            this.txtLuongton.Size = new System.Drawing.Size(208, 30);
-            this.txtLuongton.TabIndex = 56;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(390, 128);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 25);
-            this.label8.TabIndex = 55;
-            this.label8.Text = "Lượng tồn:";
+            this.btnchon.Click += new System.EventHandler(this.btnchon_Click);
             // 
             // dgvKetQua
             // 

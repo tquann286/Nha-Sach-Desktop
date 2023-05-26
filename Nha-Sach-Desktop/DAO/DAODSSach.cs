@@ -119,6 +119,7 @@ namespace Nha_Sach_Desktop.DAO
                 s.TonDau = 0;
                 s.TongBan = 0;
                 s.TongNhap = 0;
+                s.TonCuoi = 0;
                 dbMain.Saches.InsertOnSubmit(s);
                 dbMain.SubmitChanges();
 
