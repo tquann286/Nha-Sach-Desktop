@@ -20,7 +20,7 @@ namespace DemoDataGridView
             //khai báo thư viện hỗ trợ Microsoft.Office.Interop.Excel
             Microsoft.Office.Interop.Excel.Application excel;
             Microsoft.Office.Interop.Excel.Workbook workbook;
-            Microsoft.Office.Interop.Excel.Worksheet worksheet;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet; 
             try
             {
                 //Tạo đối tượng COM.

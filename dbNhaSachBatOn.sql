@@ -1,7 +1,6 @@
 create database BatOnBookStore
-go
 use BatOnBookStore
-go
+
 CREATE TABLE DangNhap (
     TaiKhoan nvarchar(50) primary key not null,
     MatKhau nvarchar(50) not null
@@ -62,7 +61,6 @@ references Sach(MaSach)
 ON UPDATE CASCADE
 ON DELETE CASCADE
 
-
 alter table HoaDon
 add constraint fk_hoadon_KhachHang foreign key (MaKH) references KhachHang(MaKH)
 
@@ -71,6 +69,9 @@ add constraint fk_hoadon_sach foreign key (MaSach) references Sach(MaSach)
 
 
 go
+alter table PhieuNhap
+add constraint fk_email_phieunhap foreign key (Email) references NhanVien(Email)
+
 ---DANG NHAP
 INSERT INTO DangNhap (TaiKhoan, MatKhau)
 VALUES ('hphat456', '1234');

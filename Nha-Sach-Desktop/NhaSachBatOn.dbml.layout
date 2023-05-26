@@ -57,6 +57,31 @@
       <nodes>
         <classShapeMoniker Id="1e394f90-a747-44af-a6b1-34cb2e8f8928" />
         <classShapeMoniker Id="91c9987a-2359-4de7-977f-bfa478042bb9" />
+        <classShapeMoniker Id="43740014-6e7a-4083-8f67-a081ca4e413b" />
+        <classShapeMoniker Id="6adf4e10-9c9f-4af3-b06c-fa39fa2437d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.70959553570713); (3.06607443490112 : 3.02566997060825 : JumpStart); (3.18392556509888 : 3.14352110080601 : JumpEnd); (3.3125 : 3.27209553570713); (3.3125 : 4.98159912109375); (3.5 : 4.98159912109375)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NhaSachBatOnDataContext/NhanVien/NhanVien_PhieuNhap" />
+      <nodes>
+        <classShapeMoniker Id="7af1b0ca-17d5-439a-9d8e-e71b0e195839" />
+        <classShapeMoniker Id="e5e49fdd-989b-4d0c-ab89-8bcb09f85a4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.42829956054687); (3.04166666666667 : 4.42829956054687 : JumpStart); (3.20833333333333 : 4.42829956054687 : JumpEnd); (3.22916666666667 : 4.42829956054687 : JumpStart); (3.39583333333333 : 4.42829956054687 : JumpEnd); (3.5 : 4.42829956054687)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NhaSachBatOnDataContext/Sach/Sach_PhieuNhap" />
+      <nodes>
+        <classShapeMoniker Id="f7c50c4a-bf8f-4f90-99fc-84958c9e13bf" />
+        <classShapeMoniker Id="e5e49fdd-989b-4d0c-ab89-8bcb09f85a4e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.92390055338542); (6.25 : 2.92390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NhaSachBatOnDataContext/HoaDon/HoaDon_PhieuBan" />
+      <nodes>
+        <classShapeMoniker Id="6adf4e10-9c9f-4af3-b06c-fa39fa2437d2" />
+        <classShapeMoniker Id="5a07beef-c258-4d9e-bd7e-0aba08c985fb" />
+      </nodes>
+    </associationConnector>
       </nodes>
     </associationConnector>
   </nestedChildShapes>

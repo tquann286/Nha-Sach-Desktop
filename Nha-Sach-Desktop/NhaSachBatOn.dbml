@@ -62,6 +62,16 @@
       <Column Name="TonCuoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Sach_HoaDon" Member="HoaDons" ThisKey="MaSach" OtherKey="MaSach" Type="HoaDon" />
       <Association Name="Sach_PhieuNhap" Member="PhieuNhaps" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuNhap" />
+      <Association Name="Sach_PhieuBan" Member="PhieuBans" ThisKey="MaSach" OtherKey="MaSach" Type="PhieuBan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuBan" Member="PhieuBans">
+    <Type Name="PhieuBan">
+      <Column Name="MaPhieuBan" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaSach" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="HoaDon_PhieuBan" Member="HoaDon" ThisKey="MaPhieuBan" OtherKey="MaHD" Type="HoaDon" IsForeignKey="true" />
+      <Association Name="Sach_PhieuBan" Member="Sach" ThisKey="MaSach" OtherKey="MaSach" Type="Sach" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
