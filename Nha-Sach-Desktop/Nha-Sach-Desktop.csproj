@@ -69,11 +69,13 @@
     <Compile Include="BUS\BUSNhanVien.cs" />
     <Compile Include="BUS\BUSDSSach.cs" />
     <Compile Include="BUS\BUSTonKho.cs" />
+    <Compile Include="BUS\BUSPhieuNhap.cs" />
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAODoanhThu.cs" />
     <Compile Include="DAO\DAODSSach.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
     <Compile Include="DAO\DAONhanVien.cs" />
+    <Compile Include="DAO\DAOPhieuNhap.cs" />
     <Compile Include="DAO\DAOTonKho.cs" />
     <Compile Include="DTO\DTOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAOHoaDon.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="DTO\DTOHoaDon.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
     <Compile Include="DTO\DTONhanVien.cs" />
+    <Compile Include="DTO\DTOPhieuNhap.cs" />
     <Compile Include="DTO\DTOTonKho.cs" />
     <Compile Include="NhaSachBatOn.designer.cs">
       <AutoGen>True</AutoGen>

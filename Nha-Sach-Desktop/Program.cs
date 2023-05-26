@@ -17,7 +17,7 @@ namespace Nha_Sach_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBaoCaoDoanhThu());
+            Application.Run(new frmPhieuNhap());
         }
     }
 }
