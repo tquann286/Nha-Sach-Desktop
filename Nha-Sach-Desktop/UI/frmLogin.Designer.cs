@@ -100,6 +100,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(291, 370);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Size = new System.Drawing.Size(183, 22);
             this.txtMatKhau.TabIndex = 17;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -128,7 +129,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

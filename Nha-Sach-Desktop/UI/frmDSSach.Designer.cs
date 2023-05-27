@@ -497,7 +497,7 @@
             this.Controls.Add(this.btnLoc);
             this.Controls.Add(this.label6);
             this.Name = "frmDSSach";
-            this.Text = "frmDSSach";
+            this.Text = "Danh sách sách";
             this.Load += new System.EventHandler(this.frmDSSach_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

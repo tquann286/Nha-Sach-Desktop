@@ -189,7 +189,7 @@
             this.Controls.Add(this.label62);
             this.Controls.Add(this.btnXuat);
             this.Name = "frmBaoCaoTonKho";
-            this.Text = "frmBaoCaoTonKho";
+            this.Text = "Báo cáo tồn kho";
             this.Load += new System.EventHandler(this.frmBaoCaoTonKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTon)).EndInit();
             this.ResumeLayout(false);

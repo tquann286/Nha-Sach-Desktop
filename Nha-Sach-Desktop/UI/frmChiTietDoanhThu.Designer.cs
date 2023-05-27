@@ -38,17 +38,17 @@
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvCTDT = new System.Windows.Forms.DataGridView();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batOnBookStoreDataSet1 = new Nha_Sach_Desktop.BatOnBookStoreDataSet1();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new Nha_Sach_Desktop.BatOnBookStoreDataSet1TableAdapters.SACHTableAdapter();
             this.batOnBookStoreDataSet2 = new Nha_Sach_Desktop.BatOnBookStoreDataSet2();
             this.sACHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter1 = new Nha_Sach_Desktop.BatOnBookStoreDataSet2TableAdapters.SACHTableAdapter();
-            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDT)).BeginInit();
@@ -151,34 +151,6 @@
             this.dgvCTDT.Size = new System.Drawing.Size(724, 204);
             this.dgvCTDT.TabIndex = 54;
             // 
-            // batOnBookStoreDataSet1
-            // 
-            this.batOnBookStoreDataSet1.DataSetName = "BatOnBookStoreDataSet1";
-            this.batOnBookStoreDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.batOnBookStoreDataSet1;
-            // 
-            // sACHTableAdapter
-            // 
-            this.sACHTableAdapter.ClearBeforeFill = true;
-            // 
-            // batOnBookStoreDataSet2
-            // 
-            this.batOnBookStoreDataSet2.DataSetName = "BatOnBookStoreDataSet2";
-            this.batOnBookStoreDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sACHBindingSource1
-            // 
-            this.sACHBindingSource1.DataMember = "SACH";
-            this.sACHBindingSource1.DataSource = this.batOnBookStoreDataSet2;
-            // 
-            // sACHTableAdapter1
-            // 
-            this.sACHTableAdapter1.ClearBeforeFill = true;
-            // 
             // masach
             // 
             this.masach.DataPropertyName = "Masach";
@@ -219,6 +191,34 @@
             this.tongtien.Name = "tongtien";
             this.tongtien.Width = 145;
             // 
+            // batOnBookStoreDataSet1
+            // 
+            this.batOnBookStoreDataSet1.DataSetName = "BatOnBookStoreDataSet1";
+            this.batOnBookStoreDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.batOnBookStoreDataSet1;
+            // 
+            // sACHTableAdapter
+            // 
+            this.sACHTableAdapter.ClearBeforeFill = true;
+            // 
+            // batOnBookStoreDataSet2
+            // 
+            this.batOnBookStoreDataSet2.DataSetName = "BatOnBookStoreDataSet2";
+            this.batOnBookStoreDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sACHBindingSource1
+            // 
+            this.sACHBindingSource1.DataMember = "SACH";
+            this.sACHBindingSource1.DataSource = this.batOnBookStoreDataSet2;
+            // 
+            // sACHTableAdapter1
+            // 
+            this.sACHTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmChiTietDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,7 +231,7 @@
             this.Controls.Add(this.label62);
             this.Controls.Add(this.btnXuat);
             this.Name = "frmChiTietDoanhThu";
-            this.Text = "Form1";
+            this.Text = "Chi tiết doanh thu";
             this.Load += new System.EventHandler(this.frmChiTietDoanhThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).EndInit();
