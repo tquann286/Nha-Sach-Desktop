@@ -19,7 +19,10 @@ namespace Nha_Sach_Desktop.UI
         {
             InitializeComponent();
         }
-
+        public class GetTK
+        {
+            public static string getTK;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +69,7 @@ namespace Nha_Sach_Desktop.UI
             DTOLogin acc = new DTOLogin();
             acc.taiKhoan = txtTaiKhoan.Text;
             acc.matKhau = txtMatKhau.Text;
+            GetTK.getTK = txtTaiKhoan.Text;
 
             if (lg.BLLKTraTKhoan(acc) == true)
             {
@@ -77,7 +81,17 @@ namespace Nha_Sach_Desktop.UI
             else
             {
                 MessageBox.Show("Vui lòng kiểm tra lại");
-            }    
+            }
+        }
+
+        private void cbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienThiMatKhau.Checked)
+            {
+                txtMatKhau.UseSystemPasswordChar = false;
+                return;
+            }
+            txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }

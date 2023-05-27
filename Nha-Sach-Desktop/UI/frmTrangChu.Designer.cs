@@ -84,8 +84,9 @@
             // đỔIMẬTKHẨUToolStripMenuItem
             // 
             this.đỔIMẬTKHẨUToolStripMenuItem.Name = "đỔIMẬTKHẨUToolStripMenuItem";
-            this.đỔIMẬTKHẨUToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
+            this.đỔIMẬTKHẨUToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.đỔIMẬTKHẨUToolStripMenuItem.Text = "ĐỔI MẬT KHẨU";
+            this.đỔIMẬTKHẨUToolStripMenuItem.Click += new System.EventHandler(this.đỔIMẬTKHẨUToolStripMenuItem_Click);
             // 
             // qUẢNLÝToolStripMenuItem
             // 

@@ -36,6 +36,7 @@
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbHienThiMatKhau = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,9 +101,9 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(291, 370);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Size = new System.Drawing.Size(183, 22);
             this.txtMatKhau.TabIndex = 17;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
@@ -116,11 +117,27 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // cbHienThiMatKhau
+            // 
+            this.cbHienThiMatKhau.AutoSize = true;
+            this.cbHienThiMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.cbHienThiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbHienThiMatKhau.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbHienThiMatKhau.Location = new System.Drawing.Point(291, 415);
+            this.cbHienThiMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.cbHienThiMatKhau.Name = "cbHienThiMatKhau";
+            this.cbHienThiMatKhau.Size = new System.Drawing.Size(144, 22);
+            this.cbHienThiMatKhau.TabIndex = 18;
+            this.cbHienThiMatKhau.Text = "Hiển thị mật khẩu";
+            this.cbHienThiMatKhau.UseVisualStyleBackColor = false;
+            this.cbHienThiMatKhau.CheckedChanged += new System.EventHandler(this.cbHienThiMatKhau_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbHienThiMatKhau);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
@@ -145,5 +162,6 @@
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox cbHienThiMatKhau;
     }
 }

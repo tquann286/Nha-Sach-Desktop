@@ -86,5 +86,13 @@ namespace Nha_Sach_Desktop.UI
         {
             Application.Exit();
         }
+
+        private void đỔIMẬTKHẨUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frmDMK = new frmDoiMatKhau();
+            this.Hide();
+            frmDMK.ShowDialog();
+            this.Show();
+        }
     }
 }

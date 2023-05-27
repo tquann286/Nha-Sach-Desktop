@@ -124,13 +124,16 @@
   <data name="ranger-4df6c1b6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ranger-4df6c1b6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ranger-4df6c1b61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ranger-4df6c1b61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ranger-4df6c1b61" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ranger-4df6c1b61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="346109325_761480482184145_5830751359220804443_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\346109325_761480482184145_5830751359220804443_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
