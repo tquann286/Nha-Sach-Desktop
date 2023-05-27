@@ -63,7 +63,6 @@
             this.label2.Size = new System.Drawing.Size(112, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tài khoản";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -75,7 +74,6 @@
             this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mật khẩu";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
             // 
@@ -87,7 +85,6 @@
             this.label1.Size = new System.Drawing.Size(196, 35);
             this.label1.TabIndex = 15;
             this.label1.Text = "ĐĂNG NHẬP";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtTaiKhoan
             // 
@@ -95,7 +92,6 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(183, 22);
             this.txtTaiKhoan.TabIndex = 16;
-            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtMatKhau
             // 
@@ -104,7 +100,6 @@
             this.txtMatKhau.Size = new System.Drawing.Size(183, 22);
             this.txtMatKhau.TabIndex = 17;
             this.txtMatKhau.UseSystemPasswordChar = true;
-            this.txtMatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
             // 
@@ -115,7 +110,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cbHienThiMatKhau
             // 
