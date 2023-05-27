@@ -117,6 +117,12 @@
     <Compile Include="UI\frmBaoCaoTonKho.Designer.cs">
       <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmDSSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmChiTietDoanhThu.resx">
       <DependentUpon>frmChiTietDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmDSSach.resx">
       <DependentUpon>frmDSSach.cs</DependentUpon>
@@ -298,6 +307,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\346109325_761480482184145_5830751359220804443_n.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

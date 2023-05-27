@@ -14,5 +14,9 @@ namespace Nha_Sach_Desktop.BUS
         {
             return DAOLogin.KiemTraTaiKhoan(account);
         }
+        public static void ChangeMK(string user, string mkcu, string mkmoi)
+        {
+            DAOLogin.ChangeMK(user, mkcu, mkmoi);
+        }
     }
 }
