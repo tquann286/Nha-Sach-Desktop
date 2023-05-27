@@ -44,7 +44,6 @@
             this.kHÁCHHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sÁCHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dANHMỤCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gIAODIỆNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -95,8 +94,8 @@
             this.đĂNGXUẤTToolStripMenuItem,
             this.tHOÁTToolStripMenuItem});
             this.qUẢNLÝToolStripMenuItem.Name = "qUẢNLÝToolStripMenuItem";
-            this.qUẢNLÝToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.qUẢNLÝToolStripMenuItem.Text = "QUẢN LÝ";
+            this.qUẢNLÝToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.qUẢNLÝToolStripMenuItem.Text = "TÀI KHOẢN";
             // 
             // tHOÁTToolStripMenuItem
             // 
@@ -189,17 +188,10 @@
             this.dANHMỤCToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
             this.dANHMỤCToolStripMenuItem.Text = "DANH MỤC";
             // 
-            // gIAODIỆNToolStripMenuItem
-            // 
-            this.gIAODIỆNToolStripMenuItem.Name = "gIAODIỆNToolStripMenuItem";
-            this.gIAODIỆNToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.gIAODIỆNToolStripMenuItem.Text = "GIAO DIỆN";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gIAODIỆNToolStripMenuItem,
             this.dANHMỤCToolStripMenuItem,
             this.nGHIỆPVỤToolStripMenuItem,
             this.tHỐNGKÊBÁOCÁOToolStripMenuItem,
@@ -443,7 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem kHÁCHHÀNGToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sÁCHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dANHMỤCToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gIAODIỆNToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
