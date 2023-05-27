@@ -81,7 +81,17 @@ namespace Nha_Sach_Desktop.UI
             else
             {
                 MessageBox.Show("Vui lòng kiểm tra lại");
-            }    
+            }
+        }
+
+        private void cbHienThiMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbHienThiMatKhau.Checked)
+            {
+                txtMatKhau.UseSystemPasswordChar = false;
+                return;
+            }
+            txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }
