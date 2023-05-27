@@ -38,15 +38,8 @@ namespace Nha_Sach_Desktop.UI
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All Files (*.*)|*.*";
-            saveFileDialog.DefaultExt = ".xlsx";
             ExportToExcel excel = new ExportToExcel();
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
-                excel.ToExcel(dgvBaoCaoTon, saveFileDialog.FileName);
-            }
+            excel.XuatExcel(dgvBaoCaoTon);
         }
     }
 }

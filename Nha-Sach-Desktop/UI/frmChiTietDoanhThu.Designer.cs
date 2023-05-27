@@ -38,17 +38,16 @@
             this.batOnBookStoreDataSet = new Nha_Sach_Desktop.BatOnBookStoreDataSet();
             this.batOnBookStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvCTDT = new System.Windows.Forms.DataGridView();
-            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.batOnBookStoreDataSet1 = new Nha_Sach_Desktop.BatOnBookStoreDataSet1();
             this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new Nha_Sach_Desktop.BatOnBookStoreDataSet1TableAdapters.SACHTableAdapter();
             this.batOnBookStoreDataSet2 = new Nha_Sach_Desktop.BatOnBookStoreDataSet2();
             this.sACHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter1 = new Nha_Sach_Desktop.BatOnBookStoreDataSet2TableAdapters.SACHTableAdapter();
+            this.masach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tensach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batOnBookStoreDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTDT)).BeginInit();
@@ -123,6 +122,7 @@
             this.btnXuat.Text = "IN BÁO CÁO";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // batOnBookStoreDataSet
             // 
@@ -142,7 +142,6 @@
             this.masach,
             this.tensach,
             this.soluong,
-            this.dongia,
             this.tongtien});
             this.dgvCTDT.Location = new System.Drawing.Point(21, 236);
             this.dgvCTDT.Name = "dgvCTDT";
@@ -150,46 +149,6 @@
             this.dgvCTDT.RowTemplate.Height = 24;
             this.dgvCTDT.Size = new System.Drawing.Size(724, 204);
             this.dgvCTDT.TabIndex = 54;
-            // 
-            // masach
-            // 
-            this.masach.DataPropertyName = "Masach";
-            this.masach.HeaderText = "Mã sách";
-            this.masach.MinimumWidth = 6;
-            this.masach.Name = "masach";
-            this.masach.Width = 125;
-            // 
-            // tensach
-            // 
-            this.tensach.DataPropertyName = "Tensach";
-            this.tensach.HeaderText = "Tên sách";
-            this.tensach.MinimumWidth = 6;
-            this.tensach.Name = "tensach";
-            this.tensach.Width = 125;
-            // 
-            // soluong
-            // 
-            this.soluong.DataPropertyName = "Soluong";
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.MinimumWidth = 6;
-            this.soluong.Name = "soluong";
-            this.soluong.Width = 125;
-            // 
-            // dongia
-            // 
-            this.dongia.DataPropertyName = "Dongia";
-            this.dongia.HeaderText = "Đơn giá";
-            this.dongia.MinimumWidth = 6;
-            this.dongia.Name = "dongia";
-            this.dongia.Width = 125;
-            // 
-            // tongtien
-            // 
-            this.tongtien.DataPropertyName = "Tongtien";
-            this.tongtien.HeaderText = "Tổng tiền";
-            this.tongtien.MinimumWidth = 6;
-            this.tongtien.Name = "tongtien";
-            this.tongtien.Width = 145;
             // 
             // batOnBookStoreDataSet1
             // 
@@ -218,6 +177,38 @@
             // sACHTableAdapter1
             // 
             this.sACHTableAdapter1.ClearBeforeFill = true;
+            // 
+            // masach
+            // 
+            this.masach.DataPropertyName = "TenKH";
+            this.masach.HeaderText = "Tên khách hàng";
+            this.masach.MinimumWidth = 6;
+            this.masach.Name = "masach";
+            this.masach.Width = 125;
+            // 
+            // tensach
+            // 
+            this.tensach.DataPropertyName = "Tensach";
+            this.tensach.HeaderText = "Tên sách";
+            this.tensach.MinimumWidth = 6;
+            this.tensach.Name = "tensach";
+            this.tensach.Width = 125;
+            // 
+            // soluong
+            // 
+            this.soluong.DataPropertyName = "Soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.MinimumWidth = 6;
+            this.soluong.Name = "soluong";
+            this.soluong.Width = 125;
+            // 
+            // tongtien
+            // 
+            this.tongtien.DataPropertyName = "Tongtien";
+            this.tongtien.HeaderText = "Tổng tiền";
+            this.tongtien.MinimumWidth = 6;
+            this.tongtien.Name = "tongtien";
+            this.tongtien.Width = 145;
             // 
             // frmChiTietDoanhThu
             // 
@@ -263,7 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn masach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tensach;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongtien;
     }
 }

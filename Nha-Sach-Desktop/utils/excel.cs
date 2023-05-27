@@ -64,5 +64,17 @@ namespace DemoDataGridView
             }
         }
 
+        public void XuatExcel(DataGridView dataGridView)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx|All Files (*.*)|*.*";
+            saveFileDialog.DefaultExt = ".xlsx";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //gọi hàm ToExcel() với tham số là dtgDSHS và filename từ SaveFileDialog
+                ToExcel(dataGridView, saveFileDialog.FileName);
+            }
+        }
+
     }
 }

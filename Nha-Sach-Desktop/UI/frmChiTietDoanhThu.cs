@@ -1,4 +1,5 @@
-﻿using Nha_Sach_Desktop.BUS;
+﻿using DemoDataGridView;
+using Nha_Sach_Desktop.BUS;
 using Nha_Sach_Desktop.DTO;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,15 @@ namespace Nha_Sach_Desktop.UI
 {
     public partial class frmChiTietDoanhThu : Form
     {
-        public frmChiTietDoanhThu()
+        private string thangNam;
+        public frmChiTietDoanhThu(string _thangNam)
         {
             InitializeComponent();
+            thangNam = _thangNam;
         }
         void LoadCTDT()
         {
-            List<DTOChiTietDoanhThu> ctdt = BUSChiTietDoanhThu.GetCTDoanhThu();
+            List<DTOChiTietDoanhThu> ctdt = BUSChiTietDoanhThu.GetCTDoanhThu(thangNam);
             dgvCTDT.DataSource = ctdt;
         }
 
@@ -32,6 +35,12 @@ namespace Nha_Sach_Desktop.UI
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            ExportToExcel excel = new ExportToExcel();
+            excel.XuatExcel(dgvCTDT);
         }
     }
 }

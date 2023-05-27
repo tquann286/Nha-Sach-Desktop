@@ -112,6 +112,7 @@
             this.btnXuat.Text = "XUẤT BÁO CÁO";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // label1
             // 

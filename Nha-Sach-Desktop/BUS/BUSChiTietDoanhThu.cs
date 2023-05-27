@@ -11,9 +11,9 @@ namespace Nha_Sach_Desktop.BUS
 {
     public class BUSChiTietDoanhThu
     {
-        public static List<DTOChiTietDoanhThu> GetCTDoanhThu()
+        public static List<DTOChiTietDoanhThu> GetCTDoanhThu(string thangNam)
         {
-            return DAOChiTietDoanhThu.GetCTDT();
+            return DAOChiTietDoanhThu.GetCTDT(thangNam);
         }
     }
 }

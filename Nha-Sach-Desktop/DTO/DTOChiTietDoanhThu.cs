@@ -9,58 +9,14 @@ namespace Nha_Sach_Desktop.DTO
 {
     public class DTOChiTietDoanhThu
     {
-        private string masach;
-        private string tensach;
-        private int soluong;
-        private int dongia;
-        private int tongtien;
-        
-        public string Masach
-        {
-            get
-            {
-                return masach; 
-            }
-            set { masach = value;}
-        }
-        public string Tensach
-        {
-            get
-            {
-                return tensach;
-            }
-            set
-            {
-                tensach = value;
-            }
-        }
-        public int Soluong
-        {
-            get
-            {
-                return soluong;
-            }
-            set
-            {
-                soluong = value;
-            }
-        }
-        public int Dongia
-        {
-            get
-            {
-                return dongia;
-            }
-            set { dongia = value; }
-        }
-        public int Tongtien
-        {
-            get
-            {
-                return tongtien;
-            }
+        private string tenKH;
+        private string tenSach;
+        private int soLuong;
+        private int tongTien;
 
-            set { tongtien = value; }
-        }
+        public string TenKH { get => tenKH; set => tenKH = value; }
+        public string TenSach { get => tenSach; set => tenSach = value; }
+        public int SoLuong { get => soLuong; set => soLuong = value; }
+        public int TongTien { get => tongTien; set => tongTien = value; }
     }
 }

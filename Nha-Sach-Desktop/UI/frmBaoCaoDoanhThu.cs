@@ -1,4 +1,5 @@
-﻿using Nha_Sach_Desktop.BUS;
+﻿using DemoDataGridView;
+using Nha_Sach_Desktop.BUS;
 using Nha_Sach_Desktop.DTO;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace Nha_Sach_Desktop.UI
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
-            frmChiTietDoanhThu frmCTDoanhthu = new frmChiTietDoanhThu();
+            string thang = dgvDSDT.CurrentRow.Cells[0].Value.ToString();
+            frmChiTietDoanhThu frmCTDoanhthu = new frmChiTietDoanhThu(thang);
             this.Hide();
             frmCTDoanhthu.ShowDialog();
             this.Show();
@@ -40,6 +42,12 @@ namespace Nha_Sach_Desktop.UI
         private void frmBaoCaoDoanhThu_Load(object sender, EventArgs e)
         {
             LoadDSDoanhThu();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            ExportToExcel excel = new ExportToExcel();
+            excel.XuatExcel(dgvDSDT);
         }
     }
 }

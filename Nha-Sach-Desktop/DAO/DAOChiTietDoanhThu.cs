@@ -1,35 +1,54 @@
 ﻿using Nha_Sach_Desktop.DTO;
+using Nha_Sach_Desktop.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Nha_Sach_Desktop.DAO
 {
     public class DAOChiTietDoanhThu
     {
-        public static List<DTOChiTietDoanhThu> GetCTDT()
+        public static List<DTOChiTietDoanhThu> GetCTDT(string thangNam)
         {
-            List<DTOChiTietDoanhThu> CTDT = new List<DTOChiTietDoanhThu>();
+            if (!IsValidMonthYearFormat(thangNam))
+            {
+                MessageBox.Show("Thời gian không hợp lệ.", "Thông báo");
+                return null;
+            }
 
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
             {
-                var query = from p in dbMain.Saches select p;
-                foreach (var row in query)
-                {
-                    DTOChiTietDoanhThu s = new DTOChiTietDoanhThu();
-                    s.Masach = row.MaSach;
-                    s.Tensach = row.TenSach;
-                    s.Soluong = row.TongBan;
-                    s.Dongia = row.DonGia;
-                    s.Tongtien = row.DonGia * row.TongBan;
-                    CTDT.Add(s);
-                }
+                int month = GetMonthFromThangNam(thangNam);
+                int year = GetYearFromThangNam(thangNam);
+
+                var query = from p in dbMain.HoaDons
+                            where p.NgayLap.Month == month && p.NgayLap.Year == year
+                            select new DTOChiTietDoanhThu
+                            {
+                                TenKH = p.TenKH,
+                                TenSach = p.TenSach,
+                                SoLuong = (int)p.SoLuong,
+                                TongTien = (int)p.TongTien
+                            };
+
+                return query.ToList();
             }
-            return CTDT;
         }
 
+        private static bool IsValidMonthYearFormat(string thangNam)
+        {
+            return DateTime.TryParseExact(thangNam, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out _);
+        }
+
+        private static int GetMonthFromThangNam(string thangNam)
+        {
+            return int.Parse(thangNam.Substring(0, 2));
+        }
+
+        private static int GetYearFromThangNam(string thangNam)
+        {
+            return int.Parse(thangNam.Substring(3, 4));
+        }
     }
 }
