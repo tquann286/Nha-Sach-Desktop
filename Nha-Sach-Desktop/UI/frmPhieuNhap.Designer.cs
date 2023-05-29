@@ -190,6 +190,7 @@
             this.btnXuat.Text = "   XUẤT   ";
             this.btnXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnMaSach
             // 
