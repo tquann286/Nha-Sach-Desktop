@@ -177,7 +177,14 @@ namespace Nha_Sach_Desktop.UI
                 BUSDSSach.DeleteSach(txtMaSach.Text);
                 MessageBox.Show("Xoá sách thành công!");
                 LoadDSSach();
+
+                txtMaSach.Text = "";
+                txtTenSach.Text = "";
+                txtTheLoai.Text = "";
+                txtTacGia.Text = "";
+                txtDonGia.Text = "";
             }
+         
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

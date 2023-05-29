@@ -65,6 +65,7 @@
     <Compile Include="BUS\BUSChiTietDoanhThu.cs" />
     <Compile Include="BUS\BUSHoaDon.cs" />
     <Compile Include="BUS\BUSDoanhThu.cs" />
+    <Compile Include="BUS\BUSKhachHang.cs" />
     <Compile Include="BUS\BUSLogin.cs" />
     <Compile Include="BUS\BUSNhanVien.cs" />
     <Compile Include="BUS\BUSDSSach.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="DAO\DAOChiTietDoanhThu.cs" />
     <Compile Include="DAO\DAODoanhThu.cs" />
     <Compile Include="DAO\DAODSSach.cs" />
+    <Compile Include="DAO\DAOKhachHang.cs" />
     <Compile Include="DAO\DAOLogin.cs" />
     <Compile Include="DAO\DAONhanVien.cs" />
     <Compile Include="DAO\DAOPhieuNhap.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="DTO\DTODoanhThu.cs" />
     <Compile Include="DTO\DTODSSach.cs" />
     <Compile Include="DTO\DTOHoaDon.cs" />
+    <Compile Include="DTO\DTOKhachHang.cs" />
     <Compile Include="DTO\DTOLogin.cs" />
     <Compile Include="DTO\DTONhanVien.cs" />
     <Compile Include="DTO\DTOPhieuNhap.cs" />
