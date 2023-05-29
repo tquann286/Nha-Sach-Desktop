@@ -24,6 +24,7 @@ namespace Nha_Sach_Desktop.DAO
                     nv.HoTen = row.HoTen;
                     nv.DiaChi = row.DiaChi;
                     nv.Sdt = row.Sdt;
+                    nv.Password = row.Password;
                     DSNhanVien.Add(nv);
                 }
             }

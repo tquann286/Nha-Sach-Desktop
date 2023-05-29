@@ -151,5 +151,22 @@ namespace Nha_Sach_Desktop.UI
             }
             BUSNhanVien.UpdateNhanVien(email, hoten, diachi, sdt);
         }
+
+        private void dgvDSNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = dgvDSNV.CurrentRow.Index; //dòng chọn
+                txtEmailNV.Text = dgvDSNV.Rows[index].Cells[0].Value.ToString();
+                txtHoTenNV.Text = dgvDSNV.Rows[index].Cells[1].Value.ToString();
+                txtDiaChiNV.Text = dgvDSNV.Rows[index].Cells[2].Value.ToString();
+                txtSDTNV.Text = dgvDSNV.Rows[index].Cells[3].Value.ToString();
+                txtMatKhau.Text = dgvDSNV.Rows[index].Cells[4].Value.ToString();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
