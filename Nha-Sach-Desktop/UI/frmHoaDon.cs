@@ -44,14 +44,11 @@ namespace Nha_Sach_Desktop.UI
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            //using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
-            //{
-            //    HoaDon hd = new HoaDon();
-            //    if(txtMaSach.Text != hd.MaSach.ToString() || txtMaKH2.Text != hd.MaKH.ToString())
-            //    {
-            //        MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập");
-            //    }    
-            //}    
+            if (BUSHoaDon.checkTrung(txtMaMoi.Text) == false)
+            {
+                MessageBox.Show("Hoá đơn không được trùng");
+                return;
+            }
             string mahd = txtMaMoi.Text;
             string makh = txtMaKH2.Text;
             string tenkh = txtTenKH2.Text;
