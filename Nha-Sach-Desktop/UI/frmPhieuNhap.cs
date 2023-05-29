@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Nha_Sach_Desktop.UI.frmDSSach;
+using DemoDataGridView;
 
 namespace Nha_Sach_Desktop.UI
 {
@@ -290,6 +291,12 @@ namespace Nha_Sach_Desktop.UI
                 return;
             }
             else this.Close();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            ExportToExcel excel = new ExportToExcel();
+            excel.XuatExcel(dgvCTPN);
         }
     }
 }

@@ -36,7 +36,6 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnchon = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -148,20 +147,6 @@
             this.label3.Size = new System.Drawing.Size(158, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Tên KH/ Mã KH:";
-            // 
-            // btnchon
-            // 
-            this.btnchon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(195)))));
-            this.btnchon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnchon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnchon.ForeColor = System.Drawing.Color.White;
-            this.btnchon.Location = new System.Drawing.Point(915, 461);
-            this.btnchon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnchon.Name = "btnchon";
-            this.btnchon.Size = new System.Drawing.Size(100, 37);
-            this.btnchon.TabIndex = 40;
-            this.btnchon.Text = "Chọn";
-            this.btnchon.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -410,7 +395,6 @@
             this.ClientSize = new System.Drawing.Size(1044, 736);
             this.Controls.Add(this.dgvDSKH);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnchon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -436,7 +420,6 @@
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnchon;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
