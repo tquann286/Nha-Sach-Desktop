@@ -76,20 +76,12 @@ namespace Nha_Sach_Desktop.UI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
-            if (txtTongTien.Text == "0")
-            {
                 if (MessageBox.Show("Bạn có chắc muốn xoá hoá đơn này?", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     BUSHoaDon.DeleteHD(txtMaMoi.Text);
                     MessageBox.Show("Xoá thành công!");
                     loadDS();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng xoá hết sách ra khỏi hoá đơn.");
-            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
