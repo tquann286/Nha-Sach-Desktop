@@ -35,6 +35,8 @@ CREATE TABLE NhanVien(
     Password nvarchar(50) not null
 );
 
+
+
 CREATE TABLE PhieuNhap (
     MaPhieuNhap nvarchar(50) not null,
     MaSach nvarchar(50) not null,
@@ -55,16 +57,15 @@ CREATE TABLE HoaDon (
     TongTien int
 );
 go
-alter table PhieuNhap with check add constraint fk_phieunhap_sach foreign key (MaSach) 
-references Sach(MaSach)
-ON UPDATE CASCADE
-ON DELETE CASCADE
+alter table PhieuNhap
+add constraint fk_phieunhap_sach foreign key (MaSach) references Sach(MaSach)
 
 alter table HoaDon
 add constraint fk_hoadon_KhachHang foreign key (MaKH) references KhachHang(MaKH)
 
 alter table HoaDon
 add constraint fk_hoadon_sach foreign key (MaSach) references Sach(MaSach)
+
 
 go
 ---DANG NHAP

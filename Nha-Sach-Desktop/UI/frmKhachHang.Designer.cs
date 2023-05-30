@@ -57,6 +57,7 @@
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -334,7 +335,7 @@
             this.Sdt,
             this.DiaChi,
             this.Email});
-            this.dgvDSKH.Location = new System.Drawing.Point(27, 275);
+            this.dgvDSKH.Location = new System.Drawing.Point(28, 307);
             this.dgvDSKH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSKH.Name = "dgvDSKH";
             this.dgvDSKH.ReadOnly = true;
@@ -388,11 +389,23 @@
             this.Email.ReadOnly = true;
             this.Email.Width = 125;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(24, 283);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 20);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Danh sách khách hàng:";
+            // 
             // frmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 736);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvDSKH);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -442,5 +455,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Label label8;
     }
 }
