@@ -35,7 +35,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMaMoi = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenKH2 = new System.Windows.Forms.TextBox();
@@ -117,16 +117,17 @@
             this.txtSoLuong.Size = new System.Drawing.Size(188, 28);
             this.txtSoLuong.TabIndex = 9;
             // 
-            // button4
+            // btnXuat
             // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkOrange;
-            this.button4.Location = new System.Drawing.Point(521, 423);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 33);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Xuất hóa đơn";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXuat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnXuat.Location = new System.Drawing.Point(521, 423);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(145, 33);
+            this.btnXuat.TabIndex = 27;
+            this.btnXuat.Text = "Xuất hóa đơn";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // btnHuy
             // 
@@ -501,7 +502,7 @@
             this.ClientSize = new System.Drawing.Size(796, 702);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDSHD);
@@ -530,7 +531,7 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox txtMaMoi;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenKH2;
