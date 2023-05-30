@@ -39,5 +39,9 @@ namespace Nha_Sach_Desktop.BUS
         {
             return DAOHoaDon.checkTrung(mahd);
         }
+        public static bool checkMaSach(string maSach)
+        {
+            return DAOHoaDon.checkMaSach(maSach);
+        }
     }
 }
