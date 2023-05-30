@@ -25,6 +25,7 @@ namespace Nha_Sach_Desktop.UI
         {
             List<DTOChiTietDoanhThu> ctdt = BUSChiTietDoanhThu.GetCTDoanhThu(thangNam);
             dgvCTDT.DataSource = ctdt;
+            lblThang.Text = "Tháng " + thangNam + ":";
         }
 
         private void frmChiTietDoanhThu_Load(object sender, EventArgs e)
