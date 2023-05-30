@@ -22,11 +22,6 @@ namespace Nha_Sach_Desktop.UI
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         void loadDS()
         {
             List<DTOHoaDon> dsHD = BUSHoaDon.GetDSHD();
