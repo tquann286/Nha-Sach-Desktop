@@ -85,6 +85,17 @@ namespace Nha_Sach_Desktop.DAO
             }
             return true;
         }
+
+        public static bool checkMaSach(string maSach)
+        {
+            using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
+            {
+                var query = from p in dbMain.Saches where p.MaSach == maSach select p;
+                if (query.Count() > 0)
+                    return true;
+            }
+            return false;
+        }
         public static void DeleteHoaDon(string maHD)
         {
             using (NhaSachBatOnDataContext dbMain = new NhaSachBatOnDataContext())
