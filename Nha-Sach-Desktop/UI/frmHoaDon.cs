@@ -181,5 +181,10 @@ namespace Nha_Sach_Desktop.UI
 
             }
         }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
